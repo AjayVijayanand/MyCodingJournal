@@ -1,4 +1,4 @@
-public class MyClass {
+public class PseudoCodeToJavaQ1 {
   public static void main(String[] args) {
     int Choice = 1;
     int Result;
