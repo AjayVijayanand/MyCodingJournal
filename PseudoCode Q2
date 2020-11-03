@@ -1,0 +1,11 @@
+int x = 2
+int c = 1
+while (c <= 50){
+    if (x % 4 == 0){
+        x = x + 2
+        continue
+    }
+    print x
+    x = x + 2
+    c = c + 1
+}
