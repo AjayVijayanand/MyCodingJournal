@@ -1,0 +1,7 @@
+//FreeLancePseudoCode1 (Factorials)
+input "Enter Number", x
+int Factorial = 1
+for (int y = 1; y <= x; y++){
+    Factorial = Factorial * y
+}
+print "Result: ", Factorial
