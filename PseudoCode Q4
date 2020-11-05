@@ -1,14 +1,16 @@
-//Check whether the number is prime or not.
-int Num;
-int Factors = 0;
-input "Enter Number: ", Num
-for (int x = 2; x < Num; x++){
-    if (Num % x == 0){
-        Factors = Factors + 1
+//Check whether the 10 inputed number is prime or not.
+for(int c = 0; c <= 10; c++){
+    int Num;
+    int Factors = 0;
+    input "Enter Number: ", Num
+    for (int x = 2; x < Num; x++){
+        if (Num % x == 0){
+            Factors = Factors + 1
+        }
     }
-}
-if (Factors == 0){
-    print "Number is a prime!"
-} else {
-    print "Number is Not A Prime. It has this many factors: “, Factors + 2
+    if (Factors == 0){
+        print "Number is a prime!"
+    } else {
+        print "Number is Not A Prime. It has this many factors: “, Factors + 2
+    }
 }
