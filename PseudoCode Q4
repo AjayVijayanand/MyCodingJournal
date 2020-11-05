@@ -1,0 +1,14 @@
+//Check whether the number is prime or not.
+int Num;
+boolean Prime = true;
+input "Enter Number: ", Num
+for (int x = 2; x < Num; x++){
+    if (Num % x == 0){
+        print "Number is Not A Prime"
+        Prime = false
+        break
+    }
+}
+if (Prime == true){
+    print "Number is a prime!"
+}
