@@ -5,15 +5,13 @@ public class PseudoCodeToJavaQ3 {
         float F = 19;
         int x = 1;
         int Choice = 1;
-        do{
-            if (Choice == 1){
-                F = (C * (9/5)) + 32;
-                System.out.println("Temperature in Farenheit: " + F);
-            } else if (Choice == 2){
-                C = (F - 32) * (5/9);
-                System.out.println("Temperature in Celcius: " + C);
-            }  
-            x = x + 1;
-        } while (x <= 10);
+        if (Choice == 1){
+            F = (C * (9/5)) + 32;
+            System.out.println("Temperature in Farenheit: " + F);
+        } else if (Choice == 2){
+            C = (F - 32) * (5/9);
+            System.out.println("Temperature in Celcius: " + C);
+        }  
+        x = x + 1;
     }
 }
