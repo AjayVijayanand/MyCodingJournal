@@ -10,5 +10,5 @@ for (int x = 2; x < Num; x++){
 if (Factors == 0){
     print "Number is a prime!"
 } else {
-    print "Number is Not A Prime"
+    print "Number is Not A Prime. It has this many factors: “, Factors + 2
 }
