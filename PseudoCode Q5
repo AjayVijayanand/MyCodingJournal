@@ -1,0 +1,22 @@
+int Num
+int ND
+int Sum
+int RevNum
+input "Enter A Number: ", Num
+int OGN = Num
+int Rem
+int Rem1
+int rem2
+while (Num > 0){
+    Rem = Num % 10
+    Sum = Sum + Rem
+    RevNum = (RevNum * 10) + Rem
+    Num = Num / 10
+print "Number You have Inputed: ", OGN
+print "Sum of the Digit: ", Sum
+print "The Reverse of the Digit: ", RevNum
+if (RevNum == OGN){
+    print "It is a Palindrome! :)"
+} else {
+    print "It is not a Palindrome! :("
+}
