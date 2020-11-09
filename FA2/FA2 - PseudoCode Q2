@@ -1,0 +1,64 @@
+//Pseudocode for five function calculator (continues till user wants)
+
+
+int Choice
+int FN
+int SN
+boolean Exit = false
+print "Welcome to the Calculator"
+while (Exit == false){
+    print "Here are your options"
+    print "1 - Addition"
+    print "2 - Subtraction"
+    print "3 - Multiplication"
+    print "4 - Division"
+    print "5 - Reminder"
+    print "6 - Exit"
+    input "Enter Choice: ", Choice
+    input "Enter First Number: ", FN
+    input "Enter Second Number: ", SN
+    switch(Choice){
+        case (Choice == 1){
+            print "Addition"
+            print "Result: ", FN + SN
+            break
+        }
+        case (Choice == 2){
+            print "Subtraction"
+            print "Result: ", FN - SN
+            break
+        }
+        case (Choice == 3){
+            print "Multiplication"
+            print "Result: ", FN * SN
+            break
+        }
+        case (Choice == 4){
+            print "Division"
+            if (SN == 0){
+                print "Result: Undefined"
+            } else {
+                print "Result: ", FN / SN
+            }
+            break
+        }
+        case (Choice == 5){
+            print "Reminder"
+            if (SN == 0){
+                print "Result: Undefined"
+            } else {
+                print "Result: ", FN % SN
+            }
+            break
+        }
+        case (Choice == 6){
+            print "Good bye"
+            Exit = true
+            break
+        }
+        otherwise {
+            print "Enter a Valid option"
+            break
+        }
+    }
+}

@@ -1,0 +1,10 @@
+//Pseudocode for factorial of a number 
+
+
+int Num
+int Factorial = 1
+input "Enter Number to find the factorial: ", Num
+for (int x = 1; x <= Num; y++){
+    Factorial = Factorial * x
+}
+print "Result: ", Factorial

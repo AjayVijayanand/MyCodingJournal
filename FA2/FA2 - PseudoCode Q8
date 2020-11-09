@@ -1,0 +1,16 @@
+//Pseudocode to check if user entered number is prime or has factors
+
+
+int Num;
+int Factors = 0;
+input "Enter Number to check whether the number is prime or has factors: ", Num
+for (int x = 2; x < Num; x++){
+    if (Num % x == 0){
+        Factors = Factors + 1
+    }
+}
+if (Factors == 0){
+    print "Number is a prime!"
+} else {
+    print "Number is Not A Prime. It has this many factors: “, Factors + 2
+}

@@ -1,0 +1,17 @@
+//Pseudocode to read 10 numbers from user and count and print how many are even and odd
+
+
+int Num
+int OddNum = 0
+int EvenNum = 0
+for (int x = 0; x <= 10; x++){
+    input "Enter Number to check whether its Even or Odd: ", Num
+    if (Num % 2 == 0){
+        EvenNum = EvenNum + 1
+    } else {
+        OddNum = OddNum + 1
+    }
+}
+print "Number of Even Numbers: ", EvenNum
+print "Number of Odd Numbers: ", OddNum
+

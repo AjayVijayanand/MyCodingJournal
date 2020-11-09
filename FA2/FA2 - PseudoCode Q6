@@ -1,0 +1,46 @@
+//Pseudocode to read  a number 1 to 7 from user and print respective day of week e.g if user enters 1 code prints Monday 
+
+
+int Day
+print "Enter a number from 1 to 7"
+print "1 - Monday"
+print "2 - Tuesday"
+print "3 - Wednesday"
+print "4 - Thursday"
+print "5 - Friday"
+print "6 - Saturday"
+print "7 - Sunday"
+input "Enter Day: ", Day
+switch (Day){
+    case (Choice == 1){
+        print "It's Monday"
+        break
+    }
+    case (Choice == 2){
+        print "It's Tuesday"
+        break
+    }
+    case (Choice == 3){
+        print "It's Wednesday"
+        break
+    }
+    case (Choice == 4){
+        print "It's Thursday"
+    }
+    case (Choice == 5){
+        print "It's Friday"
+        break
+    }
+    case (Choice == 6){
+        print "It's Saturday"
+        break
+    }
+    case (Choice == 7){
+        print "It's Sunday"
+        break
+    }
+    otherwise{
+        print "Invalid Day"
+        break
+    }
+}

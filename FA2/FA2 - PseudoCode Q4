@@ -1,0 +1,10 @@
+//Pseudocode to print multiplication table of a user entered number 
+
+
+int Num
+int Range
+input "Enter Number for the multiplication table: ", Num
+input "Enter Range for the multiplication table: ", Range
+for(int x = 0; x <= 10; x++){
+    print Num, " * ", x, " = ", (Num * x)
+}

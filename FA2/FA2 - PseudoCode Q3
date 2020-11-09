@@ -1,0 +1,15 @@
+//Pseudocode for printing first 50 even numbers (except multiples of 10)
+
+
+int c = 0
+int x = 2
+print "This code will print the first 50 even numbers (except multiples of 10)"
+while (c <= 50){
+    if (x % 10 == 0){
+        x = x + 2
+        continue
+    } 
+    print x
+    x = x + 2
+    c = c + 1
+}
