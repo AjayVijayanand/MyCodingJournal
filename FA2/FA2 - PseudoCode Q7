@@ -1,23 +1,23 @@
 //Pseudocode to print maximum out of 3 user entered numbers (using nested if condition)
 
 
-int Num1
-int Num2
-int Num3
-print "This code is to print maximum out of 3 user entered numbers (using nested if condition)"
-input "Enter Number 1: ", Num1
-input "Enter Number 2: ", Num2
-input "Enter Number 3: ", Num3
-if(Num1 > Num2){
-    if (Num1 > Num3){
-        print "Number 1 is the Greatest"
-    } else {
-        print "Number 3 is the Greatest"
+int Num1                                                                                                    //declaration of the variable "Num1" as an integer
+int Num2                                                                                                    //declaration of the variable "Num2" as an integer
+int Num3                                                                                                    //declaration of the variable "Num3" as an integer
+print "This code is to print maximum out of 3 user entered numbers (using nested if condition)"             //printing the user the function of the code
+input "Enter Number 1: ", Num1                                                                              //Asks the user to input a number and stores it in the Varibale "Num1"
+input "Enter Number 2: ", Num2                                                                              //Asks the user to input a number and stores it in the Varibale "Num2"
+input "Enter Number 3: ", Num3                                                                              //Asks the user to input a number and stores it in the Varibale "Num3"
+if(Num1 > Num2){                                                                                            //Checks whether the value in the variable "Num1" is greater than the value in the variable "Num2"
+    if (Num1 > Num3){                                                                                       //Checks whether the value in the variable "Num1" is greater than the value in the variable "Num3"
+        print "Number 1 is the Greatest. The number is: ", Num1                                             //Prints Number 1 is the greatest number and the value stored in the Variable "Num1"
+    } else {                                                                                                //If not...
+        print "Number 3 is the Greatest. The number is: ", Num3                                             //Prints Number 3 is the greatest number and the value stored in the Variable "Num3"
     }
-} else {
-    if (Num2 > Num3){
-        print "Number 2 is the Greatest"
-    } else {
-        print "Number 3 is the Greatest"
+} else {                                                                                                    //If not...
+    if (Num2 > Num3){                                                                                       //Checks whether the value in the variable "Num2" is greater than the value in the variable "Num3"
+        print "Number 2 is the Greatest. The number is: ", Num2                                             //Prints Number 2 is the greatest number and the value stored in the Variable "Num2"
+    } else {                                                                                                //If not...
+        print "Number 3 is the Greatest. The number is: ", Num3                                             //Prints Number 3 is the greatest number and the value stored in the Variable "Num3"
     }
 }

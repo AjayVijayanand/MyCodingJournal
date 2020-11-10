@@ -1,10 +1,10 @@
 //Pseudocode for factorial of a number 
 
 
-int Num
-int Factorial = 1
-input "Enter Number to find the factorial: ", Num
-for (int x = 1; x <= Num; y++){
-    Factorial = Factorial * x
+int Num                                                                         //declaration of the variable "Num" as an integer
+int Factorial = 1                                                               //declaration of the variable "Factorial" as an integer and storing a value "1"
+input "Enter Number to find the factorial: ", Num                               //User inputing a Number and is stored in a variable "Num"
+for (int x = 1; x <= Num; y++){                                                 //starting a for loop to repeat the code until the Variable "x", declared as an integer and given the value 0, becomes more than the value specified in the variable "Num" and the value of the variable "x" is incremented by 1.
+    Factorial = Factorial * x                                                   //Factorial gets updated by Multiplying the "x" variable to the "Factorial" Variable
 }
-print "Result: ", Factorial
+print "Result: ", Factorial                                                     //Printing the Variable "Factorial"

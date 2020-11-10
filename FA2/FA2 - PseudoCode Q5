@@ -1,17 +1,16 @@
 //Pseudocode to read 10 numbers from user and count and print how many are even and odd
 
 
-int Num
-int OddNum = 0
-int EvenNum = 0
-for (int x = 0; x <= 10; x++){
-    input "Enter Number to check whether its Even or Odd: ", Num
-    if (Num % 2 == 0){
-        EvenNum = EvenNum + 1
-    } else {
-        OddNum = OddNum + 1
+int Num                                                                         //declaration of the variable "Num" as an integer
+int OddNum = 0                                                                  //declaration of the variable "OddNum" as an integer and storing the value 0
+int EvenNum = 0                                                                 //declaration of the variable "EvenNum" as an integer and storing the value 0
+for (int x = 0; x <= 10; x++){                                                  //starting a for loop to repeat the code until the Variable "x", declared as an integer and given the value 0, becomes more than 10 and the value of the variable "x" is incremented by 1.
+    input "Enter Number to check whether its Even or Odd: ", Num                //Asks the user to input a number and stores it in the Varibale "Num"
+    if (Num % 2 == 0){                                                          //Checks whether the Value in the Variable "Num" is divisible by 2.
+        EvenNum = EvenNum + 1                                                   //The value of the variable "EvenNum" is incremented by 1
+    } else {                                                                    //If it is not...
+        OddNum = OddNum + 1                                                     //...The value of the variable "OddNum" is incremented by 1
     }
 }
-print "Number of Even Numbers: ", EvenNum
-print "Number of Odd Numbers: ", OddNum
-
+print "Number of Even Numbers: ", EvenNum                                       //Prints the number of even numbers by printing the value stored in the variable "EvenNum"
+print "Number of Odd Numbers: ", OddNum                                         //Prints the number of odd numbers by printing the value stored in the variable "OddNum"

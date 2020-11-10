@@ -1,46 +1,47 @@
 //Pseudocode to read  a number 1 to 7 from user and print respective day of week e.g if user enters 1 code prints Monday 
 
 
-int Day
-print "Enter a number from 1 to 7"
-print "1 - Monday"
-print "2 - Tuesday"
-print "3 - Wednesday"
-print "4 - Thursday"
-print "5 - Friday"
-print "6 - Saturday"
-print "7 - Sunday"
-input "Enter Day: ", Day
-switch (Day){
-    case (Choice == 1){
-        print "It's Monday"
-        break
+int Day                                                                      //declaration of the variable "Day" as an integer
+print "Enter a number from 1 to 7 to display the Day"                        //printing the user the options
+print "1 - Monday"                                                           //printing the user the options
+print "2 - Tuesday"                                                          //printing the user the options
+print "3 - Wednesday"                                                        //printing the user the options
+print "4 - Thursday"                                                         //printing the user the options
+print "5 - Friday"                                                           //printing the user the options
+print "6 - Saturday"                                                         //printing the user the options
+print "7 - Sunday"                                                           //printing the user the options
+input "Enter Day: ", Day                                                     //User inputs a number and is stored in the varibale "Day"
+switch (Day){                                                                //Starting a Switch Case Conditional and comapring it with the Variable "Day"
+    case (Day == 1){                                                         //Compares whether the Variable "Day" is equal to 1
+        print "It's Monday"                                                  //prints the user the Day
+        break                                                                //breaks the code
     }
-    case (Choice == 2){
-        print "It's Tuesday"
-        break
+    case (Day == 2){                                                         //Compares whether the Variable "Day" is equal to 2
+        print "It's Tuesday"                                                 //prints the user the Day
+        break                                                                //breaks the code
     }
-    case (Choice == 3){
-        print "It's Wednesday"
-        break
+    case (Day == 3){                                                         //Compares whether the Variable "Day" is equal to 3
+        print "It's Wednesday"                                               //prints the user the Day
+        break                                                                //breaks the code
     }
-    case (Choice == 4){
-        print "It's Thursday"
+    case (Day == 4){                                                         //Compares whether the Variable "Day" is equal to 4
+        print "It's Thursday"                                                //prints the user the Day
+        break                                                                //breaks the code
     }
-    case (Choice == 5){
-        print "It's Friday"
-        break
+    case (Day == 5){                                                         //Compares whether the Variable "Day" is equal to 5
+        print "It's Friday"                                                  //prints the user the Day
+        break                                                                //breaks the code
     }
-    case (Choice == 6){
-        print "It's Saturday"
-        break
+    case (Day == 6){                                                         //Compares whether the Variable "Day" is equal to 6
+        print "It's Saturday"                                                //prints the user the Day
+        break                                                                //breaks the code
     }
-    case (Choice == 7){
-        print "It's Sunday"
-        break
+    case (Day == 7){                                                         //Compares whether the Variable "Day" is equal to 7
+        print "It's Sunday"                                                  //prints the user the Day
+        break                                                                //breaks the code
     }
-    otherwise{
-        print "Invalid Day"
-        break
+    otherwise{                                                               //If the user entered value in the Varibale "Day" is not in the list...
+        print "Invalid Day"                                                  //...Code tells user that the inputed value is invalid
+        break                                                                //breaks the code
     }
-}
+} 

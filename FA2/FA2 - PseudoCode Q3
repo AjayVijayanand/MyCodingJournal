@@ -1,15 +1,15 @@
 //Pseudocode for printing first 50 even numbers (except multiples of 10)
 
 
-int c = 0
-int x = 2
-print "This code will print the first 50 even numbers (except multiples of 10)"
-while (c <= 50){
-    if (x % 10 == 0){
-        x = x + 2
-        continue
+int c = 0                                                                                                   //declaration of the variable "c" as an integer and storing the value 0
+int x = 2                                                                                                   //declaration of the variable "x" as an integer and storing the value 2
+print "This code will print the first 50 even numbers (except multiples of 10)"                             //printing the user the function of the code
+while (c <= 50){                                                                                            //starting a while loop to repeat the code until the Variable "c" becomes more than "50" 
+    if (x % 10 == 0){                                                                                       //checks whether the Value of the varibale "x" is divisible by 10
+        x = x + 2                                                                                           //The value of the "x" variable is incremented by 2
+        continue                                                                                            //The Continue Function skips the lines 12, 13, 14 of the code for that particular part
     } 
-    print x
-    x = x + 2
-    c = c + 1
+    print x                                                                                                 //The value in "x" is displayed 
+    x = x + 2                                                                                               //The value of the "x" variable is incremented by 2
+    c = c + 1                                                                                               //The value of the "c" variable is incremented by 1
 }

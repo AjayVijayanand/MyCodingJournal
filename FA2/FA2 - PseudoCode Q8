@@ -1,16 +1,16 @@
 //Pseudocode to check if user entered number is prime or has factors
 
 
-int Num;
-int Factors = 0;
-input "Enter Number to check whether the number is prime or has factors: ", Num
-for (int x = 2; x < Num; x++){
-    if (Num % x == 0){
-        Factors = Factors + 1
+int Num                                                                                     //declaration of the variable "Num" as an integer
+int Factors = 0                                                                             //declaration of the variable "Factors" as an integer and stores the value 0
+input "Enter Number to check whether the number is prime or has factors: ", Num             //asks the user to input a number and stores the number in varibale "Num"
+for (int x = 2; x < Num; x++){                                                              //starting a for loop to repeat the code until the Variable "x", declared as an integer and given the value 2, becomes more than 10 and the value of the variable "x" is incremented by 1.                      
+    if (Num % x == 0){                                                                      //Checks whether the Value in the variable "Num" is divisible by the value in the variable "x"
+        Factors = Factors + 1                                                               //Increments the value of the variable "Factors" by 1
     }
 }
-if (Factors == 0){
-    print "Number is a prime!"
-} else {
-    print "Number is Not A Prime. It has this many factors: “, Factors + 2
+if (Factors == 0){                                                                          //checks whether the value of the variable "factors" is equal to 0
+    print "Number is a prime!"                                                              //prints that the number is prime
+} else {                                                                                    //If not...
+    print "Number is Not A Prime. It has this many factors: “, Factors + 2                  //prints that the number is not a prime and shows the number of factors by adding 2 to the value in the variable "Factors"
 }

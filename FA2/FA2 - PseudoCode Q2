@@ -1,64 +1,64 @@
 //Pseudocode for five function calculator (continues till user wants)
 
 
-int Choice
-int FN
-int SN
-boolean Exit = false
-print "Welcome to the Calculator"
-while (Exit == false){
-    print "Here are your options"
-    print "1 - Addition"
-    print "2 - Subtraction"
-    print "3 - Multiplication"
-    print "4 - Division"
-    print "5 - Reminder"
-    print "6 - Exit"
-    input "Enter Choice: ", Choice
-    input "Enter First Number: ", FN
-    input "Enter Second Number: ", SN
-    switch(Choice){
-        case (Choice == 1){
-            print "Addition"
-            print "Result: ", FN + SN
-            break
+int Choice                                                                                      //declaration of the variable "Choice" as an integer
+int FN                                                                                          //declaration of the variable "FN" as an integer
+int SN                                                                                          //declaration of the variable "SN" as an integer
+boolean Exit = false                                                                            //declaration of the variable "Exit" as an boolean and stored the value "false"
+print "Welcome to the Calculator"                                                               //printing the user the function of the code
+while (Exit == false){                                                                          //starting a while loop to repeat the code until the Variable "Exit" becomes "true" 
+    print "Here are your options"                                                               //printing the user the options for the calculator
+    print "1 - Addition"                                                                        //printing the user the options for the calculator
+    print "2 - Subtraction"                                                                     //printing the user the options for the calculator
+    print "3 - Multiplication"                                                                  //printing the user the options for the calculator
+    print "4 - Division"                                                                        //printing the user the options for the calculator
+    print "5 - Reminder"                                                                        //printing the user the options for the calculator
+    print "6 - Exit"                                                                            //printing the user the options for the calculator
+    input "Enter Choice: ", Choice                                                              //Asking user to input a choice and stores in the varible "Choice"
+    input "Enter First Number: ", FN                                                            //Asking user to input a FN and stores in the varible "FN"
+    input "Enter Second Number: ", SN                                                           //Asking user to input a SN and stores in the varible "SN"
+    switch(Choice){                                                                             //Starting a Switch Case Conditional and comapring it with the Variable "Choice"
+        case (Choice == 1){                                                                     //Compares whether the Variable "Choice" is equal to 1
+            print "Addition"                                                                    //Prints the Function the Code is performing
+            print "Result: ", FN + SN                                                           //Prints the Result by adding the First Number, Stored in the variable "FN", and the Second Number, Stored in the variable "SN"
+            break                                                                               //breaks the code
         }
-        case (Choice == 2){
-            print "Subtraction"
-            print "Result: ", FN - SN
-            break
+        case (Choice == 2){                                                                     //Compares whether the Variable "Choice" is equal to 2
+            print "Subtraction"                                                                 //Prints the Function the Code is performing
+            print "Result: ", FN - SN                                                           //Prints the Result by Subtracting the First Number, Stored in the variable "FN", from the Second Number, Stored in the variable "SN"
+            break                                                                               //breaks the code
         }
-        case (Choice == 3){
-            print "Multiplication"
-            print "Result: ", FN * SN
-            break
+        case (Choice == 3){                                                                     //Compares whether the Variable "Choice" is equal to 3
+            print "Multiplication"                                                              //Prints the Function the Code is performing
+            print "Result: ", FN * SN                                                           //Prints the Result by Multiplying the First Number, Stored in the variable "FN", and the Second Number, Stored in the variable "SN"
+            break                                                                               //breaks the code
         }
-        case (Choice == 4){
-            print "Division"
-            if (SN == 0){
-                print "Result: Undefined"
-            } else {
-                print "Result: ", FN / SN
+        case (Choice == 4){                                                                     //Compares whether the Variable "Choice" is equal to 4
+            print "Division"                                                                    //Prints the Function the Code is performing
+            if (SN == 0){                                                                       //Use of an IF...THEN...ELSE... Conditional and compares whether the Second Number, stored in the "SN", is equal to zero
+                print "Result: Undefined"                                                       //Prints the Result as "Undefined" as No Number can be divided by Zero
+            } else {                                                                            //If it is not...
+                print "Result: ", FN / SN                                                       //,,,Prints the Result by dividing the First Number, Stored in the variable "FN", and the Second Number, Stored in the variable "SN"
             }
-            break
+            break                                                                               //breaks the code
         }
-        case (Choice == 5){
-            print "Reminder"
-            if (SN == 0){
-                print "Result: Undefined"
-            } else {
-                print "Result: ", FN % SN
+        case (Choice == 5){                                                                     //Compares whether the Variable "Choice" is equal to 5
+            print "Reminder"                                                                    //Prints the Function the Code is performing
+            if (SN == 0){                                                                       //Use of an IF...THEN...ELSE... Conditional and compares whether the Second Number, stored in the "SN", is equal to zero
+                print "Result: Undefined"                                                       //Prints the Result as "Undefined" as No Number can be divided by Zero
+            } else {                                                                            //If it is not...
+                print "Result: ", FN % SN                                                       //...Prints the Result by dividing the First Number, Stored in the variable "FN", and the Second Number, Stored in the variable "SN" and finding the reminder of it
             }
-            break
+            break                                                                               //breaks the code
         }
-        case (Choice == 6){
-            print "Good bye"
-            Exit = true
-            break
+        case (Choice == 6){                                                                     //Compares whether the Variable "Choice" is equal to 6
+            print "Good bye"                                                                    //Prints the Function the Code is performing
+            Exit = true                                                                         //The Value of the "Exit" Variable is changed to the value "True" to exit the loop and stop the code
+            break                                                                               //breaks the code
         }
-        otherwise {
-            print "Enter a Valid option"
-            break
+        otherwise {                                                                             //If the user entered value in the Varibale "Choice" is not in the list...
+            print "Enter a Valid option"                                                        //...Code Asks the user to "Enter a valid option"
+            break                                                                               //breaks the code
         }
     }
 }
