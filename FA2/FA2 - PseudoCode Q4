@@ -3,6 +3,6 @@
 
 int Num                                                                         //declaration of the variable "Num" as an integer
 input "Enter Number for the multiplication table: ", Num                        //Asks the user to input a number and stores it in the Varibale "Num"
-for(int x = 0; x <= 10; x++){                                                   //starting a for loop to repeat the code until the Variable "x", declared as an integer and given the value 0, becomes more than 10 and the value of the variable "x" is incremented by 1. 
+for(int x = 1; x <= 10; x++){                                                   //starting a for loop to repeat the code until the Variable "x", declared as an integer and given the value 1, becomes more than 10 and the value of the variable "x" is incremented by 1. 
     print Num, " * ", x, " = ", (Num * x)                                       //Prints the Multiplication Table in the format: a * b = Result; where: a is the varibale "Num", b is the variable "x" and Result is the Reuslt of Multiplying the variables "Num" and "x"
 }
