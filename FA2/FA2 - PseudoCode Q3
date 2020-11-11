@@ -1,7 +1,7 @@
 //Pseudocode for printing first 50 even numbers (except multiples of 10)
 
 
-int c = 1                                                                                                   //declaration of the variable "c" as an integer and storing the value 0
+int c = 1                                                                                                   //declaration of the variable "c" as an integer and storing the value 1
 int x = 2                                                                                                   //declaration of the variable "x" as an integer and storing the value 2
 print "This code will print the first 50 even numbers (except multiples of 10)"                             //printing the user the function of the code
 while (c <= 50){                                                                                            //starting a while loop to repeat the code until the Variable "c" becomes more than "50" 
