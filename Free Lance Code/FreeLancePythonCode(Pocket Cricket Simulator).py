@@ -1,27 +1,21 @@
 from random import *
 from time import sleep
-
 RunsDie = ["1", "1", "2", "2", "3", "3"]
 ConservativeDie = ["Dot Ball", "Hook Shot", "Pull Shot", "Cut Shot", "Cover Drive", "Howzat?"]
 AggressiveDie = ["4 Runs", "Super Shot 4", "Big Hit 6", "In the Air?", "Outsdie Edge", "Big Swing and A Miss"]
 BowlingDie = ["Clean Bowled", "No Ball", "Fast Ball", "Spin", "Bouncer", "Swing Ball"]
 FieldingDie = ["Through the Gap", "Over the Top", "Dropped Catch", "Fielded", "Classic Catch", "Shot at the stumps"]
 UmpireDie = ["Not Out", "LBW", "Caught and Bowled", "Run Out", "Caught", "Not Out"]
-
 Run1 = 0
 Run2 = 0
-
 PlayerChoice1 = ""
 PlayerChoice2 = ""
-
 ChoiceValid = False
-
 Out = False
 PlayerScore1 = 0
 PlayerBalls1 = 0
 PlayerScore2 = 0
 PlayerBalls2 = 0
-
 def CD(DieResult, FreeHit):
     if ConservativeDie[DieResult] == "Dot Ball":
         print("Batsman left the ball. No Run")
@@ -48,8 +42,6 @@ def CD(DieResult, FreeHit):
         else:
             print("What is the Umpire gonna say about it!")
             return False, True
-
-
 def AD(DieResult, PS, FreeHit):
     if AggressiveDie[DieResult] == "4 Runs":
         print("Good Timing. And it's good enough for 4!! Wow!")
@@ -85,8 +77,6 @@ def AD(DieResult, PS, FreeHit):
         if FreeHit:
             print("Good attempt on the free hit though")
         return False, PS
-
-
 def BD(DieResult, PS, PB):
     if BowlingDie[DieResult] == "Clean Bowled":
         print("Bowled Em!!!!")
@@ -113,8 +103,6 @@ def BD(DieResult, PS, PB):
     elif BowlingDie[DieResult] == "Swing Ball":
         print("That Ball Swung!")
         return True, False, PB, PS, False
-
-
 def FeD(DieResult1, DieResult2):
     if FieldingDie[DieResult1] == "Through the Gap":
         if AggressiveDie[DieResult2] == "Outside Edge":
@@ -160,8 +148,6 @@ def FeD(DieResult1, DieResult2):
     elif FieldingDie[DieResult1] == "Fielded":
         print("Great Fielding. No Runs!")
         return False, False, False
-
-
 def UmD(DieResult, DieResult2):
     if UmpireDie[DieResult] == "Not Out":
         print("Umpire Doesn't think it's out. Well. On to the next then!")
@@ -187,8 +173,6 @@ def UmD(DieResult, DieResult2):
         else:
             print("No hesitation there. That's out!")
         return False, True
-
-
 def RuD(DieResult, PS):
     if RunsDie[DieResult] == "1":
         print("He takes a Single")
@@ -200,44 +184,19 @@ def RuD(DieResult, PS):
         print("He Runs hard for a 3")
         PS = PS + 3
     return PS
-
-
 print("Welcome to the code version of pocket cricket")
-print()
-sleep(5)
-print()
 print("Let's do the toss")
 while RunsDie[Run1] == RunsDie[Run2]:
-    print()
-    sleep(2)
-    print()
     print("Rolling Dice for Player 1")
-    print()
-    sleep(2)
-    print()
     Run1 = randint(0,5)
     print("Result of Dice for Player 1: " + RunsDie[Run1])
-    print()
-    sleep(2)
-    print()
     print("Rolling Dice for Player 2")
-    print()
-    sleep(2)
-    print()
     Run2 = randint(0,5)
     print("Result of Dice for Player 2: " + RunsDie[Run2])
-    print()
-    sleep(2)
-    print()
     if RunsDie[Run1] == RunsDie[Run2]:
         print("It's a Tie! Lets do that again!")
 if Run1 > Run2:
     print("Player1 Has won the toss")
-
-    print()
-    sleep(2)
-    print()
-
     while not ChoiceValid:
         Choice = str(input("What do you choose Player 1? "))
         if Choice.upper() == "BAT":
@@ -252,9 +211,6 @@ if Run1 > Run2:
             print("Enter a Valid Choice") 
 else:
     print("Player2 Has won the toss")
-    print()
-    sleep(2)
-    print()
     while not ChoiceValid:
         Choice = str(input("What do you choose Player 2? "))
         if Choice.upper() == "BAT":
@@ -267,18 +223,10 @@ else:
             ChoiceValid = True
         else:
             print("Enter a Valid Choice [Type 'BAT' OR ('BOWL' OR 'FIELD')]") 
-print()
-sleep(3)
-print()
 print("So Player 1 will " + PlayerChoice1.lower())
 print("And Player 2 will " + PlayerChoice2.lower())
-print()
-sleep(2)
-print()
 print("Let's Play!")
-print()
-sleep(5)
-print()
+sleep(1)
 if PlayerChoice1 == "BAT":
     while not Out:
         FreeHit = False
@@ -289,24 +237,18 @@ if PlayerChoice1 == "BAT":
         UD = False
         FD = False
         PlayerBalls1 = PlayerBalls1 + 1
+        Bowling = 0
+        Batting = 0
+        Fielding = 0
+        UmpireCall = 0
+        Run = 0
         print("Player 2 is now rolling the Bowling Dice")
-        print()
-        sleep(3)
-        print()
         Bowling = randint(0, 5)
         DieChoice, Out, PlayerBalls1, PlayerScore1, NBFH = BD(Bowling, PlayerScore1, PlayerBalls1)
-        print()
-        sleep(3)
-        print()
+        sleep(1)
         if DieChoice:
             print("Bowler hasn't got the batsman out yet!")
-            print()
-            sleep(2)
-            print()
             BatsmanDiceChoice = str(input("Does Player1 want the batsman to go Aggressive (High chances of getting out) or Conservative (Low chances of getting out)? "))
-            print()
-            sleep(2)
-            print()
             if BatsmanDiceChoice.upper() == "AGGRESSIVE" or BatsmanDiceChoice.upper() == "A":
                 print("Alright Aggresive Dice it is!")
                 AggressiveDieChoosen = True
@@ -315,75 +257,38 @@ if PlayerChoice1 == "BAT":
                 ConservativeDieChoosen = True
             else:
                 print("Enter Valid Choice [Type ('AGGRESSIVE' OR 'A') OR ('CONSERVATIVE' OR 'C')]")
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if ConservativeDieChoosen:
             print("Player 1 is now rolling the Conservative Dice")
-            print()
-            sleep(3)
-            print()
             Batting = randint(0,5)
             RD, UD = CD(Batting, NBFH)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         elif AggressiveDieChoosen:
             print("Player 1 is now rolling the Aggressive Dice")
-            print()
-            sleep(3)
-            print()
             Batting = randint(0,5)
             FD, PlayerScore1 = AD(Batting, PlayerScore1, FreeHit)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if FD:
             print("Player 2 is now rolling the Fielding Dice")
-            print()
-            sleep(3)
-            print()
             Fielding = randint(0,5) 
             RD, Out, UD = FeD(Fielding, Batting)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if UD:
             print("Player 2 is now rolling the Umpiring Dice")
-            print()
-            sleep(3)
-            print()
             UmpireCall = randint(0, 5)
             RD, Out = UmD(UmpireCall, Fielding)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if RD:
             print("Player 1 is now rolling the Run Dice")
-            print()
-            sleep(3)
-            print()
             Run = randint(0, 5)
             PlayerScore1 = RuD(Run, PlayerScore1)
-            print()
-            sleep(3)
-            print()
-
+            sleep(1)
         print("Player 1 Score: " + str(PlayerScore1))
         print("Balls: " + str(PlayerBalls1))
-    
-    print()
-    sleep(10)
-    print()
-
+        sleep(1)
     print("1st Innings is over. Player 2 needs " + str(PlayerScore1 + 1) + " Runs to win!")
-
-    print()
-    sleep(5)
-    print()
-
     print("Let's continue!")
-
+    sleep(1)
     Out = False
     TargetReach = False
     while not Out or not TargetReach:
@@ -394,25 +299,19 @@ if PlayerChoice1 == "BAT":
         RD = False
         UD = False
         FD = False
+        Bowling = 0
+        Batting = 0
+        Fielding = 0
+        UmpireCall = 0
+        Run = 0
         PlayerBalls2 = PlayerBalls2 + 1
         print("Player 1 is now rolling the Bowling Dice")
-        print()
-        sleep(3)
-        print()
         Bowling = randint(0, 5)
         DieChoice, Out, PlayerBalls2, PlayerScore2, NBFH = BD(Bowling, PlayerScore2, PlayerBalls2)
-        print()
-        sleep(3)
-        print()
+        sleep(1)
         if DieChoice:
             print("Bowler hasn't got the batsman out yet!")
-            print()
-            sleep(2)
-            print()
             BatsmanDiceChoice = str(input("Does Player2 want the batsman to go Aggressive (High chances of getting out) or Conservative (Low chances of getting out)? "))
-            print()
-            sleep(2)
-            print()
             if BatsmanDiceChoice.upper() == "AGGRESSIVE" or BatsmanDiceChoice.upper() == "A":
                 print("Alright Aggresive Dice it is!")
                 AggressiveDieChoosen = True
@@ -421,86 +320,49 @@ if PlayerChoice1 == "BAT":
                 ConservativeDieChoosen = True
             else:
                 print("You have entered an Invalid Die Choice.\nIt's too late!\n No Run!\n Enter Valid Choice [Type ('AGGRESSIVE' OR 'A') OR ('CONSERVATIVE' OR 'C')]")
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if ConservativeDieChoosen:
             print("Player 2 is now rolling the Conservative Dice")
-            print()
-            sleep(3)
-            print()
             Batting = randint(0,5)
             RD, UD = CD(Batting, NBFH)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         elif AggressiveDieChoosen:
             print("Player 2 is now rolling the Aggressive Dice")
-            print()
-            sleep(3)
-            print()
             Batting = randint(0,5)
             FD, PlayerScore2 = AD(Batting, PlayerScore2, FreeHit)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if FD:
             print("Player 2 is now rolling the Fielding Dice")
-            print()
-            sleep(3)
-            print()
             Fielding = randint(0,5) 
             RD, Out, UD = FeD(Fielding, Batting)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if UD:
             print("Player 2 is now rolling the Umpiring Dice")
-            print()
-            sleep(3)
-            print()
             UmpireCall = randint(0, 5)
             RD, Out = UmD(UmpireCall, Fielding)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if RD:
             print("Player 1 is now rolling the Run Dice")
-            print()
-            sleep(3)
-            print()
             Run = randint(0, 5)
             PlayerScore2 = RuD(Run, PlayerScore2)
-            print()
-            sleep(3)
-            print()
-
+            sleep(1)
         print("Player 2 Score: " + str(PlayerScore2))
         print("Balls: " + str(PlayerBalls2))
-
-        print()
-        sleep(3)
-        print()
-
-        if PlayerScore1 > PlayerScore2:
+        sleep(1)
+        if PlayerScore1 <= PlayerScore2:
             print("Player2 Needs " + str(((PlayerScore1 + 1) - PlayerScore2)) + " More Run(s) to win!")
-            TargetReach = True
         elif PlayerScore1 == PlayerScore2:
             print("Scores Are tied!")
-        else:
+        elif PlayerScore1 > PlayerScore2:
             TargetReach = True
-
-    print()
-    sleep(5)
-    print()
-
     print("Match Over!")
-    if PlayerScore1 > PlayerScore2:
-        print("Player1 Won the Match")
+    sleep(1)
+    if PlayerScore1 <= PlayerScore2:
+        print("Player2 Won the Match")
     elif PlayerScore1 == PlayerScore2:
         print("Scores Are tied!")
-    else:
-        print("Player2 Won the Match")
+    elif PlayerScore1 > PlayerScore2:
+        print("Player1 Won the Match")
 elif PlayerChoice2 == "BAT":
     while not Out:
         FreeHit = False
@@ -512,23 +374,12 @@ elif PlayerChoice2 == "BAT":
         FD = False
         PlayerBalls2 = PlayerBalls2 + 1
         print("Player 1 is now rolling the Bowling Dice")
-        print()
-        sleep(3)
-        print()
         Bowling = randint(0, 5)
         DieChoice, Out, PlayerBalls2, PlayerScore2, NBFH = BD(Bowling, PlayerScore2, PlayerBalls2)
-        print()
-        sleep(3)
-        print()
+        sleep(1)
         if DieChoice:
             print("Bowler hasn't got the batsman out yet!")
-            print()
-            sleep(2)
-            print()
             BatsmanDiceChoice = str(input("Does Player2 want the batsman to go Aggressive (High chances of getting out) or Conservative (Low chances of getting out)? "))
-            print()
-            sleep(2)
-            print()
             if BatsmanDiceChoice.upper() == "AGGRESSIVE" or BatsmanDiceChoice.upper() == "A":
                 print("Alright Aggresive Dice it is!")
                 AggressiveDieChoosen = True
@@ -537,75 +388,38 @@ elif PlayerChoice2 == "BAT":
                 ConservativeDieChoosen = True
             else:
                 print("You have entered an Invalid Die Choice.\nIt's too late!\n No Run!\n Enter Valid Choice [Type ('AGGRESSIVE' OR 'A') OR ('CONSERVATIVE' OR 'C')]")
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if ConservativeDieChoosen:
             print("Player 2 is now rolling the Conservative Dice")
-            print()
-            sleep(3)
-            print()
             Batting = randint(0,5)
             RD, UD = CD(Batting, NBFH)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         elif AggressiveDieChoosen:
             print("Player 2 is now rolling the Aggressive Dice")
-            print()
-            sleep(3)
-            print()
             Batting = randint(0,5)
             FD, PlayerScore2 = AD(Batting, PlayerScore2, FreeHit)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if FD:
             print("Player 1 is now rolling the Fielding Dice")
-            print()
-            sleep(3)
-            print()
             Fielding = randint(0,5) 
             RD, Out, UD = FeD(Fielding, Batting)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if UD:
             print("Player 1 is now rolling the Umpiring Dice")
-            print()
-            sleep(3)
-            print()
             UmpireCall = randint(0, 5)
             RD, Out = UmD(UmpireCall, Fielding)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if RD:
             print("Player 2 is now rolling the Run Dice")
-            print()
-            sleep(3)
-            print()
             Run = randint(0, 5)
             PlayerScore2 = RuD(Run, PlayerScore2)
-            print()
-            sleep(3)
-            print()
-
+            sleep(1)
         print("Player 2 Score: " + str(PlayerScore2))
         print("Balls: " + str(PlayerBalls2))
-    
-    print()
-    sleep(10)
-    print()
-
+        sleep(1)
     print("1st Innings is over. Player 1 needs " + str(PlayerScore2 + 1) + " Runs to win!")
-
-    print()
-    sleep(5)
-    print()
-
     print("Let's continue!")
-
+    sleep(1)
     Out = False
     TargetReach = False
     while not Out or not TargetReach:
@@ -618,23 +432,12 @@ elif PlayerChoice2 == "BAT":
         FD = False
         PlayerBalls1 = PlayerBalls1 + 1
         print("Player 2 is now rolling the Bowling Dice")
-        print()
-        sleep(3)
-        print()
         Bowling = randint(0, 5)
         DieChoice, Out, PlayerBalls1, PlayerScore1, NBFH = BD(Bowling, PlayerScore1, PlayerBalls1)
-        print()
-        sleep(3)
-        print()
+        sleep(1)
         if DieChoice:
             print("Bowler hasn't got the batsman out yet!")
-            print()
-            sleep(2)
-            print()
             BatsmanDiceChoice = str(input("Does Player1 want the batsman to go Aggressive (High chances of getting out) or Conservative (Low chances of getting out)? "))
-            print()
-            sleep(2)
-            print()
             if BatsmanDiceChoice.upper() == "AGGRESSIVE" or BatsmanDiceChoice.upper() == "A":
                 print("Alright Aggresive Dice it is!")
                 AggressiveDieChoosen = True
@@ -643,83 +446,46 @@ elif PlayerChoice2 == "BAT":
                 ConservativeDieChoosen = True
             else:
                 print("You have entered an Invalid Die Choice.\nIt's too late!\n No Run!\n Enter Valid Choice [Type ('AGGRESSIVE' OR 'A') OR ('CONSERVATIVE' OR 'C')]")
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if ConservativeDieChoosen:
             print("Player 1 is now rolling the Conservative Dice")
-            print()
-            sleep(3)
-            print()
             Batting = randint(0,5)
             RD, UD = CD(Batting, NBFH)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         elif AggressiveDieChoosen:
             print("Player 1 is now rolling the Aggressive Dice")
-            print()
-            sleep(3)
-            print()
             Batting = randint(0,5)
             FD, PlayerScore1 = AD(Batting, PlayerScore1, FreeHit)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if FD:
             print("Player 2 is now rolling the Fielding Dice")
-            print()
-            sleep(3)
-            print()
             Fielding = randint(0,5) 
             RD, Out, UD = FeD(Fielding, Batting)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if UD:
             print("Player 2 is now rolling the Umpiring Dice")
-            print()
-            sleep(3)
-            print()
             UmpireCall = randint(0, 5)
             RD, Out = UmD(UmpireCall, Fielding)
-            print()
-            sleep(3)
-            print()
+            sleep(1)
         if RD:
             print("Player 1 is now rolling the Run Dice")
-            print()
-            sleep(3)
-            print()
             Run = randint(0, 5)
             PlayerScore1 = RuD(Run, PlayerScore1)
-            print()
-            sleep(3)
-            print()
-
+            sleep(1)
         print("Player 1 Score: " + str(PlayerScore1))
         print("Balls: " + str(PlayerBalls1))
-
-        print()
-        sleep(3)
-        print()
-
-        if PlayerScore2 > PlayerScore1:
+        sleep(1)
+        if PlayerScore2 >= PlayerScore1:
             print("Player1 Needs " + str(((PlayerScore2 + 1) - PlayerScore1)) + " More Run(s) to win!")
-            TargetReach = True
         elif PlayerScore1 == PlayerScore2:
             print("Scores Are tied!")
-        else:
+        elif PlayerScore2 < PlayerScore1:
             TargetReach = True
-
-    print()
-    sleep(5)
-    print()
-
     print("Match Over!")
-    if PlayerScore2 > PlayerScore1:
-        print("Player1 Won the Match")
+    sleep(1)
+    if PlayerScore2 >= PlayerScore1:
+        print("Player2 Won the Match")
     elif PlayerScore2 == PlayerScore1:
         print("Scores Are tied!")
-    else:
-        print("Player2 Won the Match")
+    elif PlayerScore2 < PlayerScore1:
+        print("Player1 Won the Match")
