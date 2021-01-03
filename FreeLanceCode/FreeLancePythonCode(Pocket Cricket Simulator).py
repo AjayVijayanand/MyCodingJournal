@@ -107,25 +107,30 @@ def FeD(DieResult1, DieResult2):
     if FieldingDie[DieResult1] == "Through the Gap":
         if AggressiveDie[DieResult2] == "Outside Edge":
             print("But it's through the gap!")
+            return True, False, False
         elif AggressiveDie[Batting] == "In the Air?":
             print("But it's in no man's land so he's safe!")
+            return True, False, False
         else:
             print("Good placement by the batsman, should get some runs")
-        return True, False, False
+            return True, False, False
     elif FieldingDie[DieResult1] == "Over the Top":
         if AggressiveDie[DieResult2] == "Outside Edge" or AggressiveDie[DieResult2] == "In the Air?":
             print("Just over the fielder's head, they gotta run hard")
+            return True, False, False
         else:
             print("Lofted over the fielder. They are gonna get some runs here")
-        return True, False, False
+            return True, False, False
     elif FieldingDie[DieResult1] == "Dropped Catch":
         if AggressiveDie[DieResult2] == "Outside Edge":
             print("Oh dear he's dropped the catch!")
+            return True, False, False
         elif AggressiveDie[DieResult2] == "In the Air?":
             print("It's Safe! He's Dropped it. That is soo unfortunate!")
+            return True, False, False
         else:
             print("Oh he's dropped it that's unfortunate")
-        return True, False, False
+            return True, False, False
     elif FieldingDie[DieResult1] == "Classic Catch":
         if FreeHit:
             print("GONE! But it's a free hit! So that's not out.")
@@ -142,9 +147,10 @@ def FeD(DieResult1, DieResult2):
     elif FieldingDie[DieResult1] == "Shot at the Stumps":
         if ConservativeDie[DieResult2] == "Outside Edge" or ConservativeDie[DieResult2] == "In the Air?":
             print("Dropped but there maybe a runout chacne here! He get's a direct hit. It's going up stairs!")
+            return False, False, True
         else:
             print("Good throw and that's a direct hit! He maybe out! 3rd Umpire Now Checking!")
-        return False, False, True
+            return False, False, True
     elif FieldingDie[DieResult1] == "Fielded":
         print("Great Fielding. No Runs!")
         return False, False, False
