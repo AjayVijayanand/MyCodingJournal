@@ -1,0 +1,245 @@
+//Number of Seats in Each Coach
+DECLARE CoachSeats AS INTEGER
+
+
+//Number of Coaches
+DECLARE Coaches AS INTEGER
+
+
+//Trips Up (There are 4 trips)
+DECLARE TrainUpTime[4] AS INTEGER //Train Time
+DECLARE TrainUp[4] AS INTEGER //Seats Available
+DECLARE TrainUpDefault[4] AS INTEGER //Total Seats
+
+
+//Trips Down (There are 4 trips)
+DECLARE TrainDownTime[4] AS INTEGER //Train Time
+DECLARE TrainDown[4] AS INTEGER //Seats Available
+DECLARE TrainDownDefault[4] AS INTEGER //Total Seats
+
+
+//Trip Cost per head
+DECLARE TripCost AS INTEGER
+
+
+//Total Cost of Trip
+DECLARE TripTotal AS INTEGER
+
+
+//Total Collection
+DECLARE TotalCollection AS INTEGER
+
+
+//Total No. of Passengers
+DECLARE TotalPassengers AS INTEGER
+
+
+//Number of Passengers that have been Discounted in the Booking
+DECLARE DiscountedPassengers AS INTEGER
+
+
+//Validations
+DECLARE TrainUpChoiceValid AS BOOLEAN // To Check Whether Train is there OR choice is valid for the journey up
+DECLARE TrainDownChoiceValid AS BOOLEAN // To Check Whether Train is there OR choice is valid for the journey down
+DECLARE PassengerNumberValidation AS BOOLEAN //To Check Whether No of Passengers is Valid or Not and whether it can accomodate that many people
+
+
+//User Inputs
+DECLARE LocChoice AS INTEGER //Location Choice
+DECLARE TrainTimeUpCode AS INTEGER //Train Time Choice for going Up
+DECLARE TrainTimeDownCode AS INTEGER //Train Time Choice for going Down
+DECLARE PassengerNo AS INTEGER //Number of Passengers
+
+
+//Variables to find the highest number of Passengers in a TrainHighestPassengersUp
+DECLARE TrainTimeWithHighestPassengersUp AS INTEGER
+DECLARE HighestPassengersDown AS INTEGER
+DECLARE TrainTimeWithHighestPassengersDown AS INTEGER
+DECLARE HighestFinderUp AS INTEGER
+DECLARE HighestFinderDown AS INTEGER
+
+
+CoachSeats <-- 80
+Coaches <-- 6
+TrainUpTime[] <-- [9, 11, 13, 15]
+TrainUpDefault[] <-- [CoachSeats * Coaches, CoachSeats * Coaches, CoachSeats * Coaches, CoachSeats * Coaches]
+TrainUp[] <-- [CoachSeats * Coaches, CoachSeats * Coaches, CoachSeats * Coaches, CoachSeats * Coaches]
+TrainDownTime[] <-- [10, 12, 14, 16]
+TrainDownDefault[] <-- [CoachSeats * Coaches, CoachSeats * Coaches, CoachSeats * Coaches, CoachSeats * (Coaches + 2)]
+TrainDown[] <-- [CoachSeats * Coaches, CoachSeats * Coaches, CoachSeats * Coaches, CoachSeats * (Coaches + 2)]
+TripCost <-- 25
+TotalCollection <-- 0
+LocChoice <-- 1
+
+
+WHILE LocChoice <> 0 DO 
+    PRINT "Where are you taking the Train from?"
+    PRINT "1 - Bottom of the Mountain"
+    PRINT "2 - Top of the Mountain"
+    PRINT "0 - Exit"
+    INPUT "Enter your location: ", LocChoice
+    CASE LocChoice OF 
+        1:
+            PRINT "You are at the Bottom of the Mountain"
+            PRINT "There is only two-way trips available
+            PRINT "Train Times for going Up: "
+
+            FOR TrainNo <-- 1 TO 4
+                IF TrainUp[TrainNo] = 0 THEN
+                    PRINT "Available Seats in Train at time ", TrainUpTime[TrainNo], ":00: CLOSED"
+                ELSE
+                    PRINT "Available Seats in Train at time ", TrainUpTime[TrainNo], ":00: ", TrainUp[TrainNo], "   (Enter Code ", TrainNo, " to book that seat)" 
+                ENDIF
+            NEXT TrainNo
+
+            TrainUpChoiceValid <-- False
+
+            WHILE TrainUpChoiceValid = False DO 
+                INPUT "Enter Time Of Train You Want To Board from the bottom of the Mountain (Use the Code to choose the Time): ", TrainTimeUpCode
+                IF TrainUp[TrainTimeUpCode] = 0 THEN
+                    PRINT "Train is closed for booking. Please enter another time"
+                ELSE IF TrainTimeUpCode < 1 OR TrainTimeUpCode > 4 THEN 
+                    PRINT "Invalid Choice. Please enter a valid Number"
+                ELSE   
+                    PRINT "You have choosen the time: ", TrainUpTime[TrainTimeUpCode]
+                    TrainUpChoiceValid <-- True
+                ENDIF
+            ENDWHILE
+
+            PRINT "Train Times for going Down: "
+            FOR TrainNo <-- 1 TO 4
+                IF TrainUp[TrainNo] = 0 THEN
+                    PRINT "Available Seats in Train at time ", TrainDownTime[TrainNo], ":00: CLOSED"
+                ELSE
+                    PRINT "Available Seats in Train at time ", TrainDownTime[TrainNo], ":00: ", TrainDown[TrainNo], "   (Enter Code ", TrainNo, " to book that seat)" 
+                ENDIF
+            NEXT TrainNo
+
+            TrainDownChoiceValid <-- False
+
+            WHILE TrainDownChoiceValid = False DO 
+                INPUT "Enter Time Of Train You Want To Board from the bottom of the Mountain (Use the Code to choose the Time): ", TrainTimeDownCode
+                IF TrainUp[TrainTimeDownCode] = 0 THEN
+                    PRINT "Train is closed for booking. Please enter another time"
+                ELSE IF TrainTimeDownCode < 1 OR TrainTimeDownCode > 4 THEN 
+                    PRINT "Invalid Choice. Please enter a valid Number"
+                ELSE   
+                    PRINT "You have choosen the time: ", TrainUpTime[TrainTimeDownCode]
+                    TrainDownChoiceValid <-- True
+                ENDIF
+            ENDWHILE
+
+            PassengerNumberValidation <-- False
+
+            WHILE PassengerNumberValidation = False DO
+                INPUT "Enter Number Of Passengers: ", PassengerNo
+                IF PassengerNo < 0 THEN
+                    PRINT "Enter Valid Number of Passengers"
+                ELSE IF TrainUp[TrainTimeDownCode] < PassengerNo THEN
+                    PRINT "Not enough Seats!"
+                ELSE
+                    PRINT "Accepted!"
+                    PassengerNumberValidation <-- True
+                ENDIF
+            ENDWHILE
+
+            IF PassengerNo >= 10 AND PassengerNo <= 80 THEN
+                DiscountedPassengers <-- INT(PassengerNo/10)
+            ELSE 
+                DiscountedPassengers <-- 0
+            ENDIF
+            
+            TotalPrice <-- PassengerNo * (TripCost*2)
+            Discount <-- DiscountedPassengers * (TripCost*2)
+            GrandTotal <-- TotalPrice - Discount
+
+            PRINT "Total Cost of Trip: $", TotalPrice
+            PRINT "Discounted Price: $", Discount
+            PRINT "Grand Total: $", GrandTotal
+
+            TotalCollection <-- TotalCollection + GrandTotal
+            TotalPassengers <-- TotalCollection + PassengerNo
+        2:
+            PRINT "You are at the Top of the Mountain"
+            PRINT "There is only one way trips available"
+            PRINT "Train Times for going Down: "
+            FOR TrainNo <-- 1 TO 4
+                IF TrainUp[TrainNo] = 0 THEN
+                    PRINT "Available Seats in Train at time ", TrainDownTime[TrainNo], ":00: CLOSED"
+                ELSE
+                    PRINT "Available Seats in Train at time ", TrainDownTime[TrainNo], ":00: ", TrainDown[TrainNo], "   (Enter Code ", TrainNo, " to book that seat)" 
+                ENDIF
+            NEXT TrainNo
+
+            TrainDownChoiceValid <-- False
+
+            WHILE TrainDownChoiceValid = False DO 
+                INPUT "Enter Time Of Train You Want To Board from the bottom of the Mountain (Use the Code to choose the Time): ", TrainTimeDownCode
+                IF TrainUp[TrainTimeDownCode] = 0 THEN
+                    PRINT "Train is closed for booking. Please enter another time"
+                ELSE IF TrainTimeDownCode < 1 OR TrainTimeDownCode > 4 THEN 
+                    PRINT "Invalid Choice. Please enter a valid Number"
+                ELSE   
+                    PRINT "You have choosen the time: ", TrainUpTime[TrainTimeDownCode]
+                    TrainDownChoiceValid <-- True
+                ENDIF
+            ENDWHILE
+
+            PassengerNumberValidation <-- False
+
+            WHILE PassengerNumberValidation = False DO
+                INPUT "Enter Number Of Passengers: ", PassengerNo
+                IF PassengerNo < 0 THEN
+                    PRINT "Enter Valid Number of Passengers"
+                ELSE IF TrainUp[TrainTimeDownCode] < PassengerNo THEN
+                    PRINT "Not enough Seats!"
+                ELSE
+                    PRINT "Accepted!"
+                    PassengerNumberValidation <-- True
+                ENDIF
+            ENDWHILE
+
+            IF PassengerNo >= 10 AND PassengerNo <= 80 THEN
+                DiscountedPassengers <-- INT(PassengerNo/10)
+            ELSE 
+                DiscountedPassengers <-- 0
+            ENDIF
+
+            TotalPrice <-- PassengerNo * (TripCost)
+            Discount <-- DiscountedPassengers * (TripCost)
+            GrandTotal <-- TotalPrice - Discount
+
+            PRINT "Total Cost of Trip: $", TotalPrice
+            PRINT "Discounted Price: $", Discount
+            PRINT "Grand Total: $", GrandTotal
+
+            TotalCollection <-- TotalCollection + GrandTotal
+            TotalPassengers <-- TotalCollection + PassengerNo
+        0:
+            PRINT "Day has ended"
+            PRINT "Total Collection: $", TotalCollection
+            PRINT "Total Number of Passengers: ", TotalPassengers
+
+            HighestPassengersUp <-- TrainUpDefault[1] - TrainUp[1]
+            TrainTimeWithHighestPassengersUp <-- TrainTimeUp[1]
+
+            HighestPassengersDown <-- TrainDownDefault[1] - TrainDown[1]
+            TrainTimeWithHighestPassengersDown <-- TrainTimeDown[1]
+            FOR HighestFinderUp <-- 2 TO 4
+                IF HighestPassengersUp < (TrainUpDefault[HighestFinderUp] - TrainUp[HighestFinderUp]) THEN
+                    HighestPassengersUp <-- TrainUpDefault[HighestFinderUp] - TrainUp[HighestFinderUp]
+                    TrainTimeWithHighestPassengersUp <-- TrainTimeUp[HighestFinderUp]
+                ENDIF
+            NEXT HighestFinderUp
+            FOR HighestFinderDown <-- 2 TO 4
+                IF HighestPassengersDown < (TrainDownDefault[HighestFinderDown] - TrainDown[HighestFinderDown]) THEN
+                    HighestPassengersDown <-- TrainDownDefault[HighestFinderDown] - TrainDown[HighestFinderDown]
+                    TrainTimeWithHighestPassengersDown <-- TrainTimeDown[HighestFinderDown]
+                ENDIF
+            NEXT HighestFinderDown
+            PRINT "Highest Number of Passengers in the Journey Towards the Top of the Mountain: ", HighestPassengersUp
+            PRINT "Time at which the Highest Number of Passengers in the Journey Towards the Top of the Mountain was recorded: ", TrainTimeWithHighestPassengersUp
+            PRINT "Highest Number of Passengers in the Journey Towards the Bottom of the Mountain: ", HighestPassengersDown
+            PRINT "Time at which the Highest Number of Passengers in the Journey Towards the Bottom of the Mountain was recorded: ", TrainTimeWithHighestPassengersDown
+            PRINT "Good Bye"
+        OTHERWISE PRINT "ENTER VALID OPTION" ENDCASE
