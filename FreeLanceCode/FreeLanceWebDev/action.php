@@ -1,16 +1,22 @@
-<html>
-<body>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "REMOVED";
 
-<h1> WELCOME TO </h1>
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
-<?php 
-echo $_POST["Players"]; 
-echo '<br>';
-echo $_POST["Player1Toss"]; 
-echo '<br>';
-echo $_POST["Player2Toss"]; 
-echo '<br>';
+// Create database
+$sql = "CREATE DATABASE ItWorks";
+if ($conn->query($sql) === TRUE) {
+  echo "Database created successfully";
+} else {
+  echo "Error creating database: " . $conn->error;
+}
+
+$conn->close();
 ?>
-
-</body>
-</html>
