@@ -4,7 +4,8 @@ import java.util.*;
 public class FA2PSCJAVAQ8 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int num = 40;
+        System.out.println("Enter Number: ");
+        int num = input.nextInt();
         int Factors = 0;
         for (int x = 2; x < num; x++){
             if (num % x == 0){

@@ -9,6 +9,7 @@ public class FA2PSCJAVAQ3 {
         while (c <= 50){
             if (x % 10 == 0){
                 x = x + 2;
+                c = c + 1;
                 continue;
             } 
             System.out.println(x); 
