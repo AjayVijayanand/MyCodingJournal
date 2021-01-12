@@ -1,7 +1,7 @@
-/**PseudoCodetoJavaQ1 (Swtich...Case Calculator)**/
+//Java Code for five function calculator (continues till user wants)
 import java.util.*;
 
-public class PseudoCodeToJavaQ1 {
+public class FA2PSCJAVAQ2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int Result;
