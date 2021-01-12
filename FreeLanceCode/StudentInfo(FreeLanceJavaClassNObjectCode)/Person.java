@@ -1,9 +1,9 @@
 import java.time.LocalDate;
-public class StudentBio{
+public class Person{
     private String Name;
     private int Age;
     private LocalDate DOB;
-    public StudentBio(String n, int a, int d, int m, int y){
+    public void Person(String n, int a, int d, int m, int y){
         Name = n;
         Age = a;
         DOB = LocalDate.of(y, m, d);
