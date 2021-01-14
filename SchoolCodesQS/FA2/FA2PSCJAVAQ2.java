@@ -5,16 +5,23 @@ public class FA2PSCJAVAQ2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int Result;
+        int FN;
+        int SN;
         boolean Exit = false;
         System.out.println("WELCOME TO THE CALCULATOR");
         while (Exit == false){
             System.out.println("Choices:\n1 - Addition\n2 - Subtraction\n3 - Multiplication\n4 - Division\n5 - Reminder\n6 - Exit ");
             System.out.println("Enter Choice: ");
             int Choice = input.nextInt();
-            System.out.println("Enter First Number: ");
-            int FN = input.nextInt();
-            System.out.println("Enter Second Number: ");
-            int SN = input.nextInt();
+            if (Choice != 6){
+                System.out.println("Enter First Number: ");
+                FN = input.nextInt();
+                System.out.println("Enter Second Number: ");
+                SN = input.nextInt();
+            } else {
+                FN = 0;
+                SN = 0;
+            }
             switch (Choice){
                 case 1:
                     System.out.println("You have choosen: Addition");
