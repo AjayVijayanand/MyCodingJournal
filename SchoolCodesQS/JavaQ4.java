@@ -10,7 +10,7 @@ public class JavaQ4{
         double r;
         double Result;
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter your Choice: ");
+        System.out.println("Looking into the Progressions...\nYour Choices:Enter your Choice: ");
         int Choice = input.nextInt();
         switch (Choice){
             case 1:
