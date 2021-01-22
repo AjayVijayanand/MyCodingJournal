@@ -16,6 +16,5 @@ public class FA2PSCJAVAQ3 {
             x = x + 2;
             c = c + 1;
         }
-
     }
 }
