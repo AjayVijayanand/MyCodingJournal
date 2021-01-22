@@ -1,7 +1,7 @@
 //Java Code for printing first 50 even numbers (except multiples of 10)
 import java.util.*;
 
-public class FA2PSCJAVAQ3 {
+public class J2Q3 {
     public static void main(String[] args) {
         int c = 1;
         int x = 2;

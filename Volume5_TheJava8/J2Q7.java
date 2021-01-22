@@ -1,7 +1,7 @@
 //Java Code to print maximum out of 3 user entered numbers (using nested if condition)
 import java.util.*;
 
-public class FA2PSCJAVAQ7 {
+public class J2Q7 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter 1st Number:");

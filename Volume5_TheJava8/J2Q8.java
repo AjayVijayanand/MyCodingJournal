@@ -1,7 +1,7 @@
 //Java Code to check if user entered number is prime or has factors
 import java.util.*;
 
-public class FA2PSCJAVAQ8 {
+public class J2Q8 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter Number: ");

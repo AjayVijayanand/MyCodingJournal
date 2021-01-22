@@ -1,7 +1,7 @@
 //Java Code to read  a number 1 to 7 from user and print respective day of week e.g if user enters 1 code prints Monday 
 import java.util.*;
 
-public class FA2PSCJAVAQ6 {
+public class J2Q6 {
     
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

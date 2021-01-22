@@ -3,7 +3,7 @@
 //long - max accurate factorial for num: 20, Values which is not zero = 65
 import java.util.*;
 
-public class FA2PSCJAVAQ1 {
+public class J2Q1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your Number: ");

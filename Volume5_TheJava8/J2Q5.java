@@ -1,7 +1,7 @@
 //Java Code to read 10 numbers from user and count and print how many are even and odd
 import java.util.*;
 
-public class FA2PSCJAVAQ5 {
+public class J2Q5 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         

@@ -1,4 +1,4 @@
-public class FreeLanceJava2 {
+public class FLJ2 {
     public static void main(String[] args){
         MathOperators Math = new MathOperators();
         System.out.println(Math.Addition(5, 6));
