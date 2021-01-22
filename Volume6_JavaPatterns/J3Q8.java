@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class FA3JavaQ8 {
+public class J3Q8 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter number pattern");
