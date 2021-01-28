@@ -20,7 +20,7 @@ TBalls2 = 0
 ScoreCardLimit = False
 
 print("WELCOME TO BOOK CRICKET SIMULATOR")
-print()
+print
 ValidInput = False
 while not ValidInput:
     try:
@@ -32,7 +32,7 @@ while not ValidInput:
     except ValueError:
         print("Enter Valid Value")
     
-print()
+print
 N1 = str(input("Enter Name of Team 1: "))
 Name1 = N1.upper()
 
@@ -40,7 +40,7 @@ for i in range(0, Players):
     NamesTeam1 = str(input("Enter Name of Player of Team 1: "))
     Team1.append(NamesTeam1)
 
-print()
+print
 N2 = str(input("Enter Name of Team 2: "))
 Name2 = N2.upper()
 
@@ -48,12 +48,12 @@ for i in range(0, Players):
     NamesTeam2 = str(input("Enter Name of Player of Team 2: "))
     Team2.append(NamesTeam2)
 
-print()
+print
 print("WELCOME TO " + Name1 + " VS " + Name2)
 time.sleep(3)
 Toss = randint(0, 1)
 Choose = randint(0, 1)
-print()
+print
 
 if Toss == 0:
     print(Name1 + " WON THE TOSS")
@@ -76,7 +76,7 @@ else:
         ChooseTeam2 = "BOWL"
         ChooseTeam1 = "BAT"
 
-print()
+print
 time.sleep(3)
 print("SO, ")
 print(Name1 + " WILL " + ChooseTeam1)
@@ -87,7 +87,7 @@ time.sleep(3)
 
 if ChooseTeam1 == "BAT":
     while Wicket1 <= (Players - 1):
-        print()
+        print
         print(Team1[Wicket1] + " IS BATTING")
         time.sleep(3)
         Runs = 1
@@ -111,23 +111,23 @@ if ChooseTeam1 == "BAT":
         time.sleep(3)
         IRUN1.append(IndScore)
         IBall1.append(Balls)
-        print()
+        print
         print(Team1[Wicket1] + " IS OUT FOR " + str(IndScore) + " IN " + str(Balls) + " BALLS")
         Wicket1 = Wicket1 + 1
         time.sleep(3)
-        print()
+        print
         print(Name1 + " SCORE IS " + str(TRUN1))
         print("BALLS " + str(TBalls1))
         print(Name1 + " LOST " + str(Wicket1) + " WICKETS")
     
     time.sleep(10)
-    print()
+    print
     print("1ST INNING IS OVER!")
     print(Name1 + ": " + str(TRUN1))
     print(Name2 + " NEEDS " + str(TRUN1 + 1) + " TO WIN WITH " + str(Players) + " WICKETS REMAINING")
 
     while TRUN2 < TRUN1 and  Wicket2 <= (Players - 1):
-        print()
+        print
         print(Team2[Wicket2] + " IS BATTING")
         time.sleep(3)
         Runs = 1
@@ -154,22 +154,22 @@ if ChooseTeam1 == "BAT":
         IRUN2.append(IndScore)
         IBall2.append(Balls)
         if Runs == 0:
-            print()
+            print
             print(Team2[Wicket2] + " IS OUT FOR " + str(IndScore) + " IN " + str(Balls) + " BALLS")
             Wicket2 = Wicket2 + 1
             time.sleep(3)
-            print()
+            print
             print(Name2 + " SCORE IS " + str(TRUN2))
             print("BALLS " + str(TBalls2))
             print(Name2 + " LOST " + str(Wicket2) + " WICKETS")
         else:
-            print()
+            print
             print(Team2[Wicket2] + " SCORED " + str(IndScore) + " IN " + str(Balls) + " BALLS")
             print(Name2 + " SCORE IS " + str(TRUN2))
             print("BALLS " + str(TBalls2))
 
     time.sleep(10)
-    print()
+    print
     print("MATCH OVER!")
     if TRUN1 < TRUN2: 
         WinningMargin = Players - Wicket2
@@ -182,7 +182,7 @@ if ChooseTeam1 == "BAT":
         print("SCORES ARE TIED!")
     
     time.sleep(3)
-    print()    
+    print    
     print(Name1 + " SCORECARD")
     time.sleep(1)
     for x in range(0, Wicket1):
@@ -190,7 +190,7 @@ if ChooseTeam1 == "BAT":
         print(str(Team1[x].upper()) + " SCORED " + str(IRUN1[x]) + " RUNS IN " + str(IBall1[x]) + " BALLS")
     
     time.sleep(3)
-    print()    
+    print   
     print(Name2 + " SCORECARD")
     time.sleep(1)
     for x in range(0, Wicket2):
@@ -202,7 +202,7 @@ if ChooseTeam1 == "BAT":
 
 elif ChooseTeam1 == "BOWL":
     while Wicket2 <= (Players - 1):
-        print()
+        print
         print(Team2[Wicket2] + " IS BATTING")
         time.sleep(3)
         Runs = 1
@@ -226,23 +226,23 @@ elif ChooseTeam1 == "BOWL":
         time.sleep(3)
         IRUN2.append(IndScore)
         IBall2.append(Balls)
-        print()
+        print
         print(Team2[Wicket2] + " IS OUT FOR " + str(IndScore) + " IN " + str(Balls) + " BALLS")
         Wicket2 = Wicket2 + 1
         time.sleep(3)
-        print()
+        print
         print(Name2 + " SCORE IS " + str(TRUN2))
         print("BALLS " + str(TBalls2))
         print(Name2 + " LOST " + str(Wicket2) + " WICKETS")
     
     time.sleep(10)
-    print()
+    print
     print("1ST INNING IS OVER!")
     print(Name2 + ": " + str(TRUN2))
     print(Name1 + " NEEDS " + str(TRUN2 + 1) + " TO WIN WITH " + str(Players) + " WICKETS REMAINING")
 
     while TRUN1 < TRUN2 and  Wicket1 <= (Players - 1):
-        print()
+        print
         print(Team1[Wicket1] + " IS BATTING")
         time.sleep(3)
         Runs = 1
@@ -269,22 +269,22 @@ elif ChooseTeam1 == "BOWL":
         IRUN1.append(IndScore)
         IBall1.append(Balls)
         if Runs == 0:
-            print()
+            print
             print(Team1[Wicket1] + " IS OUT FOR " + str(IndScore) + " IN " + str(Balls) + " BALLS")
             Wicket1 = Wicket1 + 1
             time.sleep(3)
-            print()
+            print
             print(Name1 + " SCORE IS " + str(TRUN1))
             print("BALLS " + str(TBalls1))
             print(Name1 + " LOST " + str(Wicket1) + " WICKETS")
         else:
-            print()
+            print
             print(Team1[Wicket1] + " SCORED " + str(IndScore) + " IN " + str(Balls) + " BALLS")
             print(Name1 + " SCORE IS " + str(TRUN1))
             print("BALLS " + str(TBalls1))
 
     time.sleep(10)
-    print()
+    print
     print("MATCH OVER!")
     if TRUN2 < TRUN1: 
         WinningMargin = Players - Wicket2
@@ -297,7 +297,7 @@ elif ChooseTeam1 == "BOWL":
         print("SCORES ARE TIED!")
     
     time.sleep(3)
-    print()    
+    print   
     print(Name2 + " SCORECARD")
     time.sleep(1)
     for x in range(0, Wicket2):
@@ -305,7 +305,7 @@ elif ChooseTeam1 == "BOWL":
         print(str(Team2[x].upper()) + " SCORED " + str(IRUN2[x]) + " RUNS IN " + str(IBall2[x]) + " BALLS")
     
     time.sleep(3)
-    print()    
+    print
     print(Name1 + " SCORECARD")
     time.sleep(1)
     for x in range(0, Wicket1):
