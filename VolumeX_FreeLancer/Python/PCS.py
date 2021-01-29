@@ -166,13 +166,13 @@ def UmD(DieResult, DieResult2, FreeHit):
         else:
             print("Finger Goes Up! That's gone and the batsman will now have to walk back!")
             return False, True
-    elif UmpireDie[DieResult] == "Caught and bowled":
+    elif UmpireDie[DieResult] == "Caught and Bowled":
         if FieldingDie[DieResult2] == "Shot at the Stumps":
             print("Ohh Batsman's in! Not out!")
             return True, False
         else:
             print("Great Return Catch! That's unbelievable! The batsman can't believe it! Nor can Anyone for that matter!")
-            Out = True
+            return False, True
     elif UmpireDie[DieResult] == "Run Out":
         if FieldingDie[DieResult2] == "Shot at the Stumps":
             print("And that's gone!")
@@ -417,14 +417,11 @@ if PlayerChoice1 == "BAT":
             print("Scores Are tied!")
         elif PlayerScore1 < PlayerScore2:
             TargetReach = True
-        print(Out)
-        print(TargetReach )
     print("Match Over!")
     sleep(5)
     if PlayerScore1 < PlayerScore2:
         print("Player2 Won the Match")
     elif PlayerScore1 == PlayerScore2:
-        print("Scores Are tied!")
         sleep(1)
         SuperOver = randint(0, 1)
         if SuperOver == 0:
