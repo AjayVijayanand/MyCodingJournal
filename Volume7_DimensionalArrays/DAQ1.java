@@ -10,7 +10,7 @@ public class DAQ1{
             Total = Total + Numbers[x];
         }
         System.out.println("Array: " + Arrays.toString(Numbers));
-        System.out.println("Total of Arrays: " + Total);
+        System.out.println("Sum Total of Array Elements: " + Total);
 
     }
 }
