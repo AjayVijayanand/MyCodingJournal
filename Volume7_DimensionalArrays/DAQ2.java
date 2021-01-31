@@ -6,8 +6,13 @@ public class DAQ2{
         int[] Rev = new int[10];
         for(int x = 0; x <= 9; x++){
             System.out.print("Enter Number: ");
-            Num[x] = input.nextInt();
-            Rev[9-x] = Num[x];
+            int Number = input.nextInt();
+            Num[x] = Number;
+            if (x < 5){
+                Rev[x+5] = Number;
+            } else {
+                Rev[x-5] = Number;
+            }
         }
         System.out.println("Your Array: " + Arrays.toString(Num));
         System.out.println("Revised Array: " + Arrays.toString(Rev));

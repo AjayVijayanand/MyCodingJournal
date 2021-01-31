@@ -1,5 +1,5 @@
 import java.util.*;
-public class DAQ2{
+public class DAQ3{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         int[] Num = new int[10];
@@ -8,10 +8,11 @@ public class DAQ2{
             System.out.print("Enter Number: ");
             int Number = input.nextInt();
             Num[x] = Number;
-            if (x < 5){
-                Rev[x+5] = Number;
-            } else {
-                Rev[x-5] = Number;
+            Rev[x] = Number;
+        }
+        for(int x = 0; x <= 9; x++){
+            if (x % 2 == 1 && x != 9){
+                Rev[8-x] = Num[x];
             }
         }
         System.out.println("Your Array: " + Arrays.toString(Num));
