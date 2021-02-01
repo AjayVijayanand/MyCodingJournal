@@ -2,7 +2,11 @@ import java.util.*;
 public class DAQ6{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        int[] Num = {1,3,4,2,6,3,7};
+        int[] Num = new int[10];
+        for(int x = 0; x <= 9; x++){
+            System.out.print("Enter Number: ");
+            Num[x] = input.nextInt();
+        }
         boolean Found = false;
         System.out.print("What Number do you want to search: ");
         int Search = input.nextInt();
