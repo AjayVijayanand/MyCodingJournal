@@ -1,8 +1,8 @@
 import java.util.*;
 public class DAQ9{
     static void BinarySearch(int Search, int[] Array, int S, int E){
-        int Mid = E + (S - E)/2;
-        if ((Mid <= E)){
+        int Mid = (S + E)/2;
+        if ((S <= Mid && Mid <= E)){
             if (Array[Mid] == Search){
                 System.out.println("Character is First Found at: " + Mid);
             }

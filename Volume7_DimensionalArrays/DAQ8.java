@@ -1,8 +1,8 @@
 import java.util.*;
 public class DAQ8{
     static void BinarySearch(int Search, int[] Array, int S, int E){
-        int Mid = E + (S - E);
-        if ((Mid <= E)){
+        int Mid = (S + E)/2;
+        if (S <= Mid && Mid <= E){
             if (Array[Mid] == Search){
                 System.out.println("Number is First Found at: " + Mid);
             }
@@ -14,7 +14,7 @@ public class DAQ8{
             }
         } else {
             System.out.println("Number is not Found!");
-        }   
+        }
     }
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
