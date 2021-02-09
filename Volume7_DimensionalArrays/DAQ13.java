@@ -6,9 +6,9 @@ public class DAQ13{
         boolean Validation = false;
         int Index = 0;
         while (!Validation){
-            System.out.print("Enter where you want to remove an element: ");
+            System.out.print("Enter where you want to add a element (0 - " + Character.length  + "): ");
             Index = input.nextInt();
-            if (Index < Character.length && Index > 0){
+            if (Index < Character.length && Index >= 0){
                 Validation = true;
             } else {
                 System.out.println("Enter Valid Index");

@@ -8,9 +8,9 @@ public class DAQ11{
         System.out.print("Enter Number: ");
         int Element = input.nextInt();
         while (!Validation){
-            System.out.print("Enter where you want to add a element: ");
+            System.out.print("Enter where you want to add a element (0 - " + Num.length  + "): ");
             Index = input.nextInt();
-            if (Index < Num.length && Index > 0){
+            if (Index < Num.length && Index >= 0){
                 Validation = true;
             } else {
                 System.out.println("Enter Valid Index");
