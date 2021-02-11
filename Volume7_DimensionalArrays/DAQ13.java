@@ -16,7 +16,7 @@ public class DAQ13{
         }
         char[] Rev = new char[Character.length - 1];
         for(int x = 0, y = 0; x <= Rev.length; x++){
-            if (x == Index){
+            if (x == Index) {
                 continue;
             } else {
                 Rev[y++] = Character[x];
