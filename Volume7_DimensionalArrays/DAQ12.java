@@ -4,7 +4,6 @@ public class DAQ12{
         Scanner input = new Scanner(System.in);
         int[] Num = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int[] Rev = new int[Num.length - 1];
-        Boolean Added = false;
         for(int x = 0; x <= Rev.length - 1; x++){
             Rev[x] = Num[x];
         }
