@@ -11,7 +11,7 @@ public class DAQ6{
         System.out.print("What Number do you want to search: ");
         int Search = input.nextInt();
         System.out.println("Your Array: " + Arrays.toString(Num));
-        System.out.println("Element Searched: " + Search);
+        System.out.println("Element Searche: " + Search);
         for(int x = 0; x <= (Num.length - 1); x++){
             if (Num[x] == Search){
                 System.out.println("Element found at Index: " + x);

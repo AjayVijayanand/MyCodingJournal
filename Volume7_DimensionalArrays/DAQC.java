@@ -1,5 +1,5 @@
 import java.util.*;
-public class DAQ13{
+public class DAQC {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         char[] Character = {'a', 'b', 'd', 'c', 'x', 'y', 'z', 'r', 'q'};
