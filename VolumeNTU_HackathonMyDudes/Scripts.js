@@ -1,3 +1,5 @@
+//Special thanks to the Google Developer Website: https://developers.google.com/calendar/quickstart/js
+
 var CLIENT_ID = 'REMOVED';
 var API_KEY = 'REMOVED';
 
