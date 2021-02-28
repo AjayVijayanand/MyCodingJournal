@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<title>Study Grove</title>
+<body>
+<div class="header">
+  <h1>Study Grove</h1>
+</div>
+
+<div class="Home">
+  <div class="startup">
+    <h1>STUDY GROVE</h1>
+    <p>Welome to study grove - an online platform for note-making, timeline planning, and task organisation.</p>
+    <h4>Authenticate your Google Email ID to use the website: </h4>
+    <button id="authorize_button" style="display: none;">Authorize</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>
+    <br>
+  </div>
+</div>
+
+<div class="startup">
+<h1 style="text-align: center;">Event Adder</h1>
+<h3>Add your Event</h3>
+<br>
+<form name="EventDetails">
+    Enter Subject:
+    <br>
+    <input type="text" id="Subject">
+    <br>
+    Enter Description:
+    <br>
+    <input type="text" id="Description">
+    <br>
+    Enter Your Email:
+    <br>
+    <input type="email" id="emailID">
+    <br>
+    Enter Start Time:
+    <br>
+    <input type="datetime-local" id="startTime">
+    <br>
+    Enter End Time:
+    <br>
+    <input type="datetime-local" id="endTime">
+    <br>
+    <input type="submit" onclick="AddEvIt()">
+</form>
+</div>
+
+<div class="timeline">
+  <div class="startup">
+  <h1 style="text-align: center;">Timeline</h1>
+  <h3>Upcoming Events: </h3>
+  <pre id="content" style="white-space: pre-wrap;"></pre>
+  <div></div>
+</div>
+
+<div class-"AboutUs">
+  <div class="startup">
+    <h1 style="text-align: center;">About Us</h1>
+    <p>We are a group of IB students currently struggling with unbearable workload amidst a global pandemic.</p>
+    <p>With digital learning on the rise, we believe that an online platform is a viable solution for students to keep track of their busy schedules at any time or place.</p>
+  </div>
+</div>
+
+<script src="Scripts.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+<script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+
+</body>
+</html>

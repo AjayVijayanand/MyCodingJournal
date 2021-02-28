@@ -1,0 +1,103 @@
+body{
+    background-image: url(2.jpg);
+    background-color: #A3D2CA;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+.startup{
+    margin-top:100px;
+    width: 75%;
+    height: auto;
+    margin-left:12.5%;
+    padding:25px;
+    box-sizing:border-box;
+    background-color:#F8F1F1;
+    border-radius:10px;
+    color:#000000;
+}
+
+.header{
+    background-color: #F8F1F1;
+    padding: 5px;
+    opacity: 0.8;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+button{
+    background-color: #EB5F35;
+    padding: 20px 40px;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+}
+
+button:hover{
+    transition-duration: 0.4s;
+    background-color: #F8F1F1;
+}
+
+input {
+    margin: 8px 0;
+    width: auto;
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+input[type="submit"]{
+    margin: 8px 0;
+    background-color: #EB5F35;
+    padding: 10px 50px;
+    border: none;
+    font-size: large;
+    font-weight: 10000;
+}
+
+input[type="submit"]:hover{
+    transition-duration: 0.4s;
+    background-color: #F8F1F1;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F8F1F1;
+  }
+  
+li {
+    float: left;
+    border-right: 1px solid #000;
+}
+  
+li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+    text-decoration: underline;
+    color: #F8F1F1;
+    background-color: #000;
+}
+
+li:hover{
+    border-right: 1px solid #F8F1F1;
+}
+
+li .active{
+    color: #F8F1F1;
+    background-color: #000;
+}
