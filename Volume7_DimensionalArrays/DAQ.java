@@ -1,5 +1,6 @@
+package Volume7_DimensionalArrays;
 import java.util.*;
-public class DAQ1{
+public class DAQ{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         int[] Numbers = new int[10];
