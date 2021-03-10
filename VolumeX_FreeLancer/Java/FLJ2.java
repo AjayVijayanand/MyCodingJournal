@@ -1,3 +1,4 @@
+package VolumeX_FreeLancer.Java;
 public class FLJ2 {
     public static void main(String[] args){
         MathOperators Math = new MathOperators();

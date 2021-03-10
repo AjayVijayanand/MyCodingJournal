@@ -1,5 +1,6 @@
 //FreeLancePseudoCodetoJava1 (Factorials)
-public class FreeLancePseudoCodeToJava1 {
+package Volume2_TheJavaBasics;
+public class PseudoCodeToJavaQ6 {
     public static void main(String args[]){
         int x = 0;
         int factorial = 1;

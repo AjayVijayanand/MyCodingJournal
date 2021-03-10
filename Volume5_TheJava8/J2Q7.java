@@ -1,4 +1,5 @@
 //Java Code to print maximum out of 3 user entered numbers (using nested if condition)
+package Volume5_TheJava8;
 import java.util.*;
 
 public class J2Q7 {

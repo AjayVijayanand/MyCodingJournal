@@ -1,4 +1,5 @@
 //Java Code to check if user entered number is prime or has factors
+package Volume5_TheJava8;
 import java.util.*;
 
 public class J2Q8 {

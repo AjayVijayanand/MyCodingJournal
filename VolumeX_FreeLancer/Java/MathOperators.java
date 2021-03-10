@@ -1,3 +1,4 @@
+package VolumeX_FreeLancer.Java;
 public class MathOperators {
     public double Addition(double Num1, double Num2){
         double Result = Num1 + Num2;

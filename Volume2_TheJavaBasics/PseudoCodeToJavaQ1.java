@@ -1,4 +1,5 @@
 /**PseudoCodetoJavaQ1 (Swtich...Case Calculator)**/
+package Volume2_TheJavaBasics;
 import java.util.*;
 
 public class PseudoCodeToJavaQ1 {

@@ -1,3 +1,4 @@
+package Volume6_JavaPatterns;
 import java.util.*;
 
 public class J3Q6 {

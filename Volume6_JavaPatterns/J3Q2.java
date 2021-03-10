@@ -1,6 +1,7 @@
+package Volume6_JavaPatterns;
 import java.util.*;
 
-public class FA3JavaQ2 {
+public class J3Q2 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter number pattern");
