@@ -40,7 +40,7 @@ public class Question{
                     }
                 }
                 System.out.println("The Area of the circle is Pi * " + A + "^2");
-                Answer = 3.14 * A;
+                Answer = Math.PI * A;
                 System.out.println("Answer: " + Answer);
                 break;
             case 2:
