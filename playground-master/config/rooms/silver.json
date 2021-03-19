@@ -1,0 +1,65 @@
+{
+  "background": "<id>.svg",
+  "sponsor": true,
+  "corners": "0.8260,0.6037;0.4424,0.9992;0.1728,0.7246;0.5541,0.3251",
+  "elements": [
+    {
+      "x": 0.5082,
+      "y": 0.2957,
+      "width": 0.0555,
+      "path": "door_flipped.svg"
+    },
+    {
+      "x": 0.652,
+      "y": 0.4814,
+      "width": 0.219,
+      "path": "desk_<id>.svg"
+    },
+    {
+      "x": 0.5654,
+      "y": 0.7142,
+      "width": 0.0368,
+      "path": "plant_<id>.svg"
+    },
+    {
+      "x": 0.4164,
+      "y": 0.4608,
+      "width": 0.1159,
+      "path": "shelf_yellow.svg"
+    },
+    {
+      "x": 0.5598,
+      "y": 0.297,
+      "width": 0.0319,
+      "path": "plant_brown.svg"
+    },
+    {
+      "x": 0.3092,
+      "y": 0.6434,
+      "width": 0.1577,
+      "path": "sofa_front.svg"
+    },
+    {
+      "x": 0.3858,
+      "y": 0.7356,
+      "width": 0.1112,
+      "path": "coffee_table.svg"
+    },
+    {
+      "x": 0.4688,
+      "y": 0.8247,
+      "width": 0.1744,
+      "path": "sofa_back.svg"
+    }
+  ],
+  "hallways": [
+    {
+      "x": 0.5107,
+      "y": 0.3836,
+      "radius": 0.0572,
+      "to": "left_field",
+      "toX": 0.5,
+      "toY": 0.5
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# misc
+.DS_Store
+*.swp
+.env
+config/sponsors.json
+
+# binary
+bin/
+playground
+playground.exe
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

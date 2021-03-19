@@ -1,0 +1,250 @@
+{
+  "background": "right_field.svg",
+  "sponsor": false,
+  "elements": [
+    {
+      "x": 0.8679,
+      "y": 0.104,
+      "width": 0.0558,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.7648,
+      "y": 0.0495,
+      "width": 0.0558,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.6522,
+      "y": 0.1756,
+      "width": 0.0558,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.4992,
+      "y": 0.1412,
+      "width": 0.0558,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.0367,
+      "y": 0.0782,
+      "width": 0.0558,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.5823,
+      "y": 0.3217,
+      "width": 0.04,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.9417,
+      "y": 0.1211,
+      "width": 0.04,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.7942,
+      "y": 0.2128,
+      "width": 0.04,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.3422,
+      "y": 0.104,
+      "width": 0.04,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.1934,
+      "y": 0.31,
+      "width": 0.22,
+      "path": "building_leah.svg"
+    },
+    {
+      "x": 0.376,
+      "y": 0.54,
+      "width": 0.22,
+      "path": "building_lsa.svg"
+    },
+    {
+      "x": 0.84,
+      "y": 0.275,
+      "width": 0.22,
+      "path": "building_lincoln.svg"
+    },
+    {
+      "x": 0.63,
+      "y": 0.48,
+      "width": 0.23,
+      "path": "building_medscience.svg"
+    },
+    {
+      "x": 0.0575,
+      "y": 0.7759,
+      "width": 0.0558,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.9527,
+      "y": 0.7816,
+      "width": 0.0558,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.8108,
+      "y": 0.879,
+      "width": 0.0558,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.1202,
+      "y": 0.8645,
+      "width": 0.04,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.5077,
+      "y": 0.6381,
+      "width": 0.0287,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.5,
+      "y": 0.8232,
+      "width": 0.0906,
+      "fountain": true
+    },
+    {
+      "x": 0.4337,
+      "y": 0.9235,
+      "width": 0.0436,
+      "path": "bench_flipped.svg"
+    },
+    {
+      "x": 0.5602,
+      "y": 0.9321,
+      "width": 0.0436,
+      "path": "bench.svg"
+    },
+    {
+      "x": 0.0227,
+      "y": 0.4392,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.1169,
+      "y": 0.5324,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.0227,
+      "y": 0.4392,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.2087,
+      "y": 0.6212,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.33520000000000005,
+      "y": 0.753,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.6583,
+      "y": 0.7659,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.7549,
+      "y": 0.667,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.8685,
+      "y": 0.5481,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.5,
+      "y": 0.9488,
+      "width": 0.0189,
+      "path": "recycling_bin.svg"
+    },
+    {
+      "x": 0.237,
+      "y": 0.5375,
+      "width": 0.0213,
+      "path": "bike_rack.svg"
+    }
+  ],
+  "hallways": [
+    {
+      "x": 0.0082,
+      "y": 0.3787,
+      "radius": 0.0579,
+      "to": "left_field",
+      "toX": 0.6113,
+      "toY": 0.9628
+    },
+    {
+      "x": 0.1371,
+      "y": 0.4574,
+      "radius": 0.0525,
+      "to": "sponsor:leah",
+      "toX": 0.4961,
+      "toY": 0.5002
+    },
+    {
+      "x": 0.3171,
+      "y": 0.6522,
+      "radius": 0.052,
+      "to": "sponsor:lsa",
+      "toX": 0.4961,
+      "toY": 0.5002
+    },
+    {
+      "x": 0.6971,
+      "y": 0.6202,
+      "radius": 0.0509,
+      "to": "sponsor:medscience",
+      "toX": 0.4961,
+      "toY": 0.5002
+    },
+    {
+      "x": 0.8933,
+      "y": 0.4077,
+      "radius": 0.0479,
+      "to": "sponsor:lincoln",
+      "toX": 0.4961,
+      "toY": 0.5002
+    },
+    {
+      "x": 0.9977,
+      "y": 0.3837,
+      "radius": 0.0521,
+      "to": "plaza",
+      "toX": 0.0445,
+      "toY": 0.9362
+    }
+  ]
+}

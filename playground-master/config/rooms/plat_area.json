@@ -1,0 +1,257 @@
+{
+  "background": "plat_sponsor_area.svg",
+  "sponsor": false,
+  "elements": [
+    {
+      "x": 0.6118,
+      "y": 0.2776,
+      "width": 0.0412,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.6778,
+      "y": 0.1727,
+      "width": 0.0412,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.0988,
+      "y": 0.1272,
+      "width": 0.08,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.1628,
+      "y": 0.2679,
+      "width": 0.08,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.3016,
+      "y": 0.3976,
+      "width": 0.08,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.3996,
+      "y": 0.1877,
+      "width": 0.08,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.6205,
+      "y": 0.0494,
+      "width": 0.08,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.658,
+      "y": 0.3111,
+      "width": 0.08,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.8309,
+      "y": 0.1087,
+      "width": 0.08,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.9239,
+      "y": 0.184,
+      "width": 0.08,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.8517,
+      "y": 0.5025,
+      "width": 0.08,
+      "path": "tree.svg"
+    },
+    {
+      "x": 0.0953,
+      "y": 0.2974,
+      "width": 0.0412,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.1278,
+      "y": 0.4949,
+      "width": 0.0412,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.0688,
+      "y": 0.7221,
+      "width": 0.0412,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.3133,
+      "y": 0.106,
+      "width": 0.0412,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.3535,
+      "y": 0.2678,
+      "width": 0.0412,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.889,
+      "y": 0.053,
+      "width": 0.0412,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.8765,
+      "y": 0.3196,
+      "width": 0.0412,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.9341,
+      "y": 0.6258,
+      "width": 0.0412,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.0368,
+      "y": 0.2382,
+      "width": 0.0509,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.0471,
+      "y": 0.5147,
+      "width": 0.0412,
+      "path": "tree2.svg"
+    },
+    {
+      "x": 0.7532,
+      "y": 0.3583,
+      "width": 0.1406,
+      "path": "building_intersystems.svg"
+    },
+    {
+      "x": 0.2646,
+      "y": 0.3583,
+      "width": 0.1496,
+      "path": "building_cmt.svg"
+    },
+    {
+      "x": 0.4547,
+      "y": 0.6668,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.345,
+      "y": 0.5544,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.3822,
+      "y": 0.7433,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.6575,
+      "y": 0.5532,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.5444,
+      "y": 0.668,
+      "width": 0.0223,
+      "path": "street_lamp.svg",
+      "toggleable": true
+    },
+    {
+      "x": 0.6795,
+      "y": 0.7406,
+      "width": 0.0483,
+      "path": "bench.svg"
+    },
+    {
+      "x": 0.3233,
+      "y": 0.7431,
+      "width": 0.0483,
+      "path": "bench_flipped.svg"
+    },
+    {
+      "x": 0.6181,
+      "y": 0.7957,
+      "width": 0.0157,
+      "path": "recycling_bin.svg"
+    },
+    {
+      "x": 0.5,
+      "y": 0.8254,
+      "width": 0.0879,
+      "fountain": true
+    },
+    {
+      "x": 0.3252,
+      "y": 0.8815,
+      "width": 0.0704,
+      "path": "more_sponsors_sign.svg"
+    },
+    {
+      "x": 0.6748,
+      "y": 0.8815,
+      "width": 0.0704,
+      "path": "more_sponsors_sign_flipped.svg"
+    }
+  ],
+  "hallways": [
+    {
+      "x": 0.5,
+      "y": 0.03,
+      "radius": 0.0641,
+      "to": "home",
+      "toX": 0.1284,
+      "toY": 0.8815
+    },
+    {
+      "x": 0.2946,
+      "y": 0.6104,
+      "radius": 0.0483,
+      "to": "sponsor:cmt",
+      "toX": 0.7053,
+      "toY": 0.6853
+    },
+    {
+      "x": 0.7402,
+      "y": 0.5717,
+      "radius": 0.056,
+      "to": "sponsor:intersystems",
+      "toX": 0.7053,
+      "toY": 0.6853
+    },
+    {
+      "x": 0.3624,
+      "y": 1.01,
+      "radius": 0.0739,
+      "to": "left_field",
+      "toX": 0.9695,
+      "toY": 0.402
+    },
+    {
+      "x": 0.6376,
+      "y": 1.01,
+      "radius": 0.0739,
+      "to": "right_field",
+      "toX": 0.0305,
+      "toY": 0.402
+    }
+  ]
+}

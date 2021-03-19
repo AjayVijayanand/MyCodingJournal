@@ -1,0 +1,47 @@
+{
+  "background": "<id>.svg",
+  "sponsor": true,
+  "corners": "0.8041,0.6878;0.4988,0.9951;0.1935,0.6857;0.5023,0.3537",
+  "elements": [
+    {
+      "x": 0.2699,
+      "y": 0.524,
+      "width": 0.0555,
+      "path": "door_flipped.svg"
+    },
+    {
+      "x": 0.6163,
+      "y": 0.5395,
+      "width": 0.1922,
+      "path": "desk_<id>.svg"
+    },
+    {
+      "x": 0.4787,
+      "y": 0.3544,
+      "width": 0.0992,
+      "path": "tall_shelf_<id>.svg"
+    },
+    {
+      "x": 0.4007,
+      "y": 0.7725,
+      "width": 0.199,
+      "path": "sofa_back_flipped.svg"
+    },
+    {
+      "x": 0.5241,
+      "y": 0.869,
+      "width": 0.1112,
+      "path": "small_shelf_<id>.svg"
+    }
+  ],
+  "hallways": [
+    {
+      "x": 0.2767,
+      "y": 0.6116,
+      "radius": 0.06,
+      "to": "left_field",
+      "toX": 0.5,
+      "toY": 0.5
+    }
+  ]
+}
