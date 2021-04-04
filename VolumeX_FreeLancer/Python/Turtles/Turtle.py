@@ -3,7 +3,7 @@ import turtle as t
 t.penup()
 t.ht()
 T = int(input("Enter Length of Triangle: "))
-z = int((T+1)/2) 
+z = int((T+1)/2)
 for dot in range(z):
     if T>9:
         t.goto(-25*dot, 0)
@@ -21,5 +21,3 @@ for dot in range(z):
                 t.forward(1)
             else:
                 t.forward(50)
-                
-        
