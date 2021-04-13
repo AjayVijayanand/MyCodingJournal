@@ -4,7 +4,6 @@ public class DAQ14{
     public static void main(String[] args){
         int[] Num = {3,1,2,6,4,1,6,1,3,4};
         int[] Rev = {3,1,2,6,4,1,6,1,9,4};
-        int Total = 0;
         int MaximumLength = Num.length - 1;
         for (int x = 0; x < MaximumLength; x++){
             for (int y = 0; y < (MaximumLength - x); y++){
