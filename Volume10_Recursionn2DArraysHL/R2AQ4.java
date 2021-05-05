@@ -60,16 +60,14 @@ public class R2AQ4{
                 Ma1[i][j] = input.nextInt();
             }
         }
-        
-        
-
+    
         for (int i = 0; i < Ma2.length; i++){
             for (int j = 0; j < Ma2[i].length; j++){
                 System.out.print("Enter Number for second Matrix: ");
                 Ma2[i][j] = input.nextInt();
             }
         }     
-
+        
         MaR1 = AddingMatrix(Ma1, Ma2);
         MaR2 = SubtractingMatrix(Ma1, Ma2);
         MaR3 = MultiplyingMatrix(Ma1, Ma2);
