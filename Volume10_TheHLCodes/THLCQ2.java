@@ -1,4 +1,4 @@
-package Volume10_Recursionn2DArraysHL;
+package Volume10_TheHLCodes;
 import java.util.Scanner;
 
 public class R2AQ2 {
