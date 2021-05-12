@@ -1,7 +1,6 @@
-package Volume10_TheHLCodes;
-import java.util.Scanner;
+import java.util.*;
 
-public class R2AQ2 {
+public class THLCQ2 {
     static int Num1 = 0;
     static int Num2 = 1;
     static int Num3;

@@ -1,7 +1,6 @@
-package Volume10_TheHLCodes;
-import java.util.Scanner;
+import java.util.*;
 
-public class R2AQ1 {
+public class THLCQ1 {
     static int Result = 1;
     public static int Factorial(int Num){
         if (Num == 0){

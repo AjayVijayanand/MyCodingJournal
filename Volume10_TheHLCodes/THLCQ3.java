@@ -1,5 +1,6 @@
-package Volume10_TheHLCodes;
-public class R2AQ3 {
+import java.util.*;
+
+public class THLCQ3 {
     public static void main(String[] args) {
         int[][] Num = {
             {1, 2, 3},
