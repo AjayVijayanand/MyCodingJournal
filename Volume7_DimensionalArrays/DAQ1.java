@@ -1,4 +1,3 @@
-package Volume7_DimensionalArrays;
 
 import java.util.*;
 public class DAQ1{
