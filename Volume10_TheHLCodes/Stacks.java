@@ -10,15 +10,6 @@ public class Stacks {
         }
     }
 
-    public void push(String[] Stack, String Value, int Top){
-        if (Top == Stack.length - 1){
-            System.out.println("Error: Overflow\nCannot Add a Value");
-        } else {
-            Top++;
-            Stack[Top] = Value;
-        }
-    }
-
     public void pop(int[] Stack, int Top){
         if (Top == Stack.length + 1){
             System.out.println("Error: Overflow\nCannot Add a Value");
@@ -45,13 +36,4 @@ public class Stacks {
         }
         return true;
     } 
-
-    public boolean isEmpty(String[] Stack){
-        for (int x = Stack.length - 1; x >= 0; x++){
-            if (Stack[x] != null){
-                return false;
-            }
-        }
-        return true;
-    }
 }
