@@ -1,4 +1,4 @@
-import java.util.*;
+
 
 public class Stacks {
     public void push(int[] Stack, int Value, int Top){
@@ -38,30 +38,20 @@ public class Stacks {
     } 
     
     public boolean isEmpty(int[] Stack){
-        int Count = 0;
-        for (int x = 0; x < Stack.length; x++){
-            if (Stack[x] == 0){
-                Count++;
+        for (int x = Stack.length - 1; x >= 0; x--){
+            if (Stack[x] != 0){
+                return false;
             }
         }
-        if (Count == Stack.length){
-            return true;
-        } else {
-            return false;
-        }
+        return true;
     } 
 
     public boolean isEmpty(String[] Stack){
-        int Count = 0;
-        for (int x = 0; x < Stack.length; x++){
-            if (Stack[x] == null){
-                Count++;
+        for (int x = Stack.length - 1; x >= 0; x++){
+            if (Stack[x] != null){
+                return false;
             }
         }
-        if (Count == Stack.length){
-            return true;
-        } else {
-            return false;
-        }
+        return true;
     }
 }

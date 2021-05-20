@@ -1,4 +1,4 @@
-import java.util.*;
+
 
 public class Collections {
     public void push(int size, int[] Stack, int Value, int Top){
