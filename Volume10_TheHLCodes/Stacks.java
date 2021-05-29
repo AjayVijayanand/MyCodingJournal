@@ -12,7 +12,7 @@ public class Stacks {
 
     public void pop(int[] Stack, int Top){
         if (Top == Stack.length + 1){
-            System.out.println("Error: Overflow\nCannot Add a Value");
+            System.out.println("Error: Overflow\nCannot Pop a Value");
         } else {
             Top--;
             Stack[Top] = 0;
