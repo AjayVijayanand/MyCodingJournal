@@ -17,17 +17,17 @@ public class THLCQ6{
         case 1:
           System.out.print("You have choosen: EnQueue\nEnter Value to EnQueue: ");
           Value = input.intNext();
-          enQueue(Queues, F, R, Value, Size);
+          Q.enQueue(Queues, F, R, Value, Size);
           System.out.println("Value EnQueued");
           break;
         case 2: 
           System.out.println("You have choosen: DeQueue");
-          deQueue(Queues, F, R);
+          Q.deQueue(Queues, F, R);
           System.out.println("Value DeQueued");
           break;
         case 3:
           System.out.println("You have choosen: Display");
-          print(Queues, F, R);
+          Q.print(Queues, F, R);
           break;
         case 4:
           exit = true;
