@@ -30,11 +30,16 @@ public class Queue{
   }
   
   public void print(int[] Que, int F, int R){
-    System.out.print("[");
-    for (int x = R - 1; x > F; x--){
-      System.out.print(Que[x] + ", ");
+    if(R == -1){
+      System.out.println("[" + Que[0] + "]");
+    } else {
+      System.out.print("[");
+      for (int x = R; x > F; x--){
+        System.out.print(Que[x] + ", ");
+      }
+      System.out.println(Que[F] + "]");
     }
-    System.out.println(Que[F] + "]");
+    
   }
   
   public boolean isEmpty(int[] Stack){

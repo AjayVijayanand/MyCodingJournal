@@ -34,10 +34,14 @@ public class Stacks {
     }
 
     public void print(int[] Stack, int Top){
-        System.out.print("[");
-        for (int x = Top; x > 0; x--){
-            System.out.print(Stack[x] + ", ");
+        if(Top == -1){
+            System.out.println("[" + Stack[0] + "]");
+        }else {
+            System.out.print("[");
+            for (int x = Top; x > 0; x--){
+                System.out.print(Stack[x] + ", ");
+            }
+            System.out.println(Stack[0] + "]");
         }
-        System.out.println(Stack[0] + "]");
     } 
 }
