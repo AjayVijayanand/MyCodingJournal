@@ -6,9 +6,11 @@ public class Queue{
       R = 0;
       F = 0;
       Que[R] = Val;
+      System.out.println("Value EnQueued");
     } else {
       R++;
-      Q[R] = Val;
+      Que[R] = Val;
+      System.out.println("Value EnQueued");
     }
   }
   
@@ -19,18 +21,20 @@ public class Queue{
       Que[F] = 0;
       R = -1;
       F = -1;
+      System.out.println("Value DeQueued");
     } else {
       Que[F] = 0;
       F++;
+      System.out.println("Value DeQueued");
     }
   }
   
   public void print(int[] Que, int F, int R){
     System.out.print("[");
     for (int x = R - 1; x > F; x--){
-      System.out.print(Stack[x] + ", ");
+      System.out.print(Que[x] + ", ");
     }
-    System.out.println(Stack[F] + "]");
+    System.out.println(Que[F] + "]");
   }
   
   public boolean isEmpty(int[] Stack){

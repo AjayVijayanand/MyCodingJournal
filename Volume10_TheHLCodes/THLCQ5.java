@@ -3,31 +3,29 @@ import java.util.*;
 public class THLCQ5 {
     public static void main(String[] args) {
         Stacks Stack = new Stacks();
-        Scanner input = new System.in()
+        Scanner input = new Scanner(System.in);
         boolean exit = false;
-        int F = -1;
-        int R = -1;
-        System.out.print("Enter Size of Queue: ");
-        Size = input.nextInt();
+        System.out.print("Enter Size of the Stack: ");
+        int Size = input.nextInt();
         int[] S = new int[Size];
+        int Top = -1;
         while (exit == false){
-            System.out.print("Choices\n1. Push\n2. Pop\3. Display\n4. Exit\nEnter Choice: ");
-            Choice = input.nextInt();
+            System.out.println(Top);
+            System.out.print("Choices\n1. Push\n2. Pop\n3. Display\n4. Exit\nEnter Choice: ");
+            int Choice = input.nextInt();
             switch (Choice) {
                 case 1:
                     System.out.print("You have choosen: Push\nEnter Value to Push: ");
-                    Value = input.intNext();
-                    Stack.enQueue(S, Value, Size);
-                    System.out.println("Value Pushed");
+                    int Value = input.nextInt();
+                    Top = Stack.push(S, Value, Top);
                     break;
                 case 2: 
                     System.out.println("You have choosen: Pop");
-                    Stack.deQueue(S, Size);
-                    System.out.println("Value Poped");
+                    Top = Stack.pop(S, Top);
                     break;
                 case 3:
                     System.out.println("You have choosen: Display");
-                    Stack.print(S, Size);
+                    Stack.print(S, Top);
                     break;
                 case 4:
                     exit = true;

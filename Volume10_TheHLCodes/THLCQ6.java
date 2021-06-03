@@ -3,27 +3,26 @@ import java.util.*;
 public class THLCQ6{
   public static void main(String[] args){
     Queue Q = new Queue();
-    Scanner input = new System.in();
+    Scanner input = new Scanner(System.in);
     boolean exit = false;
     int F = -1;
     int R = -1;
     System.out.print("Enter Size of Queue: ");
-    Size = input.nextInt();
+    int Size = input.nextInt();
     int[] Queues = new int[Size];
     while (exit == false){
-      System.out.print("Choices\n1. EnQueue\n2. DeQueue\3. Display\n4. Exit\nEnter Choice: ");
-      Choice = input.nextInt();
+      System.out.print("Choices\n1. EnQueue\n2. DeQueue\n3. Display\n4. Exit\nEnter Choice: ");
+      int Choice = input.nextInt();
       switch (Choice) {
         case 1:
           System.out.print("You have choosen: EnQueue\nEnter Value to EnQueue: ");
-          Value = input.intNext();
+          int Value = input.nextInt();
           Q.enQueue(Queues, F, R, Value, Size);
           System.out.println("Value EnQueued");
           break;
         case 2: 
           System.out.println("You have choosen: DeQueue");
           Q.deQueue(Queues, F, R);
-          System.out.println("Value DeQueued");
           break;
         case 3:
           System.out.println("You have choosen: Display");
