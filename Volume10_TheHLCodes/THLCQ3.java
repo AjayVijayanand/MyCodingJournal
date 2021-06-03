@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class THLCQ3 {
     public static void main(String[] args) {
         int[][] Num = {
