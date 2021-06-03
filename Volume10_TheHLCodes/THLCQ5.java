@@ -10,7 +10,6 @@ public class THLCQ5 {
         int[] S = new int[Size];
         int Top = -1;
         while (exit == false){
-            System.out.println(Top);
             System.out.print("Choices\n1. Push\n2. Pop\n3. Display\n4. Exit\nEnter Choice: ");
             int Choice = input.nextInt();
             switch (Choice) {

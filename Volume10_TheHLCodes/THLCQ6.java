@@ -11,6 +11,8 @@ public class THLCQ6{
     int Size = input.nextInt();
     int[] Queues = new int[Size];
     while (exit == false){
+      System.out.println(F);
+      System.out.println(R);
       System.out.print("Choices\n1. EnQueue\n2. DeQueue\n3. Display\n4. Exit\nEnter Choice: ");
       int Choice = input.nextInt();
       switch (Choice) {
@@ -18,7 +20,6 @@ public class THLCQ6{
           System.out.print("You have choosen: EnQueue\nEnter Value to EnQueue: ");
           int Value = input.nextInt();
           Q.enQueue(Queues, F, R, Value, Size);
-          System.out.println("Value EnQueued");
           break;
         case 2: 
           System.out.println("You have choosen: DeQueue");
