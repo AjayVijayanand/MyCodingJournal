@@ -121,7 +121,6 @@ public class SimpleDemoGA {
         return secondFittest;
     }
 
-
     //Replace least fittest individual from most fittest offspring
     void addFittestOffspring() {
 
@@ -135,7 +134,6 @@ public class SimpleDemoGA {
         //Replace least fittest individual from most fittest offspring
         population.individuals[leastFittestIndex] = getFittestOffspring();
     }
-
 }
 
 //Individual class
