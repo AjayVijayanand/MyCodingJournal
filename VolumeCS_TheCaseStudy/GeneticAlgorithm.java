@@ -2,6 +2,7 @@ package VolumeCS_TheCaseStudy;
 import java.util.Random;
 
 /**
+ * Note that this is a general code for a Genetic Algorithm. This is NOT the final code to solve the Travelling Salesman Problem.
  * Thank you https://towardsdatascience.com/introduction-to-genetic-algorithms-including-example-code-e396e98d8bf3
  * @author Vijini
  */
