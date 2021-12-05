@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "Volume7_DimensionalArrays",
         "Volume10_TheHLCodes",
-        "Volume7_DimensionalArrays"
+        "Volume2_TheJavaBasics"
     ]
 }
