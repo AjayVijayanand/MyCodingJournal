@@ -1,5 +1,4 @@
 //PseudoCodeToJavaQ3 (C to F and F to C Convertor)
-package Volume2_TheJavaBasics;
 public class PseudoCodeToJavaQ3 {
     public static void main(String[] args) {
         float C = 18;

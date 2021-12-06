@@ -1,5 +1,4 @@
 //Java Code to print multiplication table of a user entered number 
-package Volume5_TheJava8;
 import java.util.*;
 
 public class J2Q4 {

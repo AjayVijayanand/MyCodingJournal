@@ -1,4 +1,3 @@
-package Volume4_LearnJava;
 public class JavaQ5 {
     public static void main(String[] args){
         int PrimeNo = 1;

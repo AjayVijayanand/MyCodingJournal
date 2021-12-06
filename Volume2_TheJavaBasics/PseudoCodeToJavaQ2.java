@@ -1,5 +1,4 @@
 //PseudoCodeToJavaQ2 (Even Numbers without Multiples of 4)
-package Volume2_TheJavaBasics;
 public class PseudoCodeToJavaQ2 {
     public static void main(String[] args) {
         int x = 2;

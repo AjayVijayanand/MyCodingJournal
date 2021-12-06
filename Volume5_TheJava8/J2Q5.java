@@ -1,5 +1,4 @@
 //Java Code to read 10 numbers from user and count and print how many are even and odd
-package Volume5_TheJava8;
 import java.util.*;
 
 public class J2Q5 {

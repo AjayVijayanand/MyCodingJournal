@@ -1,7 +1,6 @@
 //Java Code for factorial of a number 
 //int - max accurate factorial for num: 13, Values which is not zero = 33
 //long - max accurate factorial for num: 20, Values which is not zero = 65
-package Volume5_TheJava8;
 import java.util.*;
 
 public class J2Q1 {

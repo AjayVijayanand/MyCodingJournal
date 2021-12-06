@@ -1,5 +1,4 @@
 //Fibonacci Sequence
-package Volume4_LearnJava;
 import java.util.*;
 public class JavaQ3{
     public static void main(String[] args){

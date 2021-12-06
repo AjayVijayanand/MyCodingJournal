@@ -1,5 +1,4 @@
 //FreeLancePseudoCodetoJava1 (Factorials)
-package Volume2_TheJavaBasics;
 public class PseudoCodeToJavaQ6 {
     public static void main(String args[]){
         int x = 0;

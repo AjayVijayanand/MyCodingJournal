@@ -1,4 +1,3 @@
-package Volume4_LearnJava;
 import java.util.*;
 
 public class JavaQ6 {

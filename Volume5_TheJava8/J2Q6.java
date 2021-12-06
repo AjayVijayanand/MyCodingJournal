@@ -1,5 +1,4 @@
 //Java Code to read  a number 1 to 7 from user and print respective day of week e.g if user enters 1 code prints Monday 
-package Volume5_TheJava8;
 import java.util.*;
 
 public class J2Q6 {
