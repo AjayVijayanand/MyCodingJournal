@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class DAQ11{
+public class ArrayAddElementInt{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         int[] Num = {1, 2, 3, 4, 5, 6, 8, 9, 0};

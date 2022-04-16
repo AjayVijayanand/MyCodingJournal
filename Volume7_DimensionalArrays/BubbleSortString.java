@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class DAQ16{
+public class BubbleSortString{
     public static void main(String[] args){
         String[] Rev = {"HELLO", "WORLD","MY", "NAME", "IS", "SOMEBODY"};
         System.out.println("Your Array: " + Arrays.toString(Rev));

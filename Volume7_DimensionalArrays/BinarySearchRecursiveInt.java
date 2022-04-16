@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class DAQ8{
+public class BinarySearchRecursiveInt{
     static void BinarySearch(int Search, int[] Array, int S, int E){
         int Mid = (S + E)/2;
         if (S <= Mid && Mid <= E){

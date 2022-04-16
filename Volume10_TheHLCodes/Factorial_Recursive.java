@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class THLCQ1 {
+public class Factorial_Recursive {
     static int Result = 1;
     public static int Factorial(int Num){
         if (Num == 0){

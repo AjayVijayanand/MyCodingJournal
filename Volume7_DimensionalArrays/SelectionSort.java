@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class DAQ15{
+public class SelectionSort{
     public static void main(String[] args){
         int[] Num = {3,1,2,6,4,1};
         int[] Rev = {3,1,2,6,4,1};

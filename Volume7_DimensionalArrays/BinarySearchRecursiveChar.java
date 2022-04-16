@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class DAQ9{
+public class BinarySearchRecursiveChar{
     static void BinarySearch(int Search, int[] Array, int S, int E){
         int Mid = (S + E)/2;
         if ((S <= Mid && Mid <= E)){

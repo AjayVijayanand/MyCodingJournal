@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class THLCQ2 {
+public class Fibonnachi_Recursive {
     static int Num1 = 0;
     static int Num2 = 1;
     static int Num3;

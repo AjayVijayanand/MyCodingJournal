@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class THLCQ6{
+public class Queue_Operation{
   public static void main(String[] args){
     Queue Q = new Queue();
     Scanner input = new Scanner(System.in);

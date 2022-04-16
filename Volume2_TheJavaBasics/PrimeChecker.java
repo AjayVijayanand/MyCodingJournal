@@ -1,5 +1,5 @@
 
-public class PseudoCodeToJavaQ4 {
+public class PrimeChecker {
     public static void main(String[] args){
         int num = 40;
         int Factors = 0;

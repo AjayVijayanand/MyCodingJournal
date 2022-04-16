@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class DAQ{
+public class ArraySum{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         int[] Numbers = new int[10];

@@ -8,7 +8,6 @@ public class JavaQ3{
         int Total = 0;
         int NumBuf1 = 1;
         int NumBuf2 = 1;
-        int Buffer;
         System.out.print(Total + ", " + NumBuf1 + ", " + NumBuf2 + ", ");
         for (int x = 2; x < (Range - 2); x++) {
             Total = NumBuf1 + NumBuf2;

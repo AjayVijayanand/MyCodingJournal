@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class THLCQ5 {
+public class Stack_Operations {
     public static void main(String[] args) {
         Stacks Stack = new Stacks();
         Scanner input = new Scanner(System.in);

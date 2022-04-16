@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class DAQ2{
+public class RearrangeHalf{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         int[] Num = new int[10];

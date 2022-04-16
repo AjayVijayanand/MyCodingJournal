@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class DAQ5{
+public class OddEvenArray{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         int[] Num = new int[10];
@@ -12,9 +12,9 @@ public class DAQ5{
             System.out.print("Enter Number: ");
             Num[x] = input.nextInt();
             if (Num[x] % 2 != 0){
-                EvenNum[x] = Num[x];
-            } else {
                 OddNum[x] = Num[x];
+            } else {
+                EvenNum[x] = Num[x];
             }
         }
         for(int x = 0; x <= 9; x++){
@@ -28,14 +28,14 @@ public class DAQ5{
         System.out.print("Even Sum: ");
         for(int x = 0; x <= 9; x++){
             if (EvenNum[x] != 0){
-                System.out.print(Num[x] + " + ");
+                System.out.print(EvenNum[x] + " + ");
             } 
         }
         System.out.println("0 = " + EvenSum);
         System.out.print("Odd Sum: ");
         for(int x = 0; x <= 9; x++){
             if (OddNum[x] != 0){
-                System.out.print(Num[x] + " + ");
+                System.out.print(OddNum[x] + " + ");
             } 
         }
         System.out.println("0 = " + OddSum);

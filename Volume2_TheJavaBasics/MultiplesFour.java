@@ -1,5 +1,5 @@
 //PseudoCodeToJavaQ2 (Even Numbers without Multiples of 4)
-public class PseudoCodeToJavaQ2 {
+public class MultiplesFour {
     public static void main(String[] args) {
         int x = 2;
         int c = 1;

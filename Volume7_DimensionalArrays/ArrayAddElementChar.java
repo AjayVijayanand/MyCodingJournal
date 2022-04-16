@@ -1,12 +1,15 @@
+
 import java.util.*;
-public class DAQC {
+public class ArrayAddElementChar{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         char[] Character = {'a', 'b', 'd', 'c', 'x', 'y', 'z', 'r', 'q'};
         boolean Validation = false;
         int Index = 0;
+        System.out.print("Enter Character: ");
+        char Element = input.next().charAt(0);
         while (!Validation){
-            System.out.print("Enter where you want to remove an element (0 - " + Character.length  + "): ");
+            System.out.print("Enter where you want to add a element (0 - " + Character.length  + "): ");
             Index = input.nextInt();
             if (Index < Character.length && Index >= 0){
                 Validation = true;
@@ -14,17 +17,21 @@ public class DAQC {
                 System.out.println("Enter Valid Index");
             }
         }
-        char[] Rev = new char[Character.length - 1];
-        for(int x = 0, y = 0; x <= Rev.length; x++){
-            if (x == Index) {
-                continue;
+        char[] Rev = new char[Character.length + 1];
+        Boolean Added = false;
+        for(int x = 0; x <= Character.length; x++){
+            if (!Added){
+                if(x == Index){
+                    Rev[x] = Element;
+                    Added = true;
+                } else {
+                    Rev[x] = Character[x];
+                }
             } else {
-                Rev[y++] = Character[x];
+                Rev[x] = Character[x-1];
             }
         }
         System.out.println("Your Array: " + Arrays.toString(Character));
         System.out.println("Revised Array: " + Arrays.toString(Rev));
-        String[] R = new String[5];
-        System.out.println("Revised Array: " + Arrays.toString(R));
     }
 }

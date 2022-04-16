@@ -1,12 +1,14 @@
 
 import java.util.*;
-public class DAQ12{
+public class ArrayReverse{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        int[] Num = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int[] Rev = new int[Num.length - 1];
-        for(int x = 0; x <= Rev.length - 1; x++){
-            Rev[x] = Num[x];
+        int[] Num = new int[10];
+        int[] Rev = new int[10];
+        for(int x = 0; x <= 9; x++){
+            System.out.print("Enter Number: ");
+            Num[x] = input.nextInt();
+            Rev[9-x] = Num[x];
         }
         System.out.println("Your Array: " + Arrays.toString(Num));
         System.out.println("Revised Array: " + Arrays.toString(Rev));

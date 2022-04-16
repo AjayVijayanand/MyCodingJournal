@@ -1,4 +1,4 @@
-public class THLCQ3 {
+public class Diagonal_Sum {
     public static void main(String[] args) {
         int[][] Num = {
             {1, 2, 3},

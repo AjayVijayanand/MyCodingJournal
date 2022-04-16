@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class THLCQ4{
+public class Matrix_Operations{
     static Scanner input = new Scanner(System.in);
     public static float[][] AddingMatrix(float[][] M1, float[][] M2){
         float[][] MR = new float[2][2];

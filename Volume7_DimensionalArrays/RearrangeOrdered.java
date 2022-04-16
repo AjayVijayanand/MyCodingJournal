@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class DAQ3{
+public class RearrangeOrdered{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         int[] Num = new int[10];

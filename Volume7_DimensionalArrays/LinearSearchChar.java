@@ -1,6 +1,6 @@
 
 import java.util.*;
-public class DAQ7{
+public class LinearSearchChar{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         char[] Characters = {'a', 'c', 'd', 'c', 'b', 'a', 'a'};
