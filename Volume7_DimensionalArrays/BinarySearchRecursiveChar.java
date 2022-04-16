@@ -18,10 +18,11 @@ public class BinarySearchRecursiveChar{
         }   
     }
     public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        int[] Character = {'a', 'b', 'd', 'e', 'v', 'x', 'y', 'z', 'z'};
-        System.out.print("What Character do you want to search: ");
-        int SearchChar = input.next().charAt(0);
-        BinarySearch(SearchChar, Character, 0, Character.length - 1);
+        try (Scanner input = new Scanner(System.in)) {
+            int[] Character = {'a', 'b', 'd', 'e', 'v', 'x', 'y', 'z', 'z'};
+            System.out.print("What Character do you want to search: ");
+            int SearchChar = input.next().charAt(0);
+            BinarySearch(SearchChar, Character, 0, Character.length - 1);
+        }
     }
 }

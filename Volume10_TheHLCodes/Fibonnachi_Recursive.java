@@ -14,11 +14,12 @@ public class Fibonnachi_Recursive {
         }
     }
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter Number: ");
-        int x = input.nextInt();
-        System.out.print("0, 1");
-        Fibonnachi(x-1);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter Number: ");
+            int x = input.nextInt();
+            System.out.print("0, 1");
+            Fibonnachi(x-1);
+        }
         System.out.println();
     }
 }

@@ -11,9 +11,10 @@ public class Factorial_Recursive {
         }
     }
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter Number: ");
-        int x = input.nextInt();
-        System.out.println(Factorial(x));
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter Number: ");
+            int x = input.nextInt();
+            System.out.println(Factorial(x));
+        }
     }
 }

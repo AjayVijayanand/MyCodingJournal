@@ -18,10 +18,11 @@ public class BinarySearchRecursiveInt{
         }
     }
     public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        int[] Num = {9, 8, 7, 6, 5, 5, 3, 2, 1};
-        System.out.print("What Number do you want to search: ");
-        int SearchNum = input.nextInt();
-        BinarySearch(SearchNum, Num, 0, Num.length - 1);
+        try (Scanner input = new Scanner(System.in)) {
+            int[] Num = {9, 8, 7, 6, 5, 5, 3, 2, 1};
+            System.out.print("What Number do you want to search: ");
+            int SearchNum = input.nextInt();
+            BinarySearch(SearchNum, Num, 0, Num.length - 1);
+        }
     }
 }
