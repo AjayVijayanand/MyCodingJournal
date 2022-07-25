@@ -48,21 +48,18 @@ time.sleep(1)
 if Toss == 0:
     if (ResToss % 2) == 1:
         print("YOU WON THE TOSS")
-        C = False
-        U = True
+        C, U = False, True
     else:
         print("COMPUTER WON THE TOSS")
-        C = True
-        U = False
+        C, U = True, False
 else:
     if (ResToss % 2) == 0:
         print("YOU WON THE TOSS")
-        C = False
-        U = True
+        C, U = False, True
     else:
         print("COMPUTER WON THE TOSS")
         C = True
-        U = False
+        C, U = True, False
 
 time.sleep(1)
 if U:
@@ -79,12 +76,10 @@ if U:
         time.sleep(1)
         if Choose == 1:
             print("YOU CHOOSE TO BAT")
-            ChooseTeamU = "BAT"
-            ChooseTeamC = "BOWL"
+            ChooseTeamC, ChooseTeamU  = "BOWL", "BAT"
         else:
             print("YOU CHOOSE TO BOWL")
-            ChooseTeamU = "BOWL"
-            ChooseTeamC = "BAT"
+            ChooseTeamC, ChooseTeamU  = "BAT", "BOWL"
         time.sleep(1)
         ValidInput4 = False
         while not ValidInput4:
@@ -100,12 +95,10 @@ else:
     Choose = randint(0, 1)
     if Choose == 0:
         print("COMPUTER CHOOSE TO BOWL")
-        ChooseTeamC = "BOWL"
-        ChooseTeamU = "BAT"
+        ChooseTeamC, ChooseTeamU  = "BOWL", "BAT"
     else:
         print("COMPUTER CHOOSE TO BAT")
-        ChooseTeamC = "BAT"
-        ChooseTeamU = "BOWL"
+        ChooseTeamC, ChooseTeamU  = "BAT", "BOWL"
     Wickets = randint(1, 10)
 time.sleep(1)
 print("FOR " + str(Wickets) + " WICKET(S)")

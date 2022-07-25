@@ -1,22 +1,28 @@
 from random import *
 import time
 
-Team1 = []
-IRUN1 = []
-IBall1 = []
+def RunMessage(Runs, Balls):
+    if 1 <= Runs <= 3:
+        print("Ball " + str(Balls) + ": HE TAKES A QUICK " + str(Runs))
+    elif Runs == 4 or Runs == 6:
+        print("Ball " + str(Balls) + ": HE HITS A " + str(Runs))
+    elif Runs == 5:
+        print("Ball " + str(Balls) + ": OH NO! ITS AN OVERTHROW! " + str(Runs) + " RUNS")
+    else:
+        print("Ball " + str(Balls) + ": GOT 'EM!")
 
-TRUN1 = 0
-Wicket1 = 0
-TBalls1 = 0
+def BatsmanScore():
+    IndScore, Balls, Runs = 0, 0 , -1
+    while Runs != 0:
+        Runs = randint(0, 6)
+        IndScore = IndScore + Runs
+        Balls = Balls + 1
+        RunMessage(Runs, Balls)
+        time.sleep(2)
+    return IndScore, Balls, Runs
 
-Team2 = []
-IRUN2 = []
-IBall2 = []
-
-TRUN2 = 0
-Wicket2 = 0
-TBalls2 = 0
-
+Team1, IRUN1, IBall1, Team2, IRUN2, IBall2 = [], [], [], [], [], []
+TRUN1, Wicket1, TBalls1, TRUN2, Wicket2, TBalls2 = 0, 0, 0, 0, 0, 0
 ScoreCardLimit = False
 
 print("WELCOME TO BOOK CRICKET SIMULATOR")
@@ -53,7 +59,7 @@ print("WELCOME TO " + Name1 + " VS " + Name2)
 time.sleep(3)
 Toss = randint(0, 1)
 Choose = randint(0, 1)
-print
+print()
 
 if Toss == 0:
     print(Name1 + " WON THE TOSS")
@@ -87,89 +93,58 @@ time.sleep(3)
 
 if ChooseTeam1 == "BAT":
     while Wicket1 <= (Players - 1):
-        print
+        print()
         print(Team1[Wicket1] + " IS BATTING")
-        time.sleep(3)
-        Runs = 1
-        Balls = 0
-        IndScore = 0
-        while Runs != 0:
-            Runs = randint(0, 6)
-            IndScore = IndScore + Runs
-            TRUN1 = TRUN1 + Runs
-            Balls = Balls + 1
-            TBalls1 = TBalls1 + 1
-            time.sleep(2)
-            if 1 <= Runs <= 3:
-                print("Ball " + str(Balls) + ": HE TAKES A QUICK " + str(Runs))
-            elif Runs == 4 or Runs == 6:
-                print("Ball " + str(Balls) + ": HE HITS A " + str(Runs))
-            elif Runs == 5:
-                print("Ball " + str(Balls) + ": OH NO! ITS AN OVERTHROW! " + str(Runs) + " RUNS")
-            else:
-                print("Ball " + str(Balls) + ": GOT 'EM!")
+        IndScore, Balls, Runs = BatsmanScore()
+        TRUN1 = TRUN1 + IndScore
+        TBalls1 = TBalls1 + Balls
         time.sleep(3)
         IRUN1.append(IndScore)
         IBall1.append(Balls)
-        print
+        print()
         print(Team1[Wicket1] + " IS OUT FOR " + str(IndScore) + " IN " + str(Balls) + " BALLS")
         Wicket1 = Wicket1 + 1
         time.sleep(3)
-        print
+        print()
         print(Name1 + " SCORE IS " + str(TRUN1))
         print("BALLS " + str(TBalls1))
         print(Name1 + " LOST " + str(Wicket1) + " WICKETS")
     
     time.sleep(10)
-    print
+    print()
     print("1ST INNING IS OVER!")
     print(Name1 + ": " + str(TRUN1))
     print(Name2 + " NEEDS " + str(TRUN1 + 1) + " TO WIN WITH " + str(Players) + " WICKETS REMAINING")
 
     while TRUN2 < TRUN1 and  Wicket2 <= (Players - 1):
-        print
+        print()
         print(Team2[Wicket2] + " IS BATTING")
         time.sleep(3)
-        Runs = 1
-        Balls = 0
-        IndScore = 0
-        while Runs != 0:
-            Runs = randint(0, 6)
-            IndScore = IndScore + Runs
-            TRUN2 = TRUN2 + Runs
-            Balls = Balls + 1
-            TBalls2 = TBalls2 + 1
-            time.sleep(2)
-            if 1 <= Runs <= 3:
-                print("Ball " + str(Balls) + ": HE TAKES A QUICK " + str(Runs))
-            elif Runs == 4 or Runs == 6:
-                print("Ball " + str(Balls) + ": HE HITS A " + str(Runs))
-            elif Runs == 5:
-                print("Ball " + str(Balls) + ": OH NO! ITS AN OVERTHROW! " + str(Runs) + " RUNS")
-            else:
-                print("Ball " + str(Balls) + ": GOT 'EM!")
-            if TRUN2 > TRUN1:
-                break
+        IndScore, Balls, Runs = BatsmanScore()
+        TRUN2 = TRUN2 + IndScore
+        TBalls2 = TBalls2 + Balls
+        if TRUN2 > TRUN1:
+            break
         time.sleep(3)
         IRUN2.append(IndScore)
         IBall2.append(Balls)
         if Runs == 0:
-            print
+            print()
             print(Team2[Wicket2] + " IS OUT FOR " + str(IndScore) + " IN " + str(Balls) + " BALLS")
             Wicket2 = Wicket2 + 1
             time.sleep(3)
-            print
+            print()
             print(Name2 + " SCORE IS " + str(TRUN2))
             print("BALLS " + str(TBalls2))
             print(Name2 + " LOST " + str(Wicket2) + " WICKETS")
         else:
-            print
+            print()
             print(Team2[Wicket2] + " SCORED " + str(IndScore) + " IN " + str(Balls) + " BALLS")
             print(Name2 + " SCORE IS " + str(TRUN2))
             print("BALLS " + str(TBalls2))
 
     time.sleep(10)
-    print
+    print()
     print("MATCH OVER!")
     if TRUN1 < TRUN2: 
         WinningMargin = Players - Wicket2
@@ -182,7 +157,7 @@ if ChooseTeam1 == "BAT":
         print("SCORES ARE TIED!")
     
     time.sleep(3)
-    print    
+    print()
     print(Name1 + " SCORECARD")
     time.sleep(1)
     for x in range(0, Wicket1):
@@ -190,7 +165,7 @@ if ChooseTeam1 == "BAT":
         print(str(Team1[x].upper()) + " SCORED " + str(IRUN1[x]) + " RUNS IN " + str(IBall1[x]) + " BALLS")
     
     time.sleep(3)
-    print   
+    print()   
     print(Name2 + " SCORECARD")
     time.sleep(1)
     for x in range(0, Wicket2):
@@ -202,89 +177,59 @@ if ChooseTeam1 == "BAT":
 
 elif ChooseTeam1 == "BOWL":
     while Wicket2 <= (Players - 1):
-        print
+        print()
         print(Team2[Wicket2] + " IS BATTING")
         time.sleep(3)
-        Runs = 1
-        Balls = 0
-        IndScore = 0
-        while Runs != 0:
-            Runs = randint(0, 6)
-            IndScore = IndScore + Runs
-            TRUN2 = TRUN2 + Runs
-            Balls = Balls + 1
-            TBalls2 = TBalls2 + 1
-            time.sleep(2)
-            if 1 <= Runs <= 3:
-                print("Ball " + str(Balls) + ": HE TAKES A QUICK " + str(Runs))
-            elif Runs == 4 or Runs == 6:
-                print("Ball " + str(Balls) + ": HE HITS A " + str(Runs))
-            elif Runs == 5:
-                print("Ball " + str(Balls) + ": OH NO! ITS AN OVERTHROW! " + str(Runs) + " RUNS")
-            else:
-                print("Ball " + str(Balls) + ": GOT 'EM!")
+        IndScore, Balls, Runs = BatsmanScore()
+        TRUN2 = TRUN2 + IndScore
+        TBalls2 = TBalls2 + Balls
         time.sleep(3)
         IRUN2.append(IndScore)
         IBall2.append(Balls)
-        print
+        print()
         print(Team2[Wicket2] + " IS OUT FOR " + str(IndScore) + " IN " + str(Balls) + " BALLS")
         Wicket2 = Wicket2 + 1
         time.sleep(3)
-        print
+        print()
         print(Name2 + " SCORE IS " + str(TRUN2))
         print("BALLS " + str(TBalls2))
         print(Name2 + " LOST " + str(Wicket2) + " WICKETS")
     
     time.sleep(10)
-    print
+    print()
     print("1ST INNING IS OVER!")
     print(Name2 + ": " + str(TRUN2))
     print(Name1 + " NEEDS " + str(TRUN2 + 1) + " TO WIN WITH " + str(Players) + " WICKETS REMAINING")
 
     while TRUN1 < TRUN2 and  Wicket1 <= (Players - 1):
-        print
+        print()
         print(Team1[Wicket1] + " IS BATTING")
         time.sleep(3)
-        Runs = 1
-        Balls = 0
-        IndScore = 0
-        while Runs != 0:
-            Runs = randint(0, 6)
-            IndScore = IndScore + Runs
-            TRUN1 = TRUN1 + Runs
-            Balls = Balls + 1
-            TBalls1 = TBalls1 + 1
-            time.sleep(2)
-            if 1 <= Runs <= 3:
-                print("Ball " + str(Balls) + ": HE TAKES A QUICK " + str(Runs))
-            elif Runs == 4 or Runs == 6:
-                print("Ball " + str(Balls) + ": HE HITS A " + str(Runs))
-            elif Runs == 5:
-                print("Ball " + str(Balls) + ": OH NO! ITS AN OVERTHROW! " + str(Runs) + " RUNS")
-            else:
-                print("Ball " + str(Balls) + ": GOT 'EM!")
-            if TRUN1 > TRUN2:
-                break
+        IndScore, Balls, Runs = BatsmanScore()
+        TRUN1 = TRUN1 + IndScore
+        TBalls1 = TBalls1 + Balls
+        if TRUN1 > TRUN2:
+            break
         time.sleep(3)
         IRUN1.append(IndScore)
         IBall1.append(Balls)
         if Runs == 0:
-            print
+            print()
             print(Team1[Wicket1] + " IS OUT FOR " + str(IndScore) + " IN " + str(Balls) + " BALLS")
             Wicket1 = Wicket1 + 1
             time.sleep(3)
-            print
+            print()
             print(Name1 + " SCORE IS " + str(TRUN1))
             print("BALLS " + str(TBalls1))
             print(Name1 + " LOST " + str(Wicket1) + " WICKETS")
         else:
-            print
+            print()
             print(Team1[Wicket1] + " SCORED " + str(IndScore) + " IN " + str(Balls) + " BALLS")
             print(Name1 + " SCORE IS " + str(TRUN1))
             print("BALLS " + str(TBalls1))
 
     time.sleep(10)
-    print
+    print()
     print("MATCH OVER!")
     if TRUN2 < TRUN1: 
         WinningMargin = Players - Wicket2
@@ -297,7 +242,7 @@ elif ChooseTeam1 == "BOWL":
         print("SCORES ARE TIED!")
     
     time.sleep(3)
-    print   
+    print()
     print(Name2 + " SCORECARD")
     time.sleep(1)
     for x in range(0, Wicket2):
@@ -305,7 +250,7 @@ elif ChooseTeam1 == "BOWL":
         print(str(Team2[x].upper()) + " SCORED " + str(IRUN2[x]) + " RUNS IN " + str(IBall2[x]) + " BALLS")
     
     time.sleep(3)
-    print
+    print()
     print(Name1 + " SCORECARD")
     time.sleep(1)
     for x in range(0, Wicket1):

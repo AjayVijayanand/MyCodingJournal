@@ -20,22 +20,22 @@ while Choice != 0:
         RPS(CompChoice, "Computer")
         if Choice == 2 and CompChoice == 1:
             print("YOU HAVE GOT THE POINT!")
-            YOU =+ 1
+            YOU = YOU + 1
         elif Choice == 1 and CompChoice == 2:
             print("COMPUTER HAS GOT THE POINT!")
-            COMP =+ 1
+            COMP = COMP + 1
         elif Choice == 3 and CompChoice == 2:
             print("YOU HAVE GOT THE POINT!")
-            YOU =+ 1
+            YOU = YOU + 1
         elif Choice == 2 and CompChoice == 3:
             print("COMPUTER HAS GOT THE POINT!") 
-            COMP =+ 1
+            COMP = COMP + 1
         elif Choice == 1 and CompChoice == 3:
             print("YOU HAVE GOT THE POINT!")
-            YOU =+ 1
+            YOU = YOU + 1
         elif Choice == 3 and CompChoice == 1:
             print("COMPUTER HAS GOT THE POINT!")
-            COMP =+ 1
+            COMP = COMP + 1
         else:
             print("ITS A TIE")
 

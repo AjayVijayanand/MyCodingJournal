@@ -81,6 +81,3 @@ for y in range(2):
         t.sety(0)
     else:
         break
-
-
-

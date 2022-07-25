@@ -1,9 +1,9 @@
+import platform
 from pymongo import MongoClient
-import ssl
 import datetime
 import subprocess as sp
 
-MyClient = MongoClient("mongodb+srv://USER:PASSWORD@ajdatabase-7tidd.gcp.mongodb.net/test?retryWrites=true&w=majority", ssl=True, ssl_cert_reqs=ssl.CERT_NONE)
+MyClient = MongoClient("mongodb+srv://USER:PASSWORD@cluster0.x2hph.mongodb.net/?retryWrites=true&w=majority")
 Users = MyClient["Messaging"]
 LoginID = Users["People"]
 Posts = Users["Messages"]
@@ -15,6 +15,9 @@ Sender = []
 Messages = []
 Time_Of_Message = []
 while not Off:
+    Users = MyClient["Messaging"]
+    LoginID = Users["People"]
+    Posts = Users["Messages"]
     for x in LoginID.find():
         Username.append(x["USERNAME"])
         Password.append(x["PASSWORD"])
@@ -51,7 +54,11 @@ while not Off:
                     Sender.append(y["Sender"])
                     Messages.append(y["Messages"])
                     Time_Of_Message.append(y["Time_Of_Message"])
-                sp.call('clear', shell=True)
+                if platform.system().lower()=="windows":
+                    cmd='cls'
+                else:
+                    cmd='clear'
+                sp.call(cmd, shell=True)
                 TIME = datetime.datetime.now()
                 for z in range(len(Messages)):
                     if Messages[z] == ("Welcome" + Sender[z]):

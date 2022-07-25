@@ -21,9 +21,8 @@ Off = False
 
 # Connects to the database
 MyClient = MongoClient(
-    "mongodb+srv://USER:PASSWORD@ajdatabase-7tidd.gcp.mongodb.net/test?retryWrites=true&w=majority",
-    ssl=True,
-    ssl_cert_reqs=ssl.CERT_NONE)
+    "mongodb+srv://USER:PASSWORD@cluster0.x2hph.mongodb.net/?retryWrites=true&w=majority")
+
 Users = MyClient["Blogging"]
 LoginID = Users["LoginID"]
 Posts = Users["Posts"]
@@ -78,34 +77,40 @@ while not Off:
             LogOut = False
             while not LogOut:
                 if AU:
-                    ValidRead2 = False
-                    while not ValidRead2:
-                        try:
-                            R2 = str(input("Enter the Post ID to read posts: "))
-                            Read2 = R2.upper()
-                            if Read2 in PostID:
-                                ValidRead2 = True
-                            else:
-                                print("Enter Valid AuthorID")
-                        except ValueError:
-                            print("Enter Valid Value")
+                    if (len(PostID) == 0):
+                        print("No Posts Available! Please Come Back Later") 
+                    else:
+                        ValidRead2 = False
+                        while not ValidRead2:
+                            try:
+                                R2 = str(input("Enter the Post ID to read posts (To Logout, Press 9): "))
+                                Read2 = R2.upper()
+                                if Read2 in PostID:
+                                    ValidRead2 = True
+                                if Read2 == 9:
+                                    ValidRead2 = True
+                                    LogOut = True
+                                else:
+                                    print("Enter Valid PostID")
+                            except ValueError:
+                                print("Enter Valid Value")
 
-                    Find = PostID.index(Read2)
-                    print(PostTitle[Find])
-                    print(PostContent[Find])
-                    Valid = False
-                    while not Valid:
-                        try:
-                            B = int(input("Press 1 to go back to the home page or 9 to LogOut"))
-                            if B == 1:
-                                Valid = True
-                            elif B == 9:
-                                Valid = True
-                                LogOut = True
-                            else:
-                                print("Enter the number 1 or 9 ONLY")
-                        except ValueError:
-                            print("Enter Valid Value")
+                        Find = PostID.index(Read2)
+                        print(PostTitle[Find])
+                        print(PostContent[Find])
+                        Valid = False
+                        while not Valid:
+                            try:
+                                B = int(input("Press 1 to go back to the home page or 9 to LogOut"))
+                                if B == 1:
+                                    Valid = True
+                                elif B == 9:
+                                    Valid = True
+                                    LogOut = True
+                                else:
+                                    print("Enter the number 1 or 9 ONLY")
+                            except ValueError:
+                                print("Enter Valid Value")
                 if AA:
                     print("What do you want to do?")
                     print("1: Create A Post")
@@ -129,23 +134,35 @@ while not Off:
                         Insert2 = ActivePosts.insert_one(Post)
                         print("Post has been Created Successfully.")
                     elif Choice2 == 2:
-                        print("You have chosen: Delete A Post.")
-                        ValidD = False
-                        while not ValidD:
-                            try:
-                                DID = str(input("Enter the PostID of the Post you want to delete: "))
-                                for v in PostID:
-                                    print(v)
-                                DelID = DID.upper()
-                                if DelID in PostID:
-                                    ValidD = True
-                                else:
-                                    print("Enter the right postID")
-                            except ValueError:
-                                print("Enter Valid Value")
-                            Del = {"_id": DelID}
-                            Posts.delete_one(Del)
-                            print("Post has been Deleted Successfully.")
+                        if (len(PostID) == 0):
+                            print("No Posts Available! Please Come Back Later") 
+                        else:
+                            print("You have chosen: Delete A Post.")
+                            ValidD = False
+                            RetHome = False
+                            while not ValidD:
+                                try:
+                                    DID = str(input("Enter the PostID of the Post you want to delete (Press 1 to go back to home screen or Press 9 to logout): "))
+                                    for v in PostID:
+                                        print(v)
+                                    DelID = DID.upper()
+                                    if DelID in PostID:
+                                        ValidD = True
+                                    elif DelID == 1:
+                                        ValidD = True
+                                        RetHome = True
+                                    elif DelID == 9:
+                                        ValidID = True
+                                        RetHome = True
+                                        LogOut = True
+                                    else:
+                                        print("Enter the right postID")
+                                except ValueError:
+                                    print("Enter Valid Value")
+                                if not RetHome:
+                                    Del = {"_id": DelID}
+                                    Posts.delete_one(Del)
+                                    print("Post has been Deleted Successfully.")
                     elif Choice2 == 3:
                         print("You have chosen: Read Another Ones' Post.")
                         ValidRead3 = False
@@ -156,7 +173,7 @@ while not Off:
                                 if Read2 in PostID:
                                     ValidRead3 = True
                                 else:
-                                    print("Enter Valid AuthorID")
+                                    print("Enter Valid PostID")
                             except ValueError:
                                 print("Enter Valid Value")
 
