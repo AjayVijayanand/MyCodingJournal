@@ -41,7 +41,7 @@ for x in range(Count + 1):
         WronglyPlaced = []
         for y in Letters:
             for z in GLetters:
-                if y == z and y not in RLetters and y not in WronglyPlaced:
+                if y == z and (y not in RLetters and y not in WronglyPlaced):
                     WronglyPlaced.append(y)
         print("Some Letters that are wrongly placed: " + str(WronglyPlaced))
         print("Tries Left " + str(Tries))
