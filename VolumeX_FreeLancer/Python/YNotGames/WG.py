@@ -1,6 +1,6 @@
 from random import randint
 
-with open("VolumeX_FreeLancer\Python\YNotGames\hrt.txt", "r") as w:
+with open("VolumeX_FreeLancer/Python/YNotGames/hrt.txt", "r") as w:
     WordList = w.readlines()
 
 Word = WordList[randint(0, len(WordList))]
