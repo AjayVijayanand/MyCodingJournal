@@ -22,7 +22,7 @@ int main(void) {
     printf("----------------------------------\n" );
     while (time <= max_time) {
         distance = (initial_velocity * time) + (0.5 * ACCEL * time * time);        //Calculation
-        printf("%7.2f %19.2f\n", time, distance);                                 //Output
+        printf("%7.2f %19.2f\n", time, distance);                                  //Output
         time = time + interval;                                                    //Loop Condition Increment
     }
     return 0;
