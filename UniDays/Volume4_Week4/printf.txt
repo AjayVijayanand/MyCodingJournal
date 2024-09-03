@@ -1,0 +1,51 @@
+(a) Printing the integer 15 using various conversion specifiers
+
+Recap: %m means minimum width of m spaces 
+
+Conversion Specifier      Display
+-----------------------------------
+         %d               15
+         %5d                 15(There are 3 spaces before the number)
+         %-5d             15   (There are 3 spaces after the number 
+				because of negative sign, i.e. %-m)
+         %1d              15
+-----------------------------------
+
+Printing 7 using %c gives
+Heard the beep?
+
+Printing 65 using %c gives A
+Printing 32 using %c gives   (Is any character displayed?)
+Printing 48 using %c gives 0
+===============================================================
+
+(b) Printing the real number 12.34567
+
+Recap: %m.n means minimum width of m spaces with n number of decimal places
+
+Conversion Specifier      Display
+----------------------------------------
+        %f                12.345670
+        %e                1.234567e+001
+        %E                1.234567E+001
+        %10.3f                12.346
+        %10.3E            1.235E+001
+        %.8f              12.34567000
+----------------------------------------
+
+
+(c) Printing the real number 0.0000123456789
+
+Conversion Specifier      Display
+----------------------------------------
+        %f                0.000012
+        %e                1.234568e-005
+        %E                1.234568E-005
+        %8.3f                0.000
+        %8.3e             1.235e-005 
+        %12.7f               0.0000123
+        %12.3f                   0.000
+        %.3f              0.000
+        %1.7f             0.0000123
+        %5.7f             0.0000123
+===============================================================

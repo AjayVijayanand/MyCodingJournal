@@ -3,5 +3,9 @@
         "Volume7_DimensionalArrays",
         "Volume10_TheHLCodes",
         "Volume2_TheJavaBasics"
-    ]
+    ],
+    "files.associations": {
+        "__locale": "c",
+        "stdio.h": "c"
+    }
 }
