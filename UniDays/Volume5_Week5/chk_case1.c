@@ -1,4 +1,4 @@
-/* Temperature Conversion from Celcius to Fahrenheit. */
+/* Checking if the input is a Char */
 
 #include <stdio.h>
 int main(void) {
@@ -13,9 +13,10 @@ int main(void) {
     scanf("%lf", &celcius);
 
     //Computation
-    fahrenheit = ((float)9/5) * celcius + 32;
+    fahrenheit = ((float)(9/5) * celcius) + 32;
 
     //Output
-    printf("%.2lf°C = %.2lf°F\n", celcius, fahrenheit);
+    printf("%.2lf°C = %.2lf°F\n", celcius, fahrenheit); 
+
     return 0;
 }
