@@ -7,10 +7,10 @@
 #define  PI_CONST 3.14159
 
 int main(void) { 
-  /* declaration */   
+  /* declaration */
   double radius, area, circumference;
 
-  /* get the input */  
+  /* get the input */
   printf("Enter the radius of the circle> ");
   scanf("%f", &radius);
 
