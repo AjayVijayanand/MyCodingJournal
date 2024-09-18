@@ -18,7 +18,7 @@ int main(void)
   /* compute the interest */
   if (period >= 15 && period < 24) {
     int_rate += 1;
-  } else if (period > 24){
+  } else if (period >= 24){
     int_rate += 1.25;
   }
   interest = amount * (int_rate/100.0)*(period/12.0);
