@@ -2,9 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-double scale(double Number, int Power){
-    return Number * pow(10, Power);
-}
+double scale(double, int);
 
 int main(void){
     double number;
@@ -15,4 +13,8 @@ int main(void){
     scanf("%d", &power);
     printf("%.1f\n", scale(number, power));
     return 0;
+}
+
+double scale(double Number, int Power){
+    return Number * pow(10, Power);
 }

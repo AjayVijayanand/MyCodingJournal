@@ -2,6 +2,17 @@
 #include <stdlib.h>
 #include <math.h>
 
+int istriangle(double, double, double);
+double areatri(double, double, double);
+
+int main(void){
+    printf("The area of the triangle = %.2f\n\n", areatri(5, 5, 6));
+    printf("The area of the triangle = %.2f\n\n", areatri(5, 5, 8));
+    printf("The area of the triangle = %.2f\n\n", areatri(0, 3, 4));
+    printf("The area of the triangle = %.2f\n\n", areatri(4, 5, 1));
+    return 0;
+}
+
 int istriangle(double a, double b, double c) {
     if (((a > 0) && (b > 0) && (c > 0)) && ((a+b) > c && (c+b) > a) && (a+c) > b) {
         printf("It is a triangle!\n");
@@ -21,12 +32,4 @@ double areatri(double a, double b, double c){
     } else {
         return 0;
     }
-}
-
-int main(void){
-    printf("The area of the triangle = %.2f\n\n", areatri(5, 5, 6));
-    printf("The area of the triangle = %.2f\n\n", areatri(5, 5, 8));
-    printf("The area of the triangle = %.2f\n\n", areatri(0, 3, 4));
-    printf("The area of the triangle = %.2f\n\n", areatri(4, 5, 1));
-    return 0;
 }
