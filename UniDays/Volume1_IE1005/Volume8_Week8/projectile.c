@@ -9,15 +9,19 @@ double flightht(double, double, double);
 
 int main(void){
     double distance, velocity, angle, time, height;
+
     instruct();
     scanf("%lf %lf %lf", &distance, &velocity, &angle);
+
     time = flighttime(distance, velocity, angle);
     height = flightht(velocity, angle, time);
+
     printf("Distance to target: %.2fm\n", distance);
     printf("Initial Velocity: %.2fm/s\n", velocity);
     printf("Angle of Elevation: %.2fradians\n", angle);
     printf("Time of flight: %.2fs\n", time);
     printf("Height of flight: %.2fm\n", height);
+    
     return 0;
 }
 
