@@ -30,6 +30,6 @@ double areatri(double a, double b, double c){
         area = sqrt((s*(s-a)*(s-b)*(s-c)));
         return area;
     } else {
-        return 0;
+        return -1;
     }
 }
