@@ -14,7 +14,7 @@ int main(void){
 }
 
 int istriangle(double a, double b, double c) {
-    if (((a > 0) && (b > 0) && (c > 0)) && ((a+b) > c && (c+b) > a) && (a+c) > b) {
+    if (((a > 0) && (b > 0) && (c > 0)) && (((a+b) > c) && ((c+b) > a) && ((a+c) > b))) {
         printf("It is a triangle!\n");
         return 1;
     } else {

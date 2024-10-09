@@ -5,8 +5,10 @@
 double repay(int);
 
 int main(void){
-    printf("%lf\n", repay(12));
-    printf("%lf\n", repay(365));
+    printf("Charge per year: $%lf\n", repay(1));
+    printf("Charge per month: $%lf\n", repay(12));
+    printf("Charge per day: $%lf\n", repay(365));
+    printf("Charge per hour: $%lf\n", repay(365*24));
     return 0;
 }
 
