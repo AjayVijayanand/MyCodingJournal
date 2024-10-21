@@ -7,6 +7,7 @@
     "files.associations": {
         "__locale": "c",
         "stdio.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "stdlib.h": "c"
     }
 }

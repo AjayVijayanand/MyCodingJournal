@@ -21,12 +21,12 @@ int main(void){
     printf("Angle of Elevation: %.2fradians\n", angle);
     printf("Time of flight: %.2fs\n", time);
     printf("Height of flight: %.2fm\n", height);
-    
+
     return 0;
 }
 
 void instruct(void){
-    printf("Enter the Distance to target, Initial Velocity and Angle of Elevation: ");
+    printf("Enter the Distance to target (in meters), Initial Velocity (in meters per second) and Angle of Elevation (in radians): ");
 }
 
 double flighttime(double dist, double vel, double theta){
