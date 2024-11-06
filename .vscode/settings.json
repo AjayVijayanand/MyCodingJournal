@@ -8,6 +8,7 @@
         "__locale": "c",
         "stdio.h": "c",
         "math.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "complex": "c"
     }
 }
