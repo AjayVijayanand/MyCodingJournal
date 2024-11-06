@@ -5,7 +5,7 @@ void print_array(int a[], int arraysize);
 int second(const int a[], int arraysize);
 
 int main(void){
-    int a[10] = {13, 25, 50, 40, 45, 51, 20, 51, 20, 17};
+    int a[10] = {13, 25, 50, 40, 45, 251, 20, 151, 20, 17};
 
     print_array(a, 10);
     printf("The second maxium number of the array is: %d\n", second(a, 10));
