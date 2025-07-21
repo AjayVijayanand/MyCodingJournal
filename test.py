@@ -1,9 +1,11 @@
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
-import pandas as pd``
+def isPalindrome(word):
+    if len(word) > 1:
+        if word[0] == word[-1]:
+            return isPalindrome(word[1:-1])
+        else:
+            return False
+    else:
+        return True
 
-data = pd.read_csv('/Users/ajvj56/MyCSJournalAJVJ/test.py', encoding='ISO-8859-1')
-
-feature_names = ["danceability_%", "valence_%", "energy_%", "acousticness_%", "instrumentalness_%", "liveness_%", "speechiness_%"]
-
-X, y = data[feature_names], data['popularity']
+word = "racecars"
+print(isPalindrome(word))
