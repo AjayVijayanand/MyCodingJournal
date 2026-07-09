@@ -1,8 +1,10 @@
 # MyCSJournalAJVJ
 
-A running journal of code I've written since November 2020 — university coursework, personal projects, and things built just for fun. This repo spans EEE coursework in C/Java, self-directed Python projects, and web development experiments.
+A running journal of code I've written since November 2020 — university coursework, personal projects, and things built just for fun. This repo spans EEE coursework in C, Junior College coursework in Java and Pseudocode, self-directed Python projects, and web development experiments.
 
-**About me:** Electrical & Electronics Engineering student at NTU, Singapore. [LinkedIn](https://linkedin.com/in/ajay-vijay-anand-2734ab185) · [Portfolio site](https://ajayvijayanand.github.io/MyCSJournalAJVJ/PortfolioWebsite/)
+## About me:
+Electrical & Electronics Engineering student at NTU, Singapore. 
+[LinkedIn](https://linkedin.com/in/ajay-vijay-anand-2734ab185) · [Portfolio site](https://ajayvijayanand.github.io/MyCSJournalAJVJ/PortfolioWebsite/)
 
 ---
 
