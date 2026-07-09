@@ -1,15 +1,18 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
 
 body {
+    margin: auto auto;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #1a1a1a;
-    background: #fafafa;
+    color: #fafafa;
+    background: #1a1a1a;
 }
 
 section {
-    max-width: 800px;
-    margin: 0 auto;
     padding: 60px 20px;
 }
 
@@ -29,7 +32,7 @@ h2 {
 
 .project {
     flex: 2 2 340px;
-    background: white;
+    background: #161616;
     border-radius: 8px;
     padding: 24px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
@@ -58,4 +61,15 @@ a:hover {
 .project:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: box-shadow 0.2s ease;
+}
+
+.fade-target { 
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.6s, transform 0.6s; 
+}
+
+.fade-target.visible { 
+    opacity: 1; 
+    transform: translateY(0); 
 }
