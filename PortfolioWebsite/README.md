@@ -1,8 +1,18 @@
-Portfolio Website
+# Portfolio website
 
-1. Initialising the first few files to add and view tasks.
-    - main.py the entry point to the code
-    - dashboard.py Handles the Task operations
-    - Task.py the tasks class
-    - README.md the journal to track this codes progress
+My personal site, written by hand in HTML, CSS and JavaScript with no
+framework or build step.
 
+Live at <https://ajayvijayanand.github.io/MyCodingJournal/PortfolioWebsite/>
+
+The strip under the introduction is a small sampling demo drawn on a canvas:
+drag the slider below two samples per cycle and the samples start to fit a
+slower wave, which is aliasing.
+
+| File | Contents |
+| --- | --- |
+| `index.html` | Page content |
+| `style.css` | Layout, type and the light and dark colour themes |
+| `script.js` | The sampling demo |
+
+To view it locally, open `index.html` in a browser.

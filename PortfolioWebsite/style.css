@@ -1,75 +1,226 @@
-* { 
-    box-sizing: border-box; 
-    margin: 0; 
-    padding: 0; 
+:root {
+    --paper: #f2f5f8;
+    --panel: #e4eaf1;
+    --ink: #14213d;
+    --muted: #4f5b70;
+    --signal: #2450b8;
+    --sample: #b86a00;
+    --rule: #c5cfdb;
+    --display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+    --body: 'Atkinson Hyperlegible', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #101a2e;
+        --panel: #18243c;
+        --ink: #e9eef6;
+        --muted: #a9b5c8;
+        --signal: #8fb0ff;
+        --sample: #f2b04a;
+        --rule: #2c3b59;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: auto auto;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--body);
+    font-size: 1.125rem;
     line-height: 1.6;
-    color: #fafafa;
-    background: #1a1a1a;
+    color: var(--ink);
+    background: var(--paper);
 }
 
-section {
-    padding: 60px 20px;
+.wrap {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
 }
 
-h1 { 
-    font-size: 2.5rem;
+.skip {
+    position: absolute;
+    left: -999px;
 }
 
-h2 { 
-    font-size: 1.8rem; margin-bottom: 20px;
+.skip:focus {
+    left: 1rem;
+    top: 1rem;
+    background: var(--paper);
+    padding: 0.5rem 0.75rem;
 }
 
-#projects {
+a {
+    color: var(--signal);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--sample);
+    outline-offset: 3px;
+}
+
+/* Hero */
+
+.hero {
+    padding-top: 4.5rem;
+}
+
+h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 9vw, 4.75rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.lede {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.status {
+    margin-top: 1rem;
+    color: var(--muted);
+}
+
+.links {
+    margin-top: 1.5rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 0.5rem 1.5rem;
+    font-weight: 700;
 }
 
-.project {
-    flex: 2 2 340px;
-    background: #161616;
-    border-radius: 8px;
-    padding: 24px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+/* Sampling demo */
+
+.sampler {
+    margin-top: 3.5rem;
+    padding: 1.75rem 0 1.5rem;
+    background: var(--panel);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+}
+
+#signal {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.sampler-controls {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.sampler-controls label {
+    font-weight: 700;
+}
+
+.sampler-controls input {
+    flex: 1 1 12rem;
+    accent-color: var(--signal);
+    min-height: 2rem;
+}
+
+.sampler-controls output {
+    min-width: 2.5rem;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+}
+
+figcaption {
+    margin-top: 0.6rem;
+    color: var(--muted);
+    font-size: 1rem;
+    min-height: 3.2em;
+}
+
+/* Sections */
+
+section {
+    padding-top: 4rem;
+}
+
+h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.9rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.projects {
+    list-style: none;
+}
+
+.projects li {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+h3 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
+}
+
+.tech {
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.more {
+    margin-top: 1.5rem;
+}
+
+.skills div {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    gap: 0.25rem 1rem;
+}
+
+.skills dt {
+    font-weight: 700;
+}
+
+#contact {
+    padding-bottom: 5rem;
 }
 
 @media (max-width: 600px) {
-
-    section { 
-        padding: 40px 16px; 
+    body {
+        font-size: 1.05rem;
     }
 
-    h1 { 
-        font-size: 1.8rem; 
+    .hero {
+        padding-top: 3rem;
     }
-}
 
-a { 
-    color: #2563eb; 
-    text-decoration: none; 
-}
+    .lede {
+        font-size: 1.15rem;
+    }
 
-a:hover { 
-    text-decoration: underline; 
-}
-
-.project:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: box-shadow 0.2s ease;
-}
-
-.fade-target { 
-    opacity: 0; 
-    transform: translateY(20px); 
-    transition: opacity 0.6s, transform 0.6s; 
-}
-
-.fade-target.visible { 
-    opacity: 1; 
-    transform: translateY(0); 
+    .skills div {
+        grid-template-columns: 1fr;
+    }
 }
