@@ -314,23 +314,30 @@ h3 {
     stroke-linejoin: round;
 }
 
-/* About me: portrait beside the text */
+/* About me: portrait beside the text, exactly as tall as the text */
 
 .about {
     display: grid;
     grid-template-columns: 15rem minmax(0, 1fr);
     gap: 2.5rem;
-    align-items: center;
+    align-items: stretch;
 }
 
+/* The frame takes its height from the text column; the photo fills it */
 .portrait {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
+    position: relative;
     border-radius: 6px;
     border: 1px solid var(--rule);
+    overflow: hidden;
+}
+
+.portrait img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;
 }
 
 @media (max-width: 700px) {
@@ -341,5 +348,6 @@ h3 {
 
     .portrait {
         max-width: 15rem;
+        aspect-ratio: 4 / 5;
     }
 }
