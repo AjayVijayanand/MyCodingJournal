@@ -1,31 +1,24 @@
-/* Three colours: paper, ink and one accent. Two fonts: display and body. */
+/* Three colours: black, white and one blue. Two fonts: display and body. */
 
 :root {
-    --paper: #f6f7f9;
-    --ink: #14213d;
-    --accent: #2450b8;
+    --primary: #000000;
+    --secondary: #ffffff;
+    --accent: #4d8dff;
 
-    /* tints of ink, not extra colours */
-    --muted: color-mix(in srgb, var(--ink) 72%, var(--paper));
-    --rule: color-mix(in srgb, var(--ink) 16%, var(--paper));
+    /* tints of white on black, not extra colours */
+    --muted: color-mix(in srgb, var(--secondary) 70%, var(--primary));
+    --rule: color-mix(in srgb, var(--secondary) 22%, var(--primary));
 
     --display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
     --body: 'Atkinson Hyperlegible', 'Helvetica Neue', Arial, sans-serif;
-}
 
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --paper: #101a2e;
-        --ink: #e9eef6;
-        --accent: #8fb0ff;
-        color-scheme: dark;
-    }
-}
+    /* One size per role */
+    --size-title: clamp(2.6rem, 9vw, 4.5rem);
+    --size-heading: 1.9rem;
+    --size-subheading: 1.3rem;
+    --size-body: 1.125rem;
+    --size-small: 1rem;
 
-:root[data-theme="dark"] {
-    --paper: #101a2e;
-    --ink: #e9eef6;
-    --accent: #8fb0ff;
     color-scheme: dark;
 }
 
@@ -37,10 +30,10 @@
 
 body {
     font-family: var(--body);
-    font-size: 1.125rem;
+    font-size: var(--size-body);
     line-height: 1.6;
-    color: var(--ink);
-    background: var(--paper);
+    color: var(--secondary);
+    background: var(--primary);
 }
 
 .wrap {
@@ -57,7 +50,7 @@ body {
 .skip:focus {
     left: 1rem;
     top: 1rem;
-    background: var(--paper);
+    background: var(--primary);
     padding: 0.5rem 0.75rem;
 }
 
@@ -85,20 +78,20 @@ a:focus-visible {
 h1 {
     font-family: var(--display);
     font-weight: 700;
-    font-size: clamp(2.6rem, 9vw, 4.75rem);
+    font-size: var(--size-title);
     line-height: 1;
     letter-spacing: -0.03em;
 }
 
 .lede {
     margin-top: 1.5rem;
-    font-size: 1.3rem;
-    line-height: 1.5;
+    font-size: var(--size-body);
 }
 
 .status {
     margin-top: 1rem;
     color: var(--muted);
+    font-size: var(--size-small);
 }
 
 .links {
@@ -107,6 +100,7 @@ h1 {
     flex-wrap: wrap;
     gap: 0.5rem 1.5rem;
     font-weight: 700;
+    font-size: var(--size-small);
 }
 
 /* Sections */
@@ -118,7 +112,7 @@ section {
 h2 {
     font-family: var(--display);
     font-weight: 700;
-    font-size: 1.9rem;
+    font-size: var(--size-heading);
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
 }
@@ -135,7 +129,7 @@ h2 {
 h3 {
     font-family: var(--display);
     font-weight: 500;
-    font-size: 1.35rem;
+    font-size: var(--size-subheading);
     line-height: 1.25;
     margin-bottom: 0.4rem;
 }
@@ -143,7 +137,7 @@ h3 {
 .tech {
     margin-top: 0.5rem;
     color: var(--muted);
-    font-size: 1rem;
+    font-size: var(--size-small);
 }
 
 .more {
@@ -167,16 +161,8 @@ h3 {
 }
 
 @media (max-width: 600px) {
-    body {
-        font-size: 1.05rem;
-    }
-
     .hero {
         padding-top: 3rem;
-    }
-
-    .lede {
-        font-size: 1.15rem;
     }
 
     .skills div {
@@ -190,7 +176,7 @@ h3 {
     position: sticky;
     top: env(safe-area-inset-top, 0px);
     z-index: 2;
-    background: var(--paper);
+    background: var(--primary);
     border-bottom: 1px solid var(--rule);
 }
 
@@ -199,11 +185,11 @@ h3 {
     gap: 0.25rem 1.4rem;
     flex-wrap: wrap;
     padding-block: 0.7rem;
-    font-size: 1rem;
+    font-size: var(--size-small);
 }
 
 .site-nav a {
-    color: var(--ink);
+    color: var(--secondary);
     text-decoration: none;
     font-weight: 700;
 }
@@ -233,7 +219,7 @@ html {
     margin-left: 0.4rem;
     color: var(--muted);
     font-family: var(--body);
-    font-size: 1rem;
+    font-size: var(--size-small);
     font-weight: 400;
 }
 
@@ -253,7 +239,7 @@ html {
 
 .timeline .when {
     color: var(--muted);
-    font-size: 1rem;
+    font-size: var(--size-small);
     font-variant-numeric: tabular-nums;
     padding-top: 0.2rem;
 }
@@ -286,16 +272,17 @@ html {
 .band {
     margin-top: 3.5rem;
     padding-block: 3rem;
-    background: var(--ink);
-    color: var(--paper);
+    background: var(--secondary);
+    color: var(--primary);
 }
 
 .band a {
-    color: var(--paper);
+    color: var(--primary);
+    font-weight: 700;
 }
 
 .band a:focus-visible {
-    outline-color: var(--paper);
+    outline-color: var(--primary);
 }
 
 .band h2 {
@@ -306,13 +293,6 @@ html {
     margin-top: 1rem;
 }
 
-.band .band-lead {
-    font-family: var(--display);
-    font-weight: 500;
-    font-size: clamp(1.35rem, 3.6vw, 1.75rem);
-    line-height: 1.35;
-    letter-spacing: -0.01em;
-}
 
 .elsewhere {
     margin-top: 0.75rem;
