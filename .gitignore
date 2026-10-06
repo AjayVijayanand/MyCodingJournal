@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Java / C build output
+*.class
+*.o
+*.out
+
+# Editors
+.vscode/
+.idea/
+
+# Secrets
+.env
