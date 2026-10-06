@@ -350,3 +350,22 @@ h3 {
         aspect-ratio: 16 / 9;
     }
 }
+
+/* Where each project comes from */
+
+.context {
+    margin-bottom: 0.4rem;
+    color: var(--muted);
+    font-size: var(--size-small);
+}
+
+/* Bullet points inside a timeline entry */
+
+.points {
+    margin-top: 0.6rem;
+    padding-left: 1.1rem;
+}
+
+.points li + li {
+    margin-top: 0.5rem;
+}

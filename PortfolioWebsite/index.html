@@ -20,7 +20,8 @@
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
-            <a href="#beyond">Beyond code</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#achievements">Achievements</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -28,7 +29,7 @@
     <header class="hero">
         <div class="wrap">
             <h1>Ajay Vijay Anand</h1>
-            <p class="lede">I'm an Electrical and Electronic Engineering student at NTU Singapore. I write software, mostly in Python, C and JavaScript, and the part of my degree I like best is signal processing.</p>
+            <p class="lede">Year 3 Electrical and Electronic Engineering student at NTU Singapore, building toward specialisations in Computing and Intelligent Systems and in Communication and Networks.</p>
             <p class="status">Looking for a January to June 2027 internship in software, signal processing or networks.</p>
             <nav class="links" aria-label="Profiles">
                 <a href="https://github.com/AjayVijayanand"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>GitHub</a>
@@ -46,8 +47,9 @@
             </div>
             <div class="about-text">
                 <h2>About me</h2>
-                <p>I'm a coder at heart. I started writing code at school in 2020 and have kept a journal of it ever since, from exam exercises to machine learning projects. At NTU I'm steering my degree toward computing, signal processing and networks, and I'm looking for an internship where I can contribute to real work and keep learning.</p>
-                <p>Away from the keyboard I'm usually behind a camera. I lead branding and content teams at Garage@EEE, and I post my photography on Instagram as <a href="https://www.instagram.com/sleepykamkoala/">@sleepykamkoala</a>.</p>
+                <p>I'm a coder at heart. My recent projects include a machine learning model that predicts song popularity from audio features, and a Python tool that automates Excel data-quality checks for a family member's small business.</p>
+                <p>I'm just as comfortable where hardware meets software: I've built a closed-loop audio amplifier on an STM32 with a live Python control layer, and a three-stage analog signal chain that I characterised end to end on an oscilloscope.</p>
+                <p>I also lead branding and content teams at Garage@EEE, and I post my photography on Instagram as <a href="https://www.instagram.com/sleepykamkoala/">@sleepykamkoala</a>.</p>
             </div>
         </div>
     </section>
@@ -58,60 +60,66 @@
             <ul class="projects">
                 <li>
                     <h3><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/UniDays/IntroductionToDataScienceAndArtificialIntelligence/MiniProject_TopSongs">Spotify song popularity classifier</a></h3>
-                    <p>Can a song's audio features predict how many streams it gets? A group project that trains K-nearest neighbours, a random forest and a voting ensemble on 2023's most-streamed songs, then uses permutation importance to see which features matter.</p>
-                    <p class="tech">Python, scikit-learn, pandas, seaborn</p>
+                    <p class="context">Group project, NTU IE0005 Introduction to Data Science and AI</p>
+                    <p>Contributed to an ensemble machine learning classifier that predicts a song's popularity from its Spotify audio features. It combines K-nearest neighbours and a random forest, tuned with GridSearchCV, and checks which features matter using permutation importance.</p>
+                    <p class="tech">Python, scikit-learn, pandas, Jupyter</p>
                 </li>
                 <li>
-                    <h3><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/CodesForFun/Python/ExcelParse">Excel data automation tool</a></h3>
-                    <p>Scripts that check a folder of Excel workbooks in one run: they flag incomplete rows and over-long text in red, write live formulas, pull out embedded images and produce a summary sheet.</p>
+                    <h3><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/CodesForFun/Python/ExcelParse">Automated data-quality and Excel reporting tool</a></h3>
+                    <p class="context">For a family member's small business, built and shipped in a day</p>
+                    <p>A Python tool that automates Excel data-quality work: it flags incomplete rows, writes live Excel formulas, classifies entries by complexity and extracts embedded images across large datasets.</p>
                     <p class="tech">Python, openpyxl</p>
                 </li>
                 <li>
-                    <h3><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/CodesForFun/Python/TermComm">TermComm</a></h3>
-                    <p>A chat room and a small blog that run in the terminal and store everything in MongoDB, with accounts, hashed passwords and separate admin and reader roles.</p>
-                    <p class="tech">Python, pymongo, MongoDB Atlas</p>
-                </li>
-                <li>
-                    <h3>JavaJam Coffee House <span class="badge">(in progress)</span></h3>
-                    <p>A multi-page coffee house site that I first built in plain HTML, CSS and PHP, and am now rebuilding in React as an optional extra: reusable components, controlled form inputs and per-field validation.</p>
-                    <p class="tech">React, Vite, JavaScript, CSS</p>
+                    <h3>JavaJam Coffee House web application <span class="badge">(in progress)</span></h3>
+                    <p class="context">NTU IE4727, AY2026/27, optional Case Study 3</p>
+                    <p>After finishing the compulsory case studies, from plain HTML and CSS through to PHP, I took on the optional React rebuild of the site. It is a multi-page app (Home, Menu, Music, Jobs) with component-based architecture, controlled form inputs and client-side validation, including regex email checks and per-field error states.</p>
+                    <p class="tech">React, Vite, JavaScript, CSS, ESLint</p>
                 </li>
                 <li>
                     <h3>Automatic volume-controlled audio amplifier</h3>
-                    <p>A closed-loop audio amplifier built around an STM32, with a voltage-controlled amplifier, power stage and VU meter. Measured for flat frequency response and steady output across a wide range of input levels.</p>
-                    <p class="tech">STM32, Python, Jupyter</p>
+                    <p class="context">NTU EE2073, AY2025/26</p>
+                    <p>A closed-loop audio amplifier on an STM32 with three subsystems: a voltage-controlled amplifier, a power amplifier and a VU meter. It holds a stable output across a wide input range. I validated a flat frequency response across the audible range, characterised the amplifier's gain across the full control-voltage range, and debugged clipping and grounding noise during integration.</p>
+                    <p class="tech">STM32, Python, Jupyter, closed-loop feedback</p>
                 </li>
                 <li>
-                    <h3>Three-stage stethoscope signal chain</h3>
-                    <p>A discrete analog chain for a stethoscope microphone: op-amp preamplifier, diode-based VU meter and transistor output buffer, simulated first and then checked on an oscilloscope.</p>
-                    <p class="tech">LTspice, op-amp and BJT circuits</p>
+                    <h3>Three-stage analog stethoscope signal chain</h3>
+                    <p class="context">NTU EE2102, AY2025/26</p>
+                    <p>A signal chain that takes body sounds from a microphone to an earpiece. Stage one is an inverting op-amp preamplifier with a feedback capacitor to suppress high-frequency noise. Stage two is a log-scale VU meter that lights LEDs at rising peak voltages using diode threshold logic. Stage three is an emitter-follower buffer that supplies enough current to drive low-impedance earpieces.</p>
+                    <p class="tech">Op-amp and BJT circuits, LTspice, oscilloscope measurement</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/CodesForFun/Python/TermComm">TermComm</a></h3>
+                    <p class="context">Personal project</p>
+                    <p>A chat room and a small blog that run in the terminal and store everything in MongoDB, with accounts, hashed passwords and separate admin and reader roles.</p>
+                    <p class="tech">Python, pymongo, MongoDB</p>
                 </li>
             </ul>
-            <p class="more">The rest of my code, including Advent of Code solutions and coursework in C and Java, is in <a href="https://github.com/AjayVijayanand/MyCodingJournal">MyCodingJournal</a>.</p>
+            <p class="more">All of this sits in <a href="https://github.com/AjayVijayanand/MyCodingJournal">MyCodingJournal</a>, a journal of the code I've written since November 2020 in Python, C, Java, HTML, CSS and JavaScript.</p>
         </section>
 
         <section id="skills">
-            <h2>Skills</h2>
+            <h2>Technical skills</h2>
             <dl class="skills">
                 <div>
-                    <dt>Languages</dt>
-                    <dd>Python, C, Java, JavaScript, SQL</dd>
+                    <dt>Programming</dt>
+                    <dd>Python, C, Java, JavaScript, HTML, CSS, SQL</dd>
                 </div>
                 <div>
-                    <dt>Libraries and tools</dt>
-                    <dd>NumPy, pandas, Matplotlib, scikit-learn, React, Git, Jupyter</dd>
+                    <dt>Hardware and signals</dt>
+                    <dd>STM32 (Python), LTspice, op-amp design, BJT amplifiers, closed-loop feedback, AC/DC signal analysis, RC filter design</dd>
+                </div>
+                <div>
+                    <dt>Software and tools</dt>
+                    <dd>Git, GitHub, VS Code, NumPy, pandas, Matplotlib, Jupyter, Microsoft Excel, Microsoft PowerPoint</dd>
                 </div>
                 <div>
                     <dt>Databases</dt>
-                    <dd>PostgreSQL, MySQL, MongoDB</dd>
+                    <dd>PostgreSQL, MySQL, MongoDB, Microsoft Access</dd>
                 </div>
                 <div>
-                    <dt>Signals and hardware</dt>
-                    <dd>Signal processing, STM32, LTspice, closed-loop feedback</dd>
-                </div>
-                <div>
-                    <dt>Media</dt>
-                    <dd>Premiere Pro, After Effects, Photoshop, Illustrator, DaVinci Resolve</dd>
+                    <dt>Creative and media</dt>
+                    <dd>Adobe Premiere Pro, After Effects, Photoshop, Illustrator, Lightroom, DaVinci Resolve, Affinity Designer</dd>
                 </div>
             </dl>
         </section>
@@ -120,56 +128,74 @@
             <h2>Education</h2>
             <ol class="timeline">
                 <li>
-                    <p class="when">2024 to 2028</p>
+                    <p class="when">Aug 2024 to May 2028</p>
                     <div>
                         <h3>Nanyang Technological University</h3>
-                        <p>Bachelor of Engineering in Electrical and Electronic Engineering, now in year 3. I'm working toward specialisations in Computing and Intelligent Systems and in Communication and Networks.</p>
-                        <p class="tech">This semester: Digital Signal Processing, Communication Principles, Computer Communications</p>
+                        <p>Bachelor of Engineering in Electrical and Electronic Engineering. CGPA 3.65 out of 5.00.</p>
+                        <p>Key modules: Computational Thinking and Programming in C, Data Structures and Algorithms, Signals and Systems, Analog Electronics, Introduction to Data Science and AI.</p>
+                        <p class="tech">In progress this semester: Digital Signal Processing, Communication Principles, Computer Communications</p>
                     </div>
                 </li>
                 <li>
-                    <p class="when">2020 to 2022</p>
+                    <p class="when">Jul 2020 to Jul 2022</p>
                     <div>
                         <h3>International Baccalaureate Diploma</h3>
-                        <p>Global Indian International School, Singapore. Scored 36 out of 45, with Physics, Computer Science and Mathematics at Higher Level.</p>
+                        <p>Global Indian International School. Scored 36 out of 45, with Physics, Computer Science and Mathematics: Analysis and Approaches at Higher Level.</p>
                     </div>
                 </li>
                 <li>
-                    <p class="when">2018 to 2020</p>
+                    <p class="when">Mar 2018 to Jun 2020</p>
                     <div>
                         <h3>Cambridge IGCSE</h3>
-                        <p>Global Indian International School, Singapore. Six A* and two A grades. Subjects included Physics, Computer Science and Additional Mathematics.</p>
+                        <p>Global Indian International School. Distinction, with six A* and two A grades. Key subjects: Physics, Computer Science, Extended Mathematics and Additional Mathematics.</p>
                     </div>
                 </li>
             </ol>
         </section>
 
-        <section id="beyond">
-            <h2>Beyond code</h2>
+        <section id="leadership">
+            <h2>Leadership and service</h2>
             <ol class="timeline">
                 <li>
-                    <p class="when">2024 to now</p>
+                    <p class="when">Sep 2024 to now</p>
                     <div>
-                        <h3>Garage@EEE, branding and marketing</h3>
-                        <p>Garage@EEE is the student makerspace at NTU's School of Electrical and Electronic Engineering. I joined its branding team in my first year and now sit on the main committee. As a vice president for Escendo 2026, a four-day make-a-thon, I managed seven people running content and publicity. I also led a team of four producing content for Makerspace Friendlies 2026, a joint event with SUTD.</p>
-                        <p>I also ran a photography and videography workshop for 30 people. My own photos are on Instagram at <a href="https://www.instagram.com/sleepykamkoala/">@sleepykamkoala</a>.</p>
+                        <h3>Garage@EEE, NTU: branding and marketing</h3>
+                        <p>Sub-committee member in my first year, main committee since May 2025.</p>
+                        <ul class="points">
+                            <li>Vice President, Escendo 2026, a four-day make-a-thon: managed three main-committee and four sub-committee members to drive content strategy, event publicity and sign-up growth.</li>
+                            <li>Vice President, Makerspace Friendlies 2026, an NTU and SUTD collaboration: led four sub-committee members producing consistent digital content to build the event's presence.</li>
+                            <li>Ran a photography and videography workshop for 30 participants, and oversaw posters, event photography and recap videos for Escendo 2025, IdeasJam 2025 and Makerspace Friendlies 2025.</li>
+                        </ul>
                     </div>
                 </li>
                 <li>
-                    <p class="when">2018 to 2022</p>
+                    <p class="when">Aug 2022 to Aug 2024</p>
                     <div>
-                        <h3>Student council media team</h3>
-                        <p>Four years on my school's media and digital communications team, ending as its head: event photography, design and audio-visual support for large school events.</p>
+                        <h3>National Service, Singapore Armed Forces</h3>
+                        <p>Served full-time as an infantry-trained security trooper. Received an Outstanding rating for performance and conduct, and the Marksmanship Award.</p>
+                    </div>
+                </li>
+                <li>
+                    <p class="when">Aug 2018 to Apr 2022</p>
+                    <div>
+                        <h3>Student Council: Head, Media and Digital Communications</h3>
+                        <p>Global Indian International School. Progressed from Prefect to Deputy Head to Head, leading the media team over four years to deliver event photography, design and technical audio-visual support for large school events.</p>
                     </div>
                 </li>
             </ol>
+        </section>
 
-            <h3 class="sub">Competitions</h3>
+        <section id="achievements">
+            <h2>Achievements and certifications</h2>
             <ul class="plain">
-                <li>iNTUition Hackathon 2021: built and deployed a working website with a team. <a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/HackathonWebsite">See the code</a></li>
-                <li>GIIS Hackathon 2019: second place</li>
+                <li>iNTUition Hackathon 2021: built and deployed a working website as part of a team. <a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/HackathonWebsite">See the code</a></li>
+                <li>GIIS Hackathon 2019 (Blender): second place</li>
                 <li>Silver Zone International Informatics Olympiad: first in class in 2018, second in 2019</li>
+                <li>UNSW Digital Technologies Olympiad 2019: Commendable</li>
+                <li>Codecademy: Computer Science career path, Natural Language Processing, Software Design Principles, Python 3 and HTML</li>
+                <li>Grade 2 Piano Certificate, Cristofori</li>
             </ul>
+            <p class="more">Outside work and study: photography and videography, creative media and design, cricket, badminton, chess and carrom. I speak English and Tamil.</p>
         </section>
 
         <section id="contact">
@@ -183,6 +209,5 @@
             </nav>
         </section>
     </main>
-
 </body>
 </html>
