@@ -1,7 +1,9 @@
 //Special thanks to the Google Developer Website: https://developers.google.com/calendar/quickstart/js
 
-var CLIENT_ID = 'REMOVED';
-var API_KEY = 'REMOVED';
+// Create your own client ID and API key in the Google Cloud console and paste them here.
+// The keys used at the hackathon have been removed from this file.
+var CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID';
+var API_KEY = 'YOUR_GOOGLE_API_KEY';
 
 // Array of API discovery doc URLs for APIs used by the quickstart
 var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];

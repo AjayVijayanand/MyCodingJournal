@@ -13,4 +13,7 @@ one place.
 | `Scripts.js` | Signs the user in and fetches their events through the Google Calendar API |
 | `styles.css` | Styling |
 
+To run it, create a Google Cloud project with the Calendar API enabled and
+put your own client ID and API key at the top of `Scripts.js`.
+
 Built with HTML, CSS, JavaScript and the Google Calendar API.
