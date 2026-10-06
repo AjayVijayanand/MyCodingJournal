@@ -123,7 +123,7 @@ h2 {
     list-style: none;
 }
 
-.projects li {
+.projects > li {
     padding: 1.5rem 0;
     border-bottom: 1px solid var(--rule);
 }
@@ -368,4 +368,41 @@ h3 {
 
 .points li + li {
     margin-top: 0.5rem;
+}
+
+/* Bullet points inside a project */
+
+.projects .points {
+    margin-top: 0.7rem;
+}
+
+/* Gallery: a collage that arranges itself around any number and shape of photos */
+
+.wrap.wide {
+    max-width: 68rem;
+}
+
+.gallery {
+    margin-top: 1.5rem;
+    columns: 3 16rem;
+    column-gap: 0.75rem;
+}
+
+.gallery a {
+    display: block;
+    margin-bottom: 0.75rem;
+    break-inside: avoid;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
+}
+
+.gallery a:hover img,
+.gallery a:focus-visible img {
+    border-color: var(--accent);
 }

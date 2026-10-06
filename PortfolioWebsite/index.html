@@ -22,6 +22,7 @@
             <a href="#education">Education</a>
             <a href="#leadership">Leadership</a>
             <a href="#achievements">Achievements</a>
+            <a href="#gallery" id="gallery-link" hidden>Gallery</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -61,41 +62,88 @@
                 <li>
                     <h3><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/UniDays/IntroductionToDataScienceAndArtificialIntelligence/MiniProject_TopSongs">Spotify song popularity classifier</a></h3>
                     <p class="context">Group project, NTU IE0005 Introduction to Data Science and AI</p>
-                    <p>Contributed to an ensemble machine learning classifier that predicts a song's popularity from its Spotify audio features. It combines K-nearest neighbours and a random forest, tuned with GridSearchCV, and checks which features matter using permutation importance.</p>
-                    <p class="tech">Python, scikit-learn, pandas, Jupyter</p>
+                    <p>Can a song's audio features predict how popular it will be? I contributed to an ensemble machine learning classifier that tries to answer that, trained on the most-streamed Spotify songs of 2023.</p>
+                    <ul class="points">
+                        <li>Used about 950 songs and six audio features: danceability, valence, energy, acousticness, instrumentalness and speechiness.</li>
+                        <li>Split songs into low, medium and high popularity by stream count, then explored the data with a correlation heatmap, pair plots and per-feature distributions.</li>
+                        <li>Trained K-nearest neighbours on standardised features, a random forest tuned with five-fold GridSearchCV, and a soft-voting ensemble of the two.</li>
+                        <li>Checked which features each model relied on using permutation importance.</li>
+                        <li>The best models reached about 43% accuracy against 33% for guessing. The finding was that audio features alone say little about streams, which probably depend more on things outside the data, such as the artist's existing audience.</li>
+                    </ul>
+                    <p class="tech">Python, scikit-learn, pandas, seaborn, Jupyter</p>
                 </li>
                 <li>
                     <h3><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/CodesForFun/Python/ExcelParse">Automated data-quality and Excel reporting tool</a></h3>
                     <p class="context">For a family member's small business, built and shipped in a day</p>
-                    <p>A Python tool that automates Excel data-quality work: it flags incomplete rows, writes live Excel formulas, classifies entries by complexity and extracts embedded images across large datasets.</p>
-                    <p class="tech">Python, openpyxl</p>
+                    <p>Checking a batch of Excel workbooks by hand means opening each one and reading every row. I wrote a Python tool that does the whole batch in one run and marks the problems inside the workbooks themselves.</p>
+                    <ul class="points">
+                        <li>Flags rows with missing fields and text that is over its length limit, filling the cell red so problems are visible as soon as the file is opened.</li>
+                        <li>Writes live Excel formulas that classify each entry as simple, moderate or complex, so the sheet keeps updating as people edit it.</li>
+                        <li>Works out where the real data ends, ignoring trailing blank rows that would otherwise trigger false warnings.</li>
+                        <li>Produces a summary workbook with the counts for every file in the batch.</li>
+                        <li>Extracts embedded images from spreadsheets, with a <a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/CodesForFun/Python/PDFParse">companion script</a> that does the same for PDFs.</li>
+                    </ul>
+                    <p class="tech">Python, openpyxl, PyMuPDF</p>
                 </li>
                 <li>
                     <h3>JavaJam Coffee House web application <span class="badge">(in progress)</span></h3>
                     <p class="context">NTU IE4727, AY2026/27, optional Case Study 3</p>
-                    <p>After finishing the compulsory case studies, from plain HTML and CSS through to PHP, I took on the optional React rebuild of the site. It is a multi-page app (Home, Menu, Music, Jobs) with component-based architecture, controlled form inputs and client-side validation, including regex email checks and per-field error states.</p>
+                    <p>The course builds one coffee house website several times over, each time with a new technology. I completed the compulsory case studies, from plain HTML and CSS through to PHP, and then took on the optional third one: rebuilding the site in React.</p>
+                    <ul class="points">
+                        <li>A multi-page app with Home, Menu, Music and Jobs pages, built from reusable components.</li>
+                        <li>Controlled form inputs with client-side validation, including regex email checks and a separate error state for each field.</li>
+                        <li>Set up with Vite, with ESLint, bundler-based asset imports and version control configured along the way.</li>
+                    </ul>
                     <p class="tech">React, Vite, JavaScript, CSS, ESLint</p>
                 </li>
                 <li>
                     <h3>Automatic volume-controlled audio amplifier</h3>
                     <p class="context">NTU EE2073, AY2025/26</p>
-                    <p>A closed-loop audio amplifier on an STM32 with three subsystems: a voltage-controlled amplifier, a power amplifier and a VU meter. It holds a stable output across a wide input range. I validated a flat frequency response across the audible range, characterised the amplifier's gain across the full control-voltage range, and debugged clipping and grounding noise during integration.</p>
+                    <p>An audio amplifier that keeps its output level steady whether the input is quiet or loud. It is a closed-loop system on an STM32 microcontroller, programmed in Python.</p>
+                    <ul class="points">
+                        <li>Built three subsystems and integrated them: a voltage-controlled amplifier, a power amplifier and a VU meter.</li>
+                        <li>Maintained a stable output across a wide range of input levels.</li>
+                        <li>Validated a flat frequency response across the audible range.</li>
+                        <li>Characterised the voltage-controlled amplifier's gain across its full control-voltage range.</li>
+                        <li>Debugged clipping and grounding noise that appeared when the subsystems were joined.</li>
+                    </ul>
                     <p class="tech">STM32, Python, Jupyter, closed-loop feedback</p>
                 </li>
                 <li>
                     <h3>Three-stage analog stethoscope signal chain</h3>
                     <p class="context">NTU EE2102, AY2025/26</p>
-                    <p>A signal chain that takes body sounds from a microphone to an earpiece. Stage one is an inverting op-amp preamplifier with a feedback capacitor to suppress high-frequency noise. Stage two is a log-scale VU meter that lights LEDs at rising peak voltages using diode threshold logic. Stage three is an emitter-follower buffer that supplies enough current to drive low-impedance earpieces.</p>
+                    <p>An electronic stethoscope front end that takes faint body sounds from a microphone and makes them loud enough to hear through an earpiece, designed in simulation and then measured on an oscilloscope.</p>
+                    <ul class="points">
+                        <li>Stage one, microphone preamplifier: an inverting op-amp circuit designed for a target closed-loop voltage gain in the audible band, with a feedback capacitor to suppress high-frequency noise.</li>
+                        <li>Stage two, log-scale VU meter: a row of LEDs that light at progressively higher peak voltages using diode threshold logic, showing the signal level at a glance.</li>
+                        <li>Stage three, power amplifier: a common-collector emitter-follower buffer that supplies the current a low-impedance earpiece needs, which the op-amp alone cannot deliver.</li>
+                    </ul>
                     <p class="tech">Op-amp and BJT circuits, LTspice, oscilloscope measurement</p>
                 </li>
                 <li>
                     <h3><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/CodesForFun/Python/TermComm">TermComm</a></h3>
                     <p class="context">Personal project</p>
-                    <p>A chat room and a small blog that run in the terminal and store everything in MongoDB, with accounts, hashed passwords and separate admin and reader roles.</p>
+                    <p>Two apps that run in the terminal and keep their data in a MongoDB database: a shared chat room and a small blog.</p>
+                    <ul class="points">
+                        <li>The chat room lets people sign up, log in, post messages and refresh to see everyone else's.</li>
+                        <li>The blog has two roles: admins create and delete posts, readers browse and read them.</li>
+                        <li>Passwords are stored as salted hashes, and the database login is read from the environment so it never sits in the code.</li>
+                    </ul>
                     <p class="tech">Python, pymongo, MongoDB</p>
                 </li>
+                <li>
+                    <h3><a href="https://github.com/AjayVijayanand/MyCodingJournal">MyCodingJournal</a></h3>
+                    <p class="context">Personal coding journal, November 2020 to now</p>
+                    <p>Everything above lives in one repository, alongside the smaller things I've written for practice or for fun since school. Every folder has its own README.</p>
+                    <ul class="points">
+                        <li><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/CodesForFun/Python/Games">Terminal games</a>, including three cricket simulators, snakes and ladders and a word guesser.</li>
+                        <li><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/CodesForFun/Python/Turtles">Kolam patterns</a>, the dot-and-line designs drawn outside Tamil homes, recreated with Python turtle graphics.</li>
+                        <li><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/SchoolCodes/Java">Data structures and algorithms in Java</a>: searching, sorting, recursion, stacks and queues written by hand.</li>
+                        <li><a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/UniDays/IntroductionToProgramming">First-year C coursework</a> and an <a href="https://github.com/AjayVijayanand/MyCodingJournal/tree/main/AdventOfCode">Advent of Code</a> solution.</li>
+                    </ul>
+                    <p class="tech">Python, C, Java, HTML, CSS, JavaScript, Jupyter</p>
+                </li>
             </ul>
-            <p class="more">All of this sits in <a href="https://github.com/AjayVijayanand/MyCodingJournal">MyCodingJournal</a>, a journal of the code I've written since November 2020 in Python, C, Java, HTML, CSS and JavaScript.</p>
         </section>
 
         <section id="skills">
@@ -162,8 +210,9 @@
                         <h3>Garage@EEE, NTU: branding and marketing</h3>
                         <p>Sub-committee member in my first year, main committee since May 2025.</p>
                         <ul class="points">
-                            <li>Vice President, Escendo 2026, a four-day make-a-thon: managed three main-committee and four sub-committee members to drive content strategy, event publicity and sign-up growth.</li>
-                            <li>Vice President, Makerspace Friendlies 2026, an NTU and SUTD collaboration: led four sub-committee members producing consistent digital content to build the event's presence.</li>
+                            <li>Vice President of Branding and Marketing, IdeasJam 2027: my current role.</li>
+                            <li>Vice President of Branding and Marketing, Escendo 2026, a four-day make-a-thon: managed three main-committee and four sub-committee members to drive content strategy, event publicity and sign-up growth.</li>
+                            <li>Vice President of Branding and Marketing, Makerspace Friendlies 2026, an NTU and SUTD collaboration: led four sub-committee members producing consistent digital content to build the event's presence.</li>
                             <li>Ran a photography and videography workshop for 30 participants, and oversaw posters, event photography and recap videos for Escendo 2025, IdeasJam 2025 and Makerspace Friendlies 2025.</li>
                         </ul>
                     </div>
@@ -197,7 +246,19 @@
             </ul>
             <p class="more">Outside work and study: photography and videography, creative media and design, cricket, badminton, chess and carrom. I speak English and Tamil.</p>
         </section>
+    </main>
 
+    <section id="gallery" hidden>
+        <div class="wrap">
+            <h2>Gallery</h2>
+            <p>Some of my photography. There is more on Instagram at <a href="https://www.instagram.com/sleepykamkoala/">@sleepykamkoala</a>.</p>
+        </div>
+        <div class="wrap wide">
+            <div id="gallery-grid" class="gallery"></div>
+        </div>
+    </section>
+
+    <div class="wrap">
         <section id="contact">
             <h2>Contact</h2>
             <p>The quickest way to reach me is email: <a href="mailto:ajayvijayanand2004@gmail.com">ajayvijayanand2004@gmail.com</a></p>
@@ -208,6 +269,8 @@
                 <a href="mailto:ajayvijayanand2004@gmail.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
             </nav>
         </section>
-    </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
