@@ -1,11 +1,14 @@
+/* Three colours: paper, ink and one accent. Two fonts: display and body. */
+
 :root {
-    --paper: #f2f5f8;
-    --panel: #e4eaf1;
+    --paper: #f6f7f9;
     --ink: #14213d;
-    --muted: #4f5b70;
-    --signal: #2450b8;
-    --sample: #b86a00;
-    --rule: #c5cfdb;
+    --accent: #2450b8;
+
+    /* tints of ink, not extra colours */
+    --muted: color-mix(in srgb, var(--ink) 72%, var(--paper));
+    --rule: color-mix(in srgb, var(--ink) 16%, var(--paper));
+
     --display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
     --body: 'Atkinson Hyperlegible', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -13,24 +16,16 @@
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
         --paper: #101a2e;
-        --panel: #18243c;
         --ink: #e9eef6;
-        --muted: #a9b5c8;
-        --signal: #8fb0ff;
-        --sample: #f2b04a;
-        --rule: #2c3b59;
+        --accent: #8fb0ff;
         color-scheme: dark;
     }
 }
 
 :root[data-theme="dark"] {
     --paper: #101a2e;
-    --panel: #18243c;
     --ink: #e9eef6;
-    --muted: #a9b5c8;
-    --signal: #8fb0ff;
-    --sample: #f2b04a;
-    --rule: #2c3b59;
+    --accent: #8fb0ff;
     color-scheme: dark;
 }
 
@@ -67,7 +62,7 @@ body {
 }
 
 a {
-    color: var(--signal);
+    color: var(--accent);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.18em;
 }
@@ -77,7 +72,7 @@ a:hover {
 }
 
 a:focus-visible {
-    outline: 3px solid var(--sample);
+    outline: 3px solid var(--accent);
     outline-offset: 3px;
 }
 
@@ -214,7 +209,7 @@ h3 {
 }
 
 .site-nav a:hover {
-    color: var(--signal);
+    color: var(--accent);
     text-decoration: underline;
 }
 
@@ -235,16 +230,11 @@ html {
 /* In-progress marker */
 
 .badge {
-    display: inline-block;
-    margin-left: 0.5rem;
-    padding: 0.1rem 0.55rem;
-    border: 1px solid var(--sample);
-    border-radius: 999px;
-    color: var(--sample);
+    margin-left: 0.4rem;
+    color: var(--muted);
     font-family: var(--body);
-    font-size: 0.85rem;
-    font-weight: 700;
-    vertical-align: 0.15em;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 /* Timelines: education and activities, in date order */
@@ -295,10 +285,17 @@ html {
 
 .band {
     margin-top: 3.5rem;
-    padding-block: 2.75rem;
-    background: var(--panel);
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
+    padding-block: 3rem;
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.band a {
+    color: var(--paper);
+}
+
+.band a:focus-visible {
+    outline-color: var(--paper);
 }
 
 .band h2 {
