@@ -1,3 +1,21 @@
+// Phone menu: the Menu button shows and hides the section links.
+
+document.documentElement.classList.add('js');
+
+const nav = document.querySelector('.site-nav');
+const toggle = document.querySelector('.menu-toggle');
+
+function setMenu(open) {
+  nav.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', String(open));
+}
+
+toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+nav.querySelectorAll('.nav-links a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMenu(false);
+});
+
 // Photo gallery.
 // Every image in the gallery/ folder is shown automatically: the list of files
 // is read from GitHub, so adding a photo to that folder and pushing is all it

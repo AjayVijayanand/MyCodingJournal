@@ -9,7 +9,7 @@ Live at <https://ajayvijayanand.github.io/MyCodingJournal/PortfolioWebsite/>
 | --- | --- |
 | `index.html` | Page content, following my resume: projects, skills, education, leadership, achievements and contact |
 | `style.css` | Layout, the Montserrat font and a black, white and blue palette |
-| `script.js` | Fills the gallery from the photos in `gallery/` |
+| `script.js` | The phone menu, and filling the gallery from the photos in `gallery/` |
 | `gallery/` | Photos shown in the Gallery section; add a file and it appears |
 | `ajay.jpg` | Portrait used in the About me section |
 

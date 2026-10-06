@@ -180,25 +180,90 @@ h3 {
     z-index: 2;
     background: var(--primary);
     border-bottom: 1px solid var(--rule);
+    font-size: var(--size-small);
+    font-weight: 700;
 }
 
 .site-nav .wrap {
-    display: flex;
-    gap: 0.25rem 1.4rem;
-    flex-wrap: wrap;
     padding-block: 0.7rem;
-    font-size: var(--size-small);
 }
 
 .site-nav a {
     color: var(--secondary);
     text-decoration: none;
-    font-weight: 700;
 }
 
 .site-nav a:hover {
     color: var(--accent);
     text-decoration: underline;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.4rem;
+}
+
+/* The name and the Menu button only appear on phones */
+.nav-name,
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .site-nav .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 1rem;
+        padding-block: 0.5rem;
+    }
+
+    .nav-name {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.4rem 0.7rem;
+        border: 1px solid var(--rule);
+        border-radius: 6px;
+        background: none;
+        color: var(--secondary);
+        font: inherit;
+        cursor: pointer;
+    }
+
+    .menu-toggle:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 3px;
+    }
+
+    /* Collapsed until Menu is pressed. Without JavaScript the links stay visible. */
+    .js .nav-links {
+        display: none;
+    }
+
+    .js .site-nav.open .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        margin-top: 0.5rem;
+        border-top: 1px solid var(--rule);
+    }
+
+    .nav-links a {
+        padding: 0.7rem 0;
+        border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
 }
 
 section[id] {
