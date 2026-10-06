@@ -313,3 +313,33 @@ h3 {
     stroke-linecap: round;
     stroke-linejoin: round;
 }
+
+/* About me: portrait beside the text */
+
+.about {
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.portrait {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
+}
+
+@media (max-width: 700px) {
+    .about {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .portrait {
+        max-width: 15rem;
+    }
+}
