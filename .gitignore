@@ -22,3 +22,6 @@ venv/
 
 # Logs
 *.log
+
+# Full-size camera originals for the gallery (web-sized copies live in gallery/)
+PortfolioWebsite/gallery-originals/
