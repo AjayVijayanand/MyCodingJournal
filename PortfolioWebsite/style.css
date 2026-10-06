@@ -1,4 +1,4 @@
-/* Three colours: black, white and one blue. Two fonts: display and body. */
+/* Three colours: black, white and one blue. One font family, Montserrat, in three weights. */
 
 :root {
     --primary: #000000;
@@ -11,15 +11,15 @@
     --muted: color-mix(in srgb, var(--secondary) 70%, var(--primary));
     --rule: color-mix(in srgb, var(--secondary) 22%, var(--primary));
 
-    --display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
-    --body: 'Atkinson Hyperlegible', 'Helvetica Neue', Arial, sans-serif;
+    --display: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    --body: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
 
     /* One size per role */
-    --size-title: clamp(2.6rem, 9vw, 4.5rem);
+    --size-title: clamp(2.3rem, 8vw, 4.25rem);
     --size-heading: 1.9rem;
     --size-subheading: 1.3rem;
-    --size-body: 1.125rem;
-    --size-small: 1rem;
+    --size-body: 1.0625rem;
+    --size-small: 0.95rem;
 
     color-scheme: dark;
 }

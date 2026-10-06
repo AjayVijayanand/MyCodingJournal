@@ -8,6 +8,6 @@ Live at <https://ajayvijayanand.github.io/MyCodingJournal/PortfolioWebsite/>
 | File | Contents |
 | --- | --- |
 | `index.html` | Page content: projects, skills, education, activities and contact |
-| `style.css` | Layout, two fonts, and a black, white and blue palette |
+| `style.css` | Layout, the Montserrat font and a black, white and blue palette |
 
 To view it locally, open `index.html` in a browser.
