@@ -5,7 +5,9 @@
     --secondary: #ffffff;
     --accent: #4d8dff;
 
-    /* tints of white on black, not extra colours */
+    /* shades between black and white, not extra colours */
+    --text: color-mix(in srgb, var(--secondary) 90%, var(--primary));
+    --surface: color-mix(in srgb, var(--secondary) 9%, var(--primary));
     --muted: color-mix(in srgb, var(--secondary) 70%, var(--primary));
     --rule: color-mix(in srgb, var(--secondary) 22%, var(--primary));
 
@@ -32,7 +34,7 @@ body {
     font-family: var(--body);
     font-size: var(--size-body);
     line-height: 1.6;
-    color: var(--secondary);
+    color: var(--text);
     background: var(--primary);
 }
 
@@ -272,17 +274,9 @@ html {
 .band {
     margin-top: 3.5rem;
     padding-block: 3rem;
-    background: var(--secondary);
-    color: var(--primary);
-}
-
-.band a {
-    color: var(--primary);
-    font-weight: 700;
-}
-
-.band a:focus-visible {
-    outline-color: var(--primary);
+    background: var(--surface);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
 }
 
 .band h2 {
@@ -296,4 +290,10 @@ html {
 
 .elsewhere {
     margin-top: 0.75rem;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--secondary);
 }
