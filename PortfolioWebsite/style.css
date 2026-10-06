@@ -288,12 +288,28 @@ html {
 }
 
 
-.elsewhere {
-    margin-top: 0.75rem;
-}
 
 h1,
 h2,
 h3 {
     color: var(--secondary);
+}
+
+/* Icons beside the profile links */
+
+.links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.icon {
+    width: 1.2em;
+    height: 1.2em;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
