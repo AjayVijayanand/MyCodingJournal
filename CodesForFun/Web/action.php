@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "REMOVED";
+$password = getenv("DB_PASSWORD"); // set DB_PASSWORD in the environment, not in the code
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);

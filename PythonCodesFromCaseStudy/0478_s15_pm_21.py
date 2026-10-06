@@ -1,3 +1,4 @@
+import os
 import pymongo
 MDT = []
 MNT = []
@@ -35,7 +36,7 @@ LTNStr = str(LTN)
 print("Highest Temperature Midday: " + HTDStr)
 print("Lowest Temperature Midnight: " + LTNStr)
 
-myclient = pymongo.MongoClient("mongodb+srv://USER:PASSWORD@ajdatabase-7tidd.gcp.mongodb.net/test?retryWrites=true&w=majority")
+myclient = pymongo.MongoClient(os.environ["MONGODB_URI"])  # connection string comes from the environment, not the code
 mydb = myclient["S15PM21"]
 mycol = mydb["Temperature Data"]
 
