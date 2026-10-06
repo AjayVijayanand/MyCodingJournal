@@ -11,7 +11,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
         --paper: #101a2e;
         --panel: #18243c;
         --ink: #e9eef6;
@@ -19,7 +19,19 @@
         --signal: #8fb0ff;
         --sample: #f2b04a;
         --rule: #2c3b59;
+        color-scheme: dark;
     }
+}
+
+:root[data-theme="dark"] {
+    --paper: #101a2e;
+    --panel: #18243c;
+    --ink: #e9eef6;
+    --muted: #a9b5c8;
+    --signal: #8fb0ff;
+    --sample: #f2b04a;
+    --rule: #2c3b59;
+    color-scheme: dark;
 }
 
 * {
@@ -221,6 +233,108 @@ h3 {
     }
 
     .skills div {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Section menu */
+
+.site-nav {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 2;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+}
+
+.site-nav .wrap {
+    display: flex;
+    gap: 0.25rem 1.4rem;
+    flex-wrap: wrap;
+    padding-block: 0.7rem;
+    font-size: 1rem;
+}
+
+.site-nav a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.site-nav a:hover {
+    color: var(--signal);
+    text-decoration: underline;
+}
+
+section[id] {
+    scroll-margin-top: 3.5rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* In-progress marker */
+
+.badge {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.55rem;
+    border: 1px solid var(--sample);
+    border-radius: 999px;
+    color: var(--sample);
+    font-family: var(--body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    vertical-align: 0.15em;
+}
+
+/* Timelines: education and activities, in date order */
+
+.timeline {
+    list-style: none;
+}
+
+.timeline > li {
+    display: grid;
+    grid-template-columns: 8.5rem minmax(0, 1fr);
+    gap: 0.25rem 1rem;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.timeline .when {
+    color: var(--muted);
+    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
+    padding-top: 0.2rem;
+}
+
+.timeline div p + p {
+    margin-top: 0.6rem;
+}
+
+.sub {
+    margin-top: 2rem;
+}
+
+.plain {
+    list-style: none;
+}
+
+.plain li {
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+@media (max-width: 600px) {
+    .timeline > li {
         grid-template-columns: 1fr;
     }
 }

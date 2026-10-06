@@ -11,7 +11,7 @@ slower wave, which is aliasing.
 
 | File | Contents |
 | --- | --- |
-| `index.html` | Page content |
+| `index.html` | Page content: projects, skills, education, activities and contact |
 | `style.css` | Layout, type and the light and dark colour themes |
 | `script.js` | The sampling demo |
 
