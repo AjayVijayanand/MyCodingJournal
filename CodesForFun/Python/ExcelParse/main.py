@@ -3,6 +3,7 @@ from openpyxl.styles.borders import Border, Side
 from openpyxl.styles import Alignment
 from openpyxl_image_loader import SheetImageLoader
 import os
+import sys
 import logging
 
 def extract_image(FILE, COLUMN, PATH):
@@ -81,7 +82,8 @@ logger = logging.getLogger()
 # logger.setLevel(logging.DEBUG)
 
 try:
-    directory_in_str = "/Users/ajvj56/MyCSJournalAJVJ/VolumeX_FreeLancer/Python/ExcelParse"
+    # Folder of .xlsx files to process: pass it as an argument, or default to this script's folder
+    directory_in_str = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
     directory = os.fsencode(directory_in_str)
     for FILE in os.listdir(directory):
         filename = os.fsdecode(FILE)

@@ -1,0 +1,2 @@
+openpyxl
+openpyxl-image-loader

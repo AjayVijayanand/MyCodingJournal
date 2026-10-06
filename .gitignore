@@ -19,3 +19,6 @@ venv/
 
 # Secrets
 .env
+
+# Logs
+*.log

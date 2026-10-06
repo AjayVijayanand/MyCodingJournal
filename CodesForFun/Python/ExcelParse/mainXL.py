@@ -1,6 +1,7 @@
 import openpyxl as xl
 from openpyxl.styles import Font, PatternFill
 import os
+import sys
 import logging
 
 def find_actual_max_row(ws):
@@ -168,7 +169,8 @@ logger = logging.getLogger()
 # logger.setLevel(logging.DEBUG)
 
 try:
-    directory_in_str = "/Users/ajvj56/MyCSJournalAJVJ/VolumeX_FreeLancer/Python/ExcelParse/9780323901086"
+    # Folder of chapter .xlsx files to check: pass it as an argument, or default to the sample folder
+    directory_in_str = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "9780323901086")
     directory = os.fsencode(directory_in_str)
     Stats = []
     for FILE in os.listdir(directory):
