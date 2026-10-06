@@ -17,11 +17,14 @@ These are the pieces I'd point someone to first:
 | [Spotify Song Popularity Classifier](UniDays/IntroductionToDataScienceAndArtificialIntelligence/MiniProject_TopSongs) | Ensemble ML model (KNN + Random Forest) predicting song popularity from audio features, tuned via GridSearchCV and validated with permutation importance | Python, scikit-learn, Pandas |
 | [Excel Data Automation Tool](CodesForFun/Python/ExcelParse) | Automates Excel data quality workflows — flagging incomplete rows, generating live formulas, classifying entries, extracting embedded images | Python, openpyxl |
 | [Blackbody Radiation / Planck's Law Assignment](Notebooks/blackbody_radiation_plancks_law.ipynb) | Numerical modeling of solar blackbody radiation, Wien's law verification, and numerical integration for visible-band intensity | Python, SciPy, Matplotlib |
+| [TermComm](CodesForFun/Python/TermComm) | Terminal chat room and blog backed by MongoDB, with accounts, hashed passwords and admin and reader roles | Python, pymongo, MongoDB |
 | [Portfolio Website](PortfolioWebsite) | This personal site, built from scratch (HTML/CSS/JS) | HTML, CSS, JavaScript |
 
 ---
 
 ## Repository structure
+
+Every folder has its own README explaining what is in it.
 
 ```
 MyCodingJournal/
