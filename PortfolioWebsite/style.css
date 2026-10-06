@@ -76,8 +76,7 @@ a:hover {
     text-decoration-thickness: 2px;
 }
 
-a:focus-visible,
-input:focus-visible {
+a:focus-visible {
     outline: 3px solid var(--sample);
     outline-offset: 3px;
 }
@@ -113,53 +112,6 @@ h1 {
     flex-wrap: wrap;
     gap: 0.5rem 1.5rem;
     font-weight: 700;
-}
-
-/* Sampling demo */
-
-.sampler {
-    margin-top: 3.5rem;
-    padding: 1.75rem 0 1.5rem;
-    background: var(--panel);
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
-}
-
-#signal {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.sampler-controls {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-    flex-wrap: wrap;
-}
-
-.sampler-controls label {
-    font-weight: 700;
-}
-
-.sampler-controls input {
-    flex: 1 1 12rem;
-    accent-color: var(--signal);
-    min-height: 2rem;
-}
-
-.sampler-controls output {
-    min-width: 2.5rem;
-    font-variant-numeric: tabular-nums;
-    font-weight: 700;
-}
-
-figcaption {
-    margin-top: 0.6rem;
-    color: var(--muted);
-    font-size: 1rem;
-    min-height: 3.2em;
 }
 
 /* Sections */
@@ -337,4 +289,8 @@ html {
     .timeline > li {
         grid-template-columns: 1fr;
     }
+}
+
+#about p + p {
+    margin-top: 1rem;
 }

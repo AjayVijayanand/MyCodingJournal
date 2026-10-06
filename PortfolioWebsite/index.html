@@ -16,6 +16,7 @@
 
     <nav class="site-nav" aria-label="Sections">
         <div class="wrap">
+            <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
@@ -35,21 +36,15 @@
                 <a href="mailto:ajayvijayanand2004@gmail.com">Email</a>
             </nav>
         </div>
-
-        <figure class="sampler">
-            <div class="wrap">
-                <canvas id="signal" width="960" height="240" role="img" aria-label="A sine wave with sample points marked along it"></canvas>
-                <div class="sampler-controls">
-                    <label for="rate">Samples per cycle</label>
-                    <input id="rate" type="range" min="1.1" max="12" step="0.1" value="8">
-                    <output id="rate-value" for="rate">8.0</output>
-                </div>
-                <figcaption id="sampler-note">Drag the slider to sample the wave less often and watch what the samples can still tell you.</figcaption>
-            </div>
-        </figure>
     </header>
 
     <main class="wrap">
+        <section id="about">
+            <h2>About me</h2>
+            <p>I'm a coder at heart. I started writing code at school in 2020 and have kept a journal of it ever since, from exam exercises to machine learning projects. At NTU I'm steering my degree toward computing, signal processing and networks, and I'm comfortable where hardware meets software: one of my projects is a microcontroller-based audio amplifier with a Python control layer.</p>
+            <p>Outside engineering I lead branding and content teams at Garage@EEE, where I shoot photos and video and manage people. I'm looking for an internship where I can contribute to real work and keep learning.</p>
+        </section>
+
         <section id="projects">
             <h2>Projects</h2>
             <ul class="projects">
@@ -175,6 +170,5 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
 </body>
 </html>
